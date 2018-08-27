@@ -1,0 +1,24 @@
+.app__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.app__header {
+  flex-shrink: 0;
+  width: 100%;
+  height: 10vh;
+}
+
+.app__content {
+  flex: 1 0 auto;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.app__footer {
+  flex-shrink: 0;
+  width: 100%;
+  height: 10vh;
+}

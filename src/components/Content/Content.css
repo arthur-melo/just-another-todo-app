@@ -1,0 +1,18 @@
+.content__todos {
+  margin: 1em 0 1em 0;
+}
+
+.content__todos__ul > li {
+  opacity: 0;
+  animation: fadeIn 0.3s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
