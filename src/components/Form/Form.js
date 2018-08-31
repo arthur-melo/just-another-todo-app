@@ -9,13 +9,7 @@ const formPropTypes = {
 };
 
 export default class Form extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      itemValue: '',
-    };
-  }
+  state = { itemValue: '' };
 
   handleSubmit = ev => ev.preventDefault();
 
