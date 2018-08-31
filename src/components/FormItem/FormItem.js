@@ -18,12 +18,7 @@ const formItemPropTypes = {
 };
 
 export default class FormItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      displayMenu: false,
-    };
-  }
+  state = { displayMenu: false };
 
   setDisplayMenu = bool => {
     if (this.state.displayMenu !== bool) {

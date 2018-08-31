@@ -14,13 +14,9 @@ const contentPropTypes = {
 };
 
 export default class Content extends Component {
-  constructor() {
-    super();
+  state = { items: [], editingItem: {} };
 
-    this.state = { items: [], editingItem: {} };
-  }
-
-  componentDidMount() {
+  componentDidMount = () => {
     const localStorageState = JSON.parse(window.localStorage.getItem(LOCALSTORAGE_NAME));
 
     if (localStorageState) {
@@ -29,11 +25,9 @@ export default class Content extends Component {
         items: localStorageState.items,
       });
     }
-  }
+  };
 
-  componentDidUpdate() {
-    return window.localStorage.setItem(LOCALSTORAGE_NAME, JSON.stringify(this.state));
-  }
+  componentDidUpdate = () => window.localStorage.setItem(LOCALSTORAGE_NAME, JSON.stringify(this.state));
 
   handleAddItem = itemValue => {
     const id = uuid();
