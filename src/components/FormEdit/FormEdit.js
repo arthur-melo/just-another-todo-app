@@ -24,6 +24,15 @@ export default class FormEdit extends Component {
     };
   }
 
+  componentDidMount = () => window.addEventListener('keyup', this.handleKeyUp);
+
+  handleKeyUp = ev => {
+    // Handle ESC Key interaction
+    if (ev.code === 'Escape') {
+      this.props.handleCancelEditItem(ev);
+    }
+  };
+
   handleItemChange = ev =>
     this.setState({
       itemValue: ev.target.value,
@@ -64,7 +73,7 @@ export default class FormEdit extends Component {
                 disabled={!this.state.itemValue}>
                 <FontAwesomeIcon icon={faCheck} />
               </button>
-              <button type="button" className="btn btn-danger " onClick={this.props.handleCancelEditItem}>
+              <button type="button" className="btn btn-danger" onClick={this.props.handleCancelEditItem}>
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
