@@ -11,7 +11,7 @@ const Header = ({ className }) => (
   <div className={className}>
     <div className="header__container">
       <h4 className="header__p">
-        Just Another Todo App &trade;{' '}
+        Just Another Todo App{' '}
         <span role="img" aria-label="">
           👌
         </span>
