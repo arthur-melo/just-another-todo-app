@@ -29,9 +29,8 @@ export default class FormEdit extends Component {
       itemValue: ev.target.value,
     });
 
-  handleSubmit = ev => ev.preventDefault();
-
-  handleEditAndResetForm = () => {
+  handleEditAndResetForm = ev => {
+    ev.preventDefault();
     this.props.handleEditItem({
       ...this.props.item,
       value: this.state.itemValue,
@@ -44,7 +43,7 @@ export default class FormEdit extends Component {
   render() {
     return (
       <li className="form_edit__component list-group-item">
-        <form method="POST" onSubmit={this.handleSubmit}>
+        <form method="POST" onSubmit={this.handleEditAndResetForm}>
           <div className="form-row">
             <div className="col">
               <input
@@ -60,10 +59,9 @@ export default class FormEdit extends Component {
 
             <div className="col-auto">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary  form_edit__button--first"
-                disabled={!this.state.itemValue}
-                onClick={this.handleEditAndResetForm}>
+                disabled={!this.state.itemValue}>
                 <FontAwesomeIcon icon={faCheck} />
               </button>
               <button type="button" className="btn btn-danger " onClick={this.props.handleCancelEditItem}>
