@@ -11,9 +11,9 @@ const formPropTypes = {
 export default class Form extends Component {
   state = { itemValue: '' };
 
-  handleSubmit = ev => ev.preventDefault();
+  handleSubmitAndResetForm = ev => {
+    ev.preventDefault();
 
-  handleSubmitAndResetForm = () => {
     this.props.handleAddItem(this.state.itemValue);
 
     // Reset value
@@ -30,7 +30,7 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-        <form method="POST" onSubmit={this.handleSubmit}>
+        <form method="POST" onSubmit={this.handleSubmitAndResetForm}>
           <div className="form-row">
             <div className="col">
               <input
@@ -46,11 +46,7 @@ export default class Form extends Component {
             </div>
 
             <div className="col-auto">
-              <button
-                type="submit"
-                className="btn btn-primary"
-                disabled={!this.state.itemValue}
-                onClick={this.handleSubmitAndResetForm}>
+              <button type="submit" className="btn btn-primary" disabled={!this.state.itemValue}>
                 <FontAwesomeIcon icon={faPlus} />
               </button>
             </div>
