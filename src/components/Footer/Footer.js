@@ -11,7 +11,7 @@ const Footer = ({ className }) => (
   <div className={className}>
     <div className="footer__container">
       <p className="footer__p">
-        Made using React -{' '}
+        Made using React + Redux -{' '}
         <a href="https://github.com/arthur-melo" rel="noopener noreferrer" target="_blank">
           @arthur-melo
         </a>

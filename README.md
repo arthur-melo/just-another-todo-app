@@ -1,6 +1,6 @@
 # JATA - Just Another Todo App
 
-A simple Todo App written in React.
+A simple Todo App written in React + Redux.
 
 ## Demo
 
@@ -27,6 +27,7 @@ npm run start
 ## Built With
 
 * [ReactJS](https://reactjs.org)
+* [Redux](https://redux.js.org/)
 
 ## License
 
