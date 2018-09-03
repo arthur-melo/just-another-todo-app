@@ -28,6 +28,7 @@ npm run start
 
 * [ReactJS](https://reactjs.org)
 * [Redux](https://redux.js.org/)
+* [BEM CSS](http://getbem.com/naming/)
 
 ## License
 
