@@ -1,6 +1,6 @@
 {
   "name": "just-another-todo-app",
-  "description": "A simple TODO App written in React + Redux.",
+  "description": "A todo app built with React + Redux.",
   "version": "2.0.0",
   "private": true,
   "scripts": {
