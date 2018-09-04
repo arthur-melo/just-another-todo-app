@@ -7,6 +7,8 @@
   background: var(--background-color);
 }
 
-.header__p {
-  margin: 0;
+.header__span {
+  margin: 0 0.2em;
+  vertical-align: super;
+  font-size: 1.3em;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faListAlt } from '@fortawesome/free-solid-svg-icons';
 
 import './Header.css';
 
@@ -10,12 +12,12 @@ const headerPropTypes = {
 const Header = ({ className }) => (
   <div className={className}>
     <div className="header__container">
-      <h4 className="header__p">
-        Just Another Todo App{' '}
-        <span role="img" aria-label="">
-          👌
+      <nav className="navbar">
+        <span className="header__span navbar-brand">
+          <FontAwesomeIcon className="d-inline-block" icon={faListAlt} size="lg" alt="List emoji" />
         </span>
-      </h4>
+        <span className="header__span">Just Another Todo App</span>
+      </nav>
     </div>
   </div>
 );
