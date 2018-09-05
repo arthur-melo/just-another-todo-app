@@ -26,7 +26,7 @@ const TodosReducer = (state = INITIAL_STATE, action) => {
         return { ...state, items: localStorageState };
       }
 
-      return { ...state };
+      return state;
     }
 
     case SAVE_STATE_LOCALSTORAGE: {
