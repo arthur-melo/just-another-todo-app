@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-const formPropTypes = {
-  handleAddItem: PropTypes.func.isRequired,
-};
-
 export default class Form extends Component {
+  static propTypes = {
+    handleAddItem: PropTypes.func.isRequired,
+  };
+
   state = { itemValue: '' };
 
   handleSubmitAndResetForm = ev => {
@@ -56,5 +56,3 @@ export default class Form extends Component {
     );
   }
 }
-
-Form.propTypes = formPropTypes;
