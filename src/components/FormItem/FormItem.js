@@ -6,18 +6,18 @@ import './FormItem.css';
 import PropertyBar from '../PropertyBar/PropertyBar';
 import Checkout from '../Checkout/Checkout';
 
-const formItemPropTypes = {
-  item: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-  }),
-  handleDeleteItem: PropTypes.func.isRequired,
-  handleSelectEditItem: PropTypes.func.isRequired,
-  handleItemCompletion: PropTypes.func.isRequired,
-};
-
 export default class FormItem extends Component {
+  static propTypes = {
+    item: PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
+    }),
+    handleDeleteItem: PropTypes.func.isRequired,
+    handleSelectEditItem: PropTypes.func.isRequired,
+    handleItemCompletion: PropTypes.func.isRequired,
+  };
+
   state = { displayMenu: false };
 
   setDisplayMenu = bool => {
@@ -50,5 +50,3 @@ export default class FormItem extends Component {
     );
   }
 }
-
-FormItem.propTypes = formItemPropTypes;

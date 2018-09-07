@@ -5,17 +5,17 @@ import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import './FormEdit.css';
 
-const formEditPropTypes = {
-  item: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-  }),
-  handleEditItem: PropTypes.func.isRequired,
-  handleCancelEditItem: PropTypes.func.isRequired,
-};
-
 export default class FormEdit extends Component {
+  static propTypes = {
+    item: PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
+    }),
+    handleEditItem: PropTypes.func.isRequired,
+    handleCancelEditItem: PropTypes.func.isRequired,
+  };
+
   constructor(props) {
     super(props);
 
@@ -83,5 +83,3 @@ export default class FormEdit extends Component {
     );
   }
 }
-
-FormEdit.propTypes = formEditPropTypes;
