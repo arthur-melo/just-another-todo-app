@@ -1,3 +1,12 @@
 {
-  "extends": "stylelint-config-recommended"
+  "plugins": ["stylelint-declaration-use-variable"],
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "sh-waqar/declaration-use-variable": "color",
+    "rule-empty-line-before": [
+      "always-multi-line", {
+        "except": ["after-single-line-comment", "first-nested"]
+      }
+    ]
+  }
 }
