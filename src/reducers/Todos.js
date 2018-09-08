@@ -25,7 +25,6 @@ const TodosReducer = (state = INITIAL_STATE, action) => {
         // TODO: Validate local storage state.
         return { ...state, items: localStorageState };
       }
-
       return state;
     }
 
