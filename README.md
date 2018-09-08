@@ -8,7 +8,7 @@ You can access the final project at: [just-another-todo-app.now.sh](https://just
 
 ## Pre-requisites
 
-* [NodeJS](https://nodejs.org)
+- [NodeJS](https://nodejs.org)
 
 ## Usage
 
@@ -26,11 +26,11 @@ npm run start
 
 ## Built With
 
-* [ReactJS](https://reactjs.org)
-* [Redux](https://redux.js.org/)
-* [BEM CSS](http://getbem.com)
-* [Bootstrap (Flatly theme from Bootswatch)](https://getbootstrap.com/)
-* [Font Awesome](https://fontawesome.com/)
+- [ReactJS](https://reactjs.org)
+- [Redux](https://redux.js.org/)
+- [BEM CSS](http://getbem.com)
+- [Bootstrap (Flatly theme from Bootswatch)](https://getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/)
 
 ## License
 
