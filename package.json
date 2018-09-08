@@ -1,7 +1,7 @@
 {
   "name": "just-another-todo-app",
   "description": "A todo app built with React + Redux.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "scripts": {
     "precommit": "lint-staged",
@@ -10,10 +10,14 @@
     "deploy": "npm run build && now --public ./build/"
   },
   "lint-staged": {
-    "src/**/*.{js,json,css}": [
-      "stylelint --fix",
-      "prettier --write",
-      "git add"
+    "*.{json,css, md}": [
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.css": [
+      "stylelint --fix"
     ]
   },
   "dependencies": {
@@ -30,7 +34,8 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
+    "ajv": "^6.5.3",
+    "babel-eslint": "^7.2.3",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
@@ -39,6 +44,7 @@
     "lint-staged": "^7.2.2",
     "prettier": "^1.14.2",
     "stylelint": "^9.5.0",
-    "stylelint-config-recommended": "^2.1.0"
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-declaration-use-variable": "^1.7.0"
   }
 }
