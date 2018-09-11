@@ -36,7 +36,7 @@ export default class FormItem extends Component {
           <div className="form_item__checkout d-inline-block">
             <Checkout isCompleted={this.props.item.completed} />
           </div>
-          <span className="h-100 form_item__text">{this.props.item.value}</span>
+          <span className="form_item__text">{this.props.item.value}</span>
         </div>
 
         {this.state.displayMenu ? (
