@@ -1,7 +1,7 @@
 {
   "name": "just-another-todo-app",
   "description": "A todo app built with React + Redux.",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "private": true,
   "scripts": {
     "precommit": "lint-staged",
@@ -34,8 +34,6 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "ajv": "^6.5.3",
-    "babel-eslint": "^7.2.3",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
