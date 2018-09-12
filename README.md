@@ -2,7 +2,7 @@
 
 A todo app built with React + Redux.
 
-[![Build Status](https://travis-ci.org/arthur-melo/just-another-todo-app.svg?branch=master)](https://travis-ci.org/arthur-melo/just-another-todo-app)
+[![Build Status](https://travis-ci.org/arthur-melo/just-another-todo-app.svg?branch=master)](https://travis-ci.org/arthur-melo/just-another-todo-app) [![Greenkeeper badge](https://badges.greenkeeper.io/arthur-melo/just-another-todo-app.svg)](https://greenkeeper.io/)
 
 ## Demo
 
