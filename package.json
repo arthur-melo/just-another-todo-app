@@ -8,8 +8,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "test-coverage": "react-scripts test --env=jsdom --coverage && codecov",
-    "deploy": "npm run build && now --public ./build/"
+    "test-coverage": "react-scripts test --env=jsdom --coverage && codecov"
   },
   "lint-staged": {
     "*.{json,css, md}": [
