@@ -2,6 +2,8 @@
 
 A todo app built with React + Redux.
 
+[![Build Status](https://travis-ci.org/arthur-melo/just-another-todo-app.svg?branch=master)](https://travis-ci.org/arthur-melo/just-another-todo-app)
+
 ## Demo
 
 You can access the final project at: [just-another-todo-app.now.sh](https://just-another-todo-app.now.sh/) 👈
