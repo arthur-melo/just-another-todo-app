@@ -7,6 +7,7 @@
     "precommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "deploy": "npm run build && now --public ./build/"
   },
   "lint-staged": {
@@ -41,6 +42,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
     "prettier": "^1.14.2",
+    "react-test-renderer": "^16.5.0",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-declaration-use-variable": "^1.7.0"
