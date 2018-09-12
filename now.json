@@ -1,0 +1,13 @@
+{
+  "name": "just-another-todo-app",
+  "alias": "just-another-todo-app",
+  "type": "static",
+  "static": {
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
