@@ -8,6 +8,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test-coverage": "react-scripts test --env=jsdom --coverage && codecov",
     "deploy": "npm run build && now --public ./build/"
   },
   "lint-staged": {
@@ -35,6 +36,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "codecov": "^3.1.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
