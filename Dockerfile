@@ -1,6 +1,7 @@
 FROM node:6-alpine
 
 WORKDIR /app
+ENV CI true
 
 COPY package.json package-lock.json ./
 
