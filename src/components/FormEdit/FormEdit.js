@@ -58,7 +58,7 @@ export default class FormEdit extends Component {
               <input
                 type="text"
                 className="form-control"
-                id="edit-todo-item"
+                id="input-edit-todo-item"
                 name="edit-todo-item"
                 value={this.state.itemValue}
                 onChange={this.handleItemChange}
@@ -69,11 +69,12 @@ export default class FormEdit extends Component {
             <div className="col-auto">
               <button
                 type="submit"
-                className="btn btn-primary  form_edit__button--first"
+                id="submit-edit-todo-item"
+                className="btn btn-primary form_edit__button--first"
                 disabled={!this.state.itemValue}>
                 <FontAwesomeIcon icon={faCheck} />
               </button>
-              <button type="button" className="btn btn-danger" onClick={this.props.handleCancelEditItem}>
+              <button id="cancel-edit-todo-item" type="button" className="btn btn-danger" onClick={this.props.handleCancelEditItem}>
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
