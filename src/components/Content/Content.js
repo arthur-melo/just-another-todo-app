@@ -44,33 +44,35 @@ const Content = props => (
           </div>
         </div>
       </div>
-      <div className="row justify-content-center">
-        <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-          <div className="content__todos">
-            <ul className="list-group content__todos__ul">
-              {props.items.map(
-                (item, index) =>
-                  props.editingItem.id === item.id ? (
-                    <FormEdit
-                      key={index}
-                      handleEditItem={props.handleEditItem}
-                      handleCancelEditItem={props.handleCancelEditItem}
-                      item={props.editingItem}
-                    />
-                  ) : (
-                    <FormItem
-                      key={index}
-                      item={item}
-                      handleDeleteItem={props.handleDeleteItem}
-                      handleSelectEditItem={props.handleSelectEditItem}
-                      handleItemCompletion={props.handleItemCompletion}
-                    />
-                  ),
-              )}
-            </ul>
+      {props.items.length ? (
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div className="content__todos">
+              <ul className="list-group content__todos__ul">
+                {props.items.map(
+                  (item, index) =>
+                    props.editingItem.id === item.id ? (
+                      <FormEdit
+                        key={index}
+                        handleEditItem={props.handleEditItem}
+                        handleCancelEditItem={props.handleCancelEditItem}
+                        item={props.editingItem}
+                      />
+                    ) : (
+                      <FormItem
+                        key={index}
+                        item={item}
+                        handleDeleteItem={props.handleDeleteItem}
+                        handleSelectEditItem={props.handleSelectEditItem}
+                        handleItemCompletion={props.handleItemCompletion}
+                      />
+                    ),
+                )}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </div>
   </div>
 );
