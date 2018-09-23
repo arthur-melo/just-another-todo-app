@@ -55,7 +55,7 @@ describe('Content', () => {
     };
 
     props.items = [...props.items, shallow(<FormItem {...props} item={item} />)];
-    props.editingItem = { ...props.editingItem, ...item };
+    props.editingItem = { ...props.editingItem, item };
 
     expect(component.find(FormEdit)).toBeDefined();
   });
