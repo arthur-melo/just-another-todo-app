@@ -19,6 +19,7 @@ const appPropTypes = {
   handleDeleteItem: PropTypes.func.isRequired,
   handleEditItem: PropTypes.func.isRequired,
   handleItemCompletion: PropTypes.func.isRequired,
+  handleSelectEditItem: PropTypes.func.isRequired,
   handleLoadStateLocalStorage: PropTypes.func.isRequired,
   handleSaveStateLocalStorage: PropTypes.func.isRequired,
 };
