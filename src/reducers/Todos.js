@@ -13,7 +13,6 @@ import { SAVE_STATE_LOCALSTORAGE } from '../actions/SaveStateLocalStorage';
 
 const INITIAL_STATE = {
   items: [],
-  editingItem: {},
 };
 
 const TodosReducer = (state = INITIAL_STATE, action) => {
@@ -45,10 +44,8 @@ const TodosReducer = (state = INITIAL_STATE, action) => {
     }
 
     case CANCEL_EDIT_ITEM: {
-      return {
-        ...state,
-        editingItem: {},
-      };
+      const newState = state.items.length ? { ...state, editingItem: {} } : { ...state };
+      return newState;
     }
 
     case DELETE_ITEM: {
