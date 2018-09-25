@@ -3,6 +3,13 @@
   "description": "A todo app built with React + Redux.",
   "version": "2.0.3",
   "private": true,
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/registerServiceWorker.js"
+    ]
+  },
   "scripts": {
     "precommit": "lint-staged",
     "start": "react-scripts start",
