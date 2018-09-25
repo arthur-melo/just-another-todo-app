@@ -29,13 +29,25 @@
     <meta name="og:locale" content="en_US">
     <meta name="og:type" content="website">
 
+    <!-- Google Analytics - gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126373328-1"></script>
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
   </head>
   <body>
+    <!-- Google analytics -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-126373328-1');
+    </script>
+
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+
     <div id="app"></div>
   </body>
 </html>
