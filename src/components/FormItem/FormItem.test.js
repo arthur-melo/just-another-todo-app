@@ -53,4 +53,14 @@ describe('FormItem', () => {
     component.instance().setDisplayMenu(true);
     expect(component.find(PropertyBar).length).toBe(1);
   });
+
+  it('verifies if setDisplayMenu is updated when `mouseMove/mouseLeave` events are called', () => {
+    const component = shallow(<FormItem {...props} />);
+
+    component.find('.form_item__component').simulate('mouseMove');
+    expect(component.state('displayMenu')).toBe(true);
+
+    component.find('.form_item__component').simulate('mouseLeave');
+    expect(component.state('displayMenu')).toBe(false);
+  });
 });
