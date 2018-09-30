@@ -3,7 +3,7 @@ import React from 'react';
 import { LoadStateLocalStorage, LOAD_STATE_LOCALSTORAGE } from './LoadStateLocalStorage';
 
 describe('LoadStateLocalStorage', () => {
-  it('verify if LoadStateLocalStorage action is called', () => {
+  it('should call LoadStateLocalStorage action', () => {
     const action = {
       type: LOAD_STATE_LOCALSTORAGE,
       payload: {},

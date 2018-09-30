@@ -3,7 +3,7 @@ import React from 'react';
 import { CancelEditItem, CANCEL_EDIT_ITEM } from './CancelEditItem';
 
 describe('CancelEditItem', () => {
-  it('verify if CancelEditItem action is called', () => {
+  it('should call CancelEditItem action', () => {
     const action = {
       type: CANCEL_EDIT_ITEM,
       payload: {},

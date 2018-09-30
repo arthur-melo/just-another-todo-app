@@ -23,7 +23,7 @@ describe('Content', () => {
     };
   });
 
-  it('verify if todo items list is shown', () => {
+  it('should show a todo items list', () => {
     const component = mount(<Content {...props} />);
 
     // Initial render
@@ -45,7 +45,7 @@ describe('Content', () => {
     expect(component.find(FormItem)).toBeDefined();
   });
 
-  it('verify if editing item form is shown when an item is selected', () => {
+  it('should show an editing item form when an item is selected', () => {
     const component = mount(<Content {...props} />);
 
     const item = {
