@@ -19,7 +19,7 @@ describe('FormEdit', () => {
     };
   });
 
-  it('verify if form submission is being handled', () => {
+  it('should handle form submission', () => {
     const component = shallow(<FormEdit {...props} />);
 
     component.find('form').simulate('submit', { preventDefault: jest.fn() });
@@ -28,7 +28,7 @@ describe('FormEdit', () => {
     expect(props.handleCancelEditItem).not.toHaveBeenCalled();
   });
 
-  it('verify if form submission is handled with a new input field value', () => {
+  it('should handle form submission with a new input field value', () => {
     const value = 'someNewValue';
 
     const component = shallow(<FormEdit {...props} />);
@@ -43,7 +43,7 @@ describe('FormEdit', () => {
     expect(props.handleCancelEditItem).not.toHaveBeenCalled();
   });
 
-  it('verify if handleCancelEditItem prop is called when button is pressed', () => {
+  it('should set handleCancelEditItem prop when button is pressed', () => {
     const component = shallow(<FormEdit {...props} />);
 
     component.find('#cancel-edit-todo-item').simulate('click');
@@ -52,7 +52,7 @@ describe('FormEdit', () => {
     expect(props.handleEditItem).not.toHaveBeenCalledWith();
   });
 
-  it('verify if handleCancelEditItem prop is called when `escape` key is pressed', () => {
+  it('should set handleCancelEditItem prop when `escape` key is pressed', () => {
     const escapeEv = {
       code: 'Escape',
     };

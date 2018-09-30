@@ -3,7 +3,7 @@ import React from 'react';
 import { ItemCompletion, ITEM_COMPLETION } from './ItemCompletion';
 
 describe('ItemCompletion', () => {
-  it('verify if ItemCompletion action is called with an item to be completed', () => {
+  it('should call ItemCompletion action with an item to be completed', () => {
     const item = {
       value: 'Test todo item',
       id: '0',

@@ -3,7 +3,7 @@ import React from 'react';
 import { AddItem, ADD_ITEM } from './AddItem';
 
 describe('AddItem', () => {
-  it('verify if addItem action is called', () => {
+  it('should call AddItem action', () => {
     const newItem = 'Some new todo item';
 
     const action = {

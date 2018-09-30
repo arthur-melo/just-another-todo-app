@@ -3,7 +3,7 @@ import React from 'react';
 import { SaveStateLocalStorage, SAVE_STATE_LOCALSTORAGE } from './SaveStateLocalStorage';
 
 describe('SaveStateLocalStorage', () => {
-  it('verify if SaveStateLocalStorage action is called', () => {
+  it('should call SaveStateLocalStorage action', () => {
     const action = {
       type: SAVE_STATE_LOCALSTORAGE,
       payload: {},

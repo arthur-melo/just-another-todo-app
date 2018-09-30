@@ -21,7 +21,7 @@ describe('FormItem', () => {
     };
   });
 
-  it('verify if handleItemCompletion prop is being called', () => {
+  it('should set handleItemCompletion prop when an item is clicked', () => {
     const component = shallow(<FormItem {...props} />);
 
     component
@@ -35,16 +35,7 @@ describe('FormItem', () => {
     expect(props.handleSelectEditItem).not.toHaveBeenCalled();
   });
 
-  it('verify if setDisplayMenu updates displayMenu', () => {
-    const component = shallow(<FormItem {...props} />);
-
-    expect(component.state('displayMenu')).toBe(false);
-
-    component.instance().setDisplayMenu(true);
-    expect(component.state('displayMenu')).toBe(true);
-  });
-
-  it('verify if displayMenu instantiates a PropertyBar component', () => {
+  it('should show a PropertyBar component when displayMenu is set', () => {
     const component = shallow(<FormItem {...props} />).update();
 
     expect(component.state('displayMenu')).toBe(false);
@@ -54,7 +45,7 @@ describe('FormItem', () => {
     expect(component.find(PropertyBar).length).toBe(1);
   });
 
-  it('verifies if setDisplayMenu is updated when `mouseMove/mouseLeave` events are called', () => {
+  it('should set displayMenu prop when `mouseMove/mouseLeave` events are fired', () => {
     const component = shallow(<FormItem {...props} />);
 
     component.find('.form_item__component').simulate('mouseMove');
