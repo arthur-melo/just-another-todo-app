@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import App from './App';
 
 describe('App', () => {
-  it('verify if component renders without errors', () => {
+  it('should render component without errors', () => {
     const props = {
       handleAddItem: jest.fn(),
       handleCancelEditItem: jest.fn(),

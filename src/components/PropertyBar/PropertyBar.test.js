@@ -15,7 +15,7 @@ describe('Checkout', () => {
     };
   });
 
-  it('verify if handleSelectEditItem prop is being called', () => {
+  it('should set handleSelectEditItem prop when edit button is clicked', () => {
     const component = mount(<PropertyBar {...props} />);
 
     component
@@ -27,7 +27,7 @@ describe('Checkout', () => {
     expect(props.handleDeleteItem).not.toHaveBeenCalled();
   });
 
-  it('verify if handleDeleteItem prop is being called', () => {
+  it('should set handleDeleteItem prop when delete button is clicked', () => {
     const component = mount(<PropertyBar {...props} />);
 
     component
@@ -36,32 +36,6 @@ describe('Checkout', () => {
       .simulate('click');
 
     expect(props.handleDeleteItem).toBeCalled();
-    expect(props.handleSelectEditItem).not.toHaveBeenCalled();
-  });
-
-  it('verify if handleSelectEditItem prop is being called with a given id', () => {
-    const id = 'someOtherId';
-
-    const component = mount(<PropertyBar {...props} id={id} />);
-    component
-      .find('.property_bar__button')
-      .first()
-      .simulate('click');
-
-    expect(props.handleSelectEditItem).toBeCalledWith('someOtherId');
-    expect(props.handleDeleteItem).not.toHaveBeenCalled();
-  });
-
-  it('verify if handleDeleteItem prop is being called with a given id', () => {
-    const id = 'someOtherId';
-
-    const component = mount(<PropertyBar {...props} id={id} />);
-    component
-      .find('.property_bar__button')
-      .last()
-      .simulate('click');
-
-    expect(props.handleDeleteItem).toBeCalledWith('someOtherId');
     expect(props.handleSelectEditItem).not.toHaveBeenCalled();
   });
 });

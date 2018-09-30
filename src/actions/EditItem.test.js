@@ -3,7 +3,7 @@ import React from 'react';
 import { EditItem, EDIT_ITEM } from './EditItem';
 
 describe('EditItem', () => {
-  it('verify if EditItem action is called with a modified todo item value', () => {
+  it('should call EditItem action with a modified todo item value', () => {
     const item = {
       value: 'Modified todo item value',
       id: '0',

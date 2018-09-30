@@ -14,7 +14,7 @@ describe('FormEdit', () => {
     };
   });
 
-  it('verify if form submission is being handled', () => {
+  it('should handle form submission', () => {
     const component = shallow(<Form {...props} />);
 
     component.find('form').simulate('submit', { preventDefault: jest.fn() });
@@ -22,7 +22,7 @@ describe('FormEdit', () => {
     expect(props.handleAddItem).toHaveBeenCalledWith(props.item);
   });
 
-  it('verify if form submission is handled with a new input field value', () => {
+  it('should handle form submission with a new input field value', () => {
     const value = 'someNewValue';
 
     const component = shallow(<Form {...props} />);
