@@ -6,8 +6,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "test-coverage": "react-scripts test --env=jsdom --coverage && codecov"
+    "test": "react-scripts test",
+    "test-coverage": "react-scripts test --coverage && codecov"
   },
   "lint-staged": {
     "*.{json,css, md}": [
@@ -27,6 +27,12 @@
       "!src/registerServiceWorker.js"
     ]
   },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.4",
     "@fortawesome/free-solid-svg-icons": "5.3.1",
@@ -36,7 +42,7 @@
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-redux": "5.0.7",
-    "react-scripts": "1.1.5",
+    "react-scripts": "2.0.3",
     "redux": "4.0.0",
     "uuid": "3.3.2"
   },
