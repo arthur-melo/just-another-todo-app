@@ -46,7 +46,11 @@ export default class Form extends Component {
             </div>
 
             <div className="col-auto">
-              <button type="submit" className="btn btn-primary" disabled={!this.state.itemValue}>
+              <button type="submit"
+                      className="btn btn-primary"
+                      disabled={!this.state.itemValue}
+                      aria-label="Add todo item"
+              >
                 <FontAwesomeIcon icon={faPlus} />
               </button>
             </div>
