@@ -33,6 +33,7 @@ npm run start
 - [BEM CSS](http://getbem.com)
 - [Bootstrap (Flatly theme from Bootswatch)](https://getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com/)
+- [React-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)
 
 ## License
 
