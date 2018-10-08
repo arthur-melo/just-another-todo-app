@@ -12,6 +12,7 @@ import { ItemCompletion } from '../actions/ItemCompletion';
 import { SelectEditItem } from '../actions/SelectEditItem';
 import { LoadStateLocalStorage } from '../actions/LoadStateLocalStorage';
 import { SaveStateLocalStorage } from '../actions/SaveStateLocalStorage';
+import { ReorderItem } from '../actions/ReorderItem';
 
 const appPropTypes = {
   handleAddItem: PropTypes.func.isRequired,
@@ -22,6 +23,7 @@ const appPropTypes = {
   handleSelectEditItem: PropTypes.func.isRequired,
   handleLoadStateLocalStorage: PropTypes.func.isRequired,
   handleSaveStateLocalStorage: PropTypes.func.isRequired,
+  handleReorderItem: PropTypes.func.isRequired,
 };
 
 class App extends Component {
@@ -34,6 +36,8 @@ class App extends Component {
   handleEditItem = modifiedItem => this.props.handleEditItem(modifiedItem);
   handleItemCompletion = modifiedItem => this.props.handleItemCompletion(modifiedItem);
   handleSelectEditItem = id => this.props.handleSelectEditItem(id);
+  handleReorderItem = (initialPosition, newPosition) =>
+    this.props.handleReorderItem(initialPosition, newPosition);
 
   render() {
     return <AppLayout {...this.props} />;
@@ -54,6 +58,7 @@ const mapDispatchToProps = {
   handleSelectEditItem: SelectEditItem,
   handleSaveStateLocalStorage: SaveStateLocalStorage,
   handleLoadStateLocalStorage: LoadStateLocalStorage,
+  handleReorderItem: ReorderItem,
 };
 
 App.propTypes = appPropTypes;
