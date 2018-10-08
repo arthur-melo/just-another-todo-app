@@ -10,6 +10,7 @@ import { ITEM_COMPLETION } from '../actions/ItemCompletion';
 import { SELECT_EDIT_ITEM } from '../actions/SelectEditItem';
 import { LOAD_STATE_LOCALSTORAGE } from '../actions/LoadStateLocalStorage';
 import { SAVE_STATE_LOCALSTORAGE } from '../actions/SaveStateLocalStorage';
+import { REORDER_ITEM } from '../actions/ReorderItem';
 
 const INITIAL_STATE = {
   items: [],
@@ -80,6 +81,14 @@ const TodosReducer = (state = INITIAL_STATE, action) => {
     case SELECT_EDIT_ITEM: {
       const item = state.items.find(({ id }) => id === action.payload.id);
       return { ...state, editingItem: item };
+    }
+
+    case REORDER_ITEM: {
+      const clone = [...state.items];
+      const [removed] = clone.splice(action.payload.initialPosition, 1);
+      clone.splice(action.payload.newPosition, 0, removed);
+
+      return { ...state, items: clone };
     }
 
     default: {
