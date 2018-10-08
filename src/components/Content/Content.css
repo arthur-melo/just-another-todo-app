@@ -2,8 +2,9 @@
   margin: 1em 0 1em 0;
 }
 
-.content__todos__ul > li {
+.content__todos__li {
   opacity: 0;
+  margin-bottom: 0.5em;
   animation: fadeIn 0.3s 1;
   animation-fill-mode: forwards;
 }
