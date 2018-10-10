@@ -10,6 +10,7 @@ import { ITEM_COMPLETION } from '../actions/ItemCompletion';
 import { SELECT_EDIT_ITEM } from '../actions/SelectEditItem';
 import { LOAD_STATE_LOCALSTORAGE } from '../actions/LoadStateLocalStorage';
 import { SAVE_STATE_LOCALSTORAGE } from '../actions/SaveStateLocalStorage';
+import { REORDER_ITEM } from '../actions/ReorderItem';
 
 import TodosReducer from './Todos';
 
@@ -275,6 +276,30 @@ describe('TodosReducer', () => {
     ).toEqual({
       editingItem: item,
       items: [item],
+    });
+  });
+
+  it('should handle REORDER_ITEM', () => {
+    const items = ['First item', 'Second item', 'Third item'];
+
+    const action = {
+      type: REORDER_ITEM,
+      payload: {
+        initialPosition: items.findIndex(el => el === 'First item'),
+        newPosition: items.findIndex(el => el === 'Third item'),
+      },
+    };
+
+    // Value is shuffled to newPosition.
+    expect(
+      TodosReducer(
+        {
+          items,
+        },
+        action,
+      ),
+    ).toEqual({
+      items: ['Second item', 'Third item', 'First item'],
     });
   });
 });
