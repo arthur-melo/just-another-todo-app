@@ -13,6 +13,7 @@ describe('App', () => {
       handleEditItem: jest.fn(),
       handleItemCompletion: jest.fn(),
       handleSelectEditItem: jest.fn(),
+      handleReorderItem: jest.fn(),
     };
 
     const component = shallow(<App {...props} />);

@@ -20,6 +20,7 @@ describe('Content', () => {
       handleEditItem: jest.fn(),
       handleItemCompletion: jest.fn(),
       handleSelectEditItem: jest.fn(),
+      handleReorderItem: jest.fn(),
     };
   });
 
