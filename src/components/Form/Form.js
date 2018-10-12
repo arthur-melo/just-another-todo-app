@@ -39,6 +39,7 @@ export default class Form extends Component {
                 id="new-todo-item"
                 name="new-todo-item"
                 placeholder="I want to do..."
+                aria-label="Todo item description"
                 value={this.state.itemValue}
                 onChange={this.handleItemChange}
                 autoFocus
@@ -46,11 +47,11 @@ export default class Form extends Component {
             </div>
 
             <div className="col-auto">
-              <button type="submit"
-                      className="btn btn-primary"
-                      disabled={!this.state.itemValue}
-                      aria-label="Add todo item"
-              >
+              <button
+                type="submit"
+                className="btn btn-primary"
+                disabled={!this.state.itemValue}
+                aria-label="Add todo item">
                 <FontAwesomeIcon icon={faPlus} />
               </button>
             </div>
