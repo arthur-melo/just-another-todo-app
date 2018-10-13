@@ -60,4 +60,22 @@ describe('Content', () => {
 
     expect(component.find(FormEdit)).toBeDefined();
   });
+
+  it('should call handleReorderItem prop on dragEnd', () => {
+    const component = mount(<Content {...props} />);
+
+    const action = {
+      source: {
+        index: 0,
+      },
+      destination: {
+        index: 1,
+      },
+    };
+
+    expect(component.instance().onDragEnd({})).toBeUndefined();
+
+    component.instance().onDragEnd(action);
+    expect(props.handleReorderItem).toBeCalledWith(0, 1);
+  });
 });
