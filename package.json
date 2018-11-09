@@ -60,7 +60,7 @@
     "lint-staged": "8.0.4",
     "prettier": "1.15.1",
     "react-test-renderer": "16.6.1",
-    "stylelint": "9.7.1",
+    "stylelint": "9.8.0",
     "stylelint-config-recommended": "2.1.0",
     "stylelint-declaration-use-variable": "1.7.0"
   }
