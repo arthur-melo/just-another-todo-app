@@ -67,7 +67,7 @@ class Content extends Component {
                         {provided => (
                           <div ref={provided.innerRef}>
                             {this.props.items.map((item, index) => (
-                              <Draggable key={index} draggableId={index} index={index}>
+                              <Draggable key={item.id} draggableId={item.id} index={index}>
                                 {provided => (
                                   <div
                                     ref={provided.innerRef}
