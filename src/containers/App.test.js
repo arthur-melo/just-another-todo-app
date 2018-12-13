@@ -124,22 +124,4 @@ describe('App', () => {
 
     expect(props.handleSelectEditItem).toHaveBeenCalledWith('0');
   });
-
-  it('should call handleLoadStateLocalStorage', () => {
-    const componentDidMountSpy = jest.spyOn(App.prototype, 'componentDidMount');
-
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
-
-    component
-      .find(App)
-      .instance()
-      .componentDidMount();
-
-    expect(componentDidMountSpy).toHaveBeenCalled();
-    componentDidMountSpy.mockClear();
-  });
 });
