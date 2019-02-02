@@ -19,6 +19,7 @@ exports[`Header gets rendered with a given classname 1`] = `
           className="svg-inline--fa fa-list-alt fa-w-16 fa-lg d-inline-block"
           data-icon="list-alt"
           data-prefix="fas"
+          focusable="false"
           role="img"
           style={Object {}}
           viewBox="0 0 512 512"
