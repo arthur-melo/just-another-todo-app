@@ -61,7 +61,7 @@
     "prettier": "1.17.0",
     "react-test-renderer": "16.8.6",
     "stylelint": "10.0.0",
-    "stylelint-config-recommended": "2.1.0",
+    "stylelint-config-recommended": "2.2.0",
     "stylelint-declaration-use-variable": "1.7.0"
   }
 }
