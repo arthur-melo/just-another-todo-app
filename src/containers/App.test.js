@@ -44,8 +44,8 @@ describe('App', () => {
 
     component
       .find(App)
-      .instance()
-      .props.handleAddItem('0');
+      .props()
+      .handleAddItem('0');
 
     expect(props.handleAddItem).toHaveBeenCalledWith('0');
   });
@@ -59,8 +59,8 @@ describe('App', () => {
 
     component
       .find(App)
-      .instance()
-      .props.handleCancelEditItem();
+      .props()
+      .handleCancelEditItem();
 
     expect(props.handleCancelEditItem).toHaveBeenCalled();
   });
@@ -74,8 +74,8 @@ describe('App', () => {
 
     component
       .find(App)
-      .instance()
-      .props.handleDeleteItem('0');
+      .props()
+      .handleDeleteItem('0');
 
     expect(props.handleDeleteItem).toHaveBeenCalledWith('0');
   });
@@ -89,8 +89,8 @@ describe('App', () => {
 
     component
       .find(App)
-      .instance()
-      .props.handleEditItem({});
+      .props()
+      .handleEditItem({});
 
     expect(props.handleEditItem).toHaveBeenCalledWith({});
   });
@@ -104,8 +104,8 @@ describe('App', () => {
 
     component
       .find(App)
-      .instance()
-      .props.handleItemCompletion({});
+      .props()
+      .handleItemCompletion({});
 
     expect(props.handleItemCompletion).toHaveBeenCalledWith({});
   });
@@ -119,8 +119,8 @@ describe('App', () => {
 
     component
       .find(App)
-      .instance()
-      .props.handleSelectEditItem('0');
+      .props()
+      .handleSelectEditItem('0');
 
     expect(props.handleSelectEditItem).toHaveBeenCalledWith('0');
   });
