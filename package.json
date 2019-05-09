@@ -48,7 +48,7 @@
     "uuid": "3.3.2"
   },
   "devDependencies": {
-    "codecov": "3.3.0",
+    "codecov": "3.4.0",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",
     "eslint-config-prettier": "4.2.0",
