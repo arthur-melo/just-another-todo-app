@@ -30,7 +30,7 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-        <form method="POST" onSubmit={this.handleSubmitAndResetForm}>
+        <form method="POST" autoComplete="on" onSubmit={this.handleSubmitAndResetForm}>
           <div className="form-row">
             <div className="col">
               <input
