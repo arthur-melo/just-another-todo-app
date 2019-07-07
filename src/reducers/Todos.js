@@ -1,38 +1,15 @@
 import uuid from 'uuid/v1';
 
-import { LOCALSTORAGE_NAME } from '../constants';
-
 import { ADD_ITEM } from '../actions/AddItem';
 import { CANCEL_EDIT_ITEM } from '../actions/CancelEditItem';
 import { DELETE_ITEM } from '../actions/DeleteItem';
 import { EDIT_ITEM } from '../actions/EditItem';
 import { ITEM_COMPLETION } from '../actions/ItemCompletion';
 import { SELECT_EDIT_ITEM } from '../actions/SelectEditItem';
-import { LOAD_STATE_LOCALSTORAGE } from '../actions/LoadStateLocalStorage';
-import { SAVE_STATE_LOCALSTORAGE } from '../actions/SaveStateLocalStorage';
 import { REORDER_ITEM } from '../actions/ReorderItem';
 
-const INITIAL_STATE = {
-  items: [],
-};
-
-const TodosReducer = (state = INITIAL_STATE, action) => {
+const TodosReducer = (state, action) => {
   switch (action.type) {
-    case LOAD_STATE_LOCALSTORAGE: {
-      const localStorageState = JSON.parse(window.localStorage.getItem(LOCALSTORAGE_NAME));
-
-      if (localStorageState) {
-        // TODO: Validate local storage state.
-        return { ...state, items: localStorageState };
-      }
-      return state;
-    }
-
-    case SAVE_STATE_LOCALSTORAGE: {
-      window.localStorage.setItem(LOCALSTORAGE_NAME, JSON.stringify(action.payload.state));
-      return state;
-    }
-
     case ADD_ITEM: {
       const id = uuid();
       const todoItem = {
