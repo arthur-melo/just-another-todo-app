@@ -28,10 +28,14 @@ const FormItem = props => {
 
   return (
     <li
+      data-testid="form-item-listitem"
       className="form_item__component list-group-item form-control"
-      onMouseMove={() => updateDisplayMenu(true)}
+      onMouseOver={() => updateDisplayMenu(true)}
       onMouseLeave={() => updateDisplayMenu(false)}>
-      <div className="text-truncate" onClick={() => props.handleItemCompletion(props.item)}>
+      <div
+        className="text-truncate"
+        data-testid="form-item-item-completion"
+        onClick={() => props.handleItemCompletion(props.item)}>
         <div className="form_item__checkout d-inline-block">
           <Checkout isCompleted={props.item.completed} />
         </div>

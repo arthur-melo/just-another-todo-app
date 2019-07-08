@@ -2,6 +2,8 @@ import React from 'react';
 
 import { LOCALSTORAGE_NAME } from '../constants';
 
+import InitialState from './InitialState';
+
 import { LOAD_STATE_LOCALSTORAGE } from '../actions/LoadStateLocalStorage';
 import { SAVE_STATE_LOCALSTORAGE } from '../actions/SaveStateLocalStorage';
 
@@ -9,11 +11,10 @@ import LocalStorageReducer from './LocalStorage';
 
 describe('TodosReducer', () => {
   it('should handle default state', () => {
-    const initialState = {
-      items: [],
-    };
+    // LocalStorageReducer uses a shared InitialState.
+    expect(LocalStorageReducer(undefined, {})).toEqual(undefined);
 
-    expect(LocalStorageReducer(undefined, {})).toEqual(initialState);
+    expect(LocalStorageReducer(InitialState, {})).toEqual(InitialState);
   });
 
   it('should handle LOAD_STATE_LOCALSTORAGE', () => {
@@ -27,18 +28,12 @@ describe('TodosReducer', () => {
       type: LOAD_STATE_LOCALSTORAGE,
     };
 
-    // Empty initial localstorage.
-    expect(LocalStorageReducer(undefined, action)).toEqual({
-      items: [],
-    });
-
     localStorage.setItem(LOCALSTORAGE_NAME, JSON.stringify([item]));
 
-    expect(LocalStorageReducer(undefined, action)).toEqual({
+    expect(LocalStorageReducer(InitialState, action)).toEqual({
+      ...InitialState,
       items: [item],
     });
-
-    expect(localStorage.getItem).toBeCalledWith(LOCALSTORAGE_NAME);
   });
 
   it('should handle SAVE_STATE_LOCALSTORAGE', () => {
@@ -51,6 +46,7 @@ describe('TodosReducer', () => {
     const action = {
       type: SAVE_STATE_LOCALSTORAGE,
       payload: {
+        ...InitialState,
         state: {
           items: [item],
         },
@@ -60,7 +56,5 @@ describe('TodosReducer', () => {
     expect(LocalStorageReducer({ items: [item] }, action)).toEqual({
       items: [item],
     });
-
-    expect(localStorage.setItem).toBeCalledWith(LOCALSTORAGE_NAME, JSON.stringify({ items: [item] }));
   });
 });

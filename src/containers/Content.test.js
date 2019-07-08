@@ -1,15 +1,13 @@
 import React from 'react';
 
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { mount } from 'enzyme';
+import { fireEvent } from '@testing-library/react';
 
-import App from './App';
-import AppReducer from '../reducers';
+import { renderWithRedux } from '../testHelpers';
 
-describe('App', () => {
+import Content from './Content';
+
+describe('Content', () => {
   let props;
-  let store;
 
   beforeEach(() => {
     props = {
@@ -21,106 +19,137 @@ describe('App', () => {
       handleItemCompletion: jest.fn(),
       handleReorderItem: jest.fn(),
     };
-    store = createStore(AppReducer);
   });
 
-  it('should render without errors', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+  it('should render the Content component', () => {
+    const { container } = renderWithRedux(<Content {...props} />);
 
-    expect(component).toHaveLength(1);
+    expect(container.firstChild).toBeDefined();
   });
 
   it('should call handleAddItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+    const { getByPlaceholderText, getByTestId, getByText } = renderWithRedux(<Content {...props} />);
 
-    component
-      .find(App)
-      .props()
-      .handleAddItem('0');
+    const input = getByPlaceholderText('I want to do...');
+    const submitButton = getByTestId('form-submit');
 
-    expect(props.handleAddItem).toHaveBeenCalledWith('0');
+    fireEvent.change(input, { target: { value: 'addItem' } });
+    fireEvent.click(submitButton);
+    expect(getByText('addItem')).toBeDefined();
   });
 
   it('should call handleCancelEditItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+    const { getByText, getByTestId } = renderWithRedux(<Content {...props} />, {
+      initialState: {
+        items: [{ value: 'cancelEditItem', id: 'id', completed: false }],
+        editingItem: {},
+      },
+    });
 
-    component
-      .find(App)
-      .props()
-      .handleCancelEditItem();
+    // Element is listed.
+    expect(getByText('cancelEditItem')).toBeDefined();
 
-    expect(props.handleCancelEditItem).toHaveBeenCalled();
+    // Hover and click on its edit button.
+    const item = getByTestId('form-item-listitem');
+    fireEvent.mouseOver(item);
+    fireEvent.click(getByTestId('property-bar-edit-button'));
+
+    // Cancel editing button is being shown, element is hidden.
+    expect(getByTestId('form-edit-cancel-edit-button')).toBeDefined();
+
+    fireEvent.click(getByTestId('form-edit-cancel-edit-button'));
+
+    // Element is beign shown.
+    expect(getByText('cancelEditItem')).toBeDefined();
   });
 
   it('should call handleDeleteItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+    const { getAllByText, getByTestId, getAllByTestId } = renderWithRedux(<Content {...props} />, {
+      initialState: {
+        items: [
+          { value: 'deleteItem', id: 'id', completed: false },
+          { value: 'deleteItem', id: 'id2', completed: false },
+        ],
+        editingItem: {},
+      },
+    });
 
-    component
-      .find(App)
-      .props()
-      .handleDeleteItem('0');
+    // Elements are listed.
+    expect(getAllByText('deleteItem')).toHaveLength(2);
 
-    expect(props.handleDeleteItem).toHaveBeenCalledWith('0');
+    // Hover on one element and click on its delete button.
+    const item = getAllByTestId('form-item-listitem').shift();
+    fireEvent.mouseOver(item);
+    fireEvent.click(getByTestId('property-bar-delete-button'));
+
+    // Only one element should be left.
+    expect(getAllByText('deleteItem')).toHaveLength(1);
   });
 
   it('should call handleEditItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+    const { getByText, getByTestId, getByDisplayValue } = renderWithRedux(<Content {...props} />, {
+      initialState: {
+        items: [{ value: 'editItem', id: 'id', completed: false }],
+        editingItem: {},
+      },
+    });
 
-    component
-      .find(App)
-      .props()
-      .handleEditItem({});
+    // Element is listed.
+    expect(getByText('editItem')).toBeDefined();
 
-    expect(props.handleEditItem).toHaveBeenCalledWith({});
+    // Hover and click on its edit button.
+    const item = getByTestId('form-item-listitem');
+    fireEvent.mouseOver(item);
+    fireEvent.click(getByTestId('property-bar-edit-button'));
+
+    // Edit its value and submit.
+    const input = getByDisplayValue('editItem');
+    const submitButton = getByTestId('form-edit-submit-button');
+
+    fireEvent.change(input, { target: { value: 'editItemNewValue' } });
+    fireEvent.click(submitButton);
+
+    // Value should be altered.
+    expect(getByText('editItemNewValue')).toBeDefined();
   });
 
   it('should call handleItemCompletion', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+    const { getByText, getByTestId, getAllByRole } = renderWithRedux(<Content {...props} />, {
+      initialState: {
+        items: [{ value: 'itemCompletion', id: 'id', completed: false }],
+        editingItem: {},
+      },
+    });
 
-    component
-      .find(App)
-      .props()
-      .handleItemCompletion({});
+    // Element is listed.
+    expect(getByText('itemCompletion')).toBeDefined();
 
-    expect(props.handleItemCompletion).toHaveBeenCalledWith({});
+    // Hover and click on its item completion button.
+    fireEvent.click(getByTestId('form-item-item-completion'));
+
+    // Element should have a check-square icon next to it.
+    const svgElements = getAllByRole('img');
+
+    expect(svgElements).toContainEqual(expect.toHaveClass('fa-check-square'));
   });
 
   it('should call handleSelectEditItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+    const { queryByText, getByTestId } = renderWithRedux(<Content {...props} />, {
+      initialState: {
+        items: [{ value: 'selectEditItem', id: 'id', completed: false }],
+        editingItem: {},
+      },
+    });
 
-    component
-      .find(App)
-      .props()
-      .handleSelectEditItem('0');
+    // Element is listed.
+    expect(queryByText('selectEditItem')).toBeDefined();
 
-    expect(props.handleSelectEditItem).toHaveBeenCalledWith('0');
+    // Hover and click on its edit button.
+    const item = getByTestId('form-item-listitem');
+    fireEvent.mouseOver(item);
+    fireEvent.click(getByTestId('property-bar-edit-button'));
+
+    // Cancel editing button is being shown, element is hidden.
+    expect(queryByText('selectEditItem')).toBeNull();
   });
 });

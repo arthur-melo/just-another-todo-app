@@ -43,6 +43,7 @@ const Form = ({ handleAddItem }) => {
           <div className="col-auto">
             <button
               type="submit"
+              data-testid="form-submit"
               className="btn btn-primary"
               disabled={!itemValue}
               aria-label="Add todo item">

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import InitialState from './InitialState';
+
 import { ADD_ITEM } from '../actions/AddItem';
 import { CANCEL_EDIT_ITEM } from '../actions/CancelEditItem';
 import { DELETE_ITEM } from '../actions/DeleteItem';
@@ -12,11 +14,10 @@ import TodosReducer from './Todos';
 
 describe('TodosReducer', () => {
   it('should handle default state', () => {
-    const initialState = {
-      items: [],
-    };
+    // TodosReducer uses a shared InitialState.
+    expect(TodosReducer(undefined, {})).toEqual(undefined);
 
-    expect(TodosReducer(undefined, {})).toEqual(initialState);
+    expect(TodosReducer(InitialState, {})).toEqual(InitialState);
   });
 
   it('should handle ADD_ITEM', () => {
@@ -28,7 +29,8 @@ describe('TodosReducer', () => {
     };
 
     // Single item.
-    expect(TodosReducer(undefined, action)).toEqual({
+    expect(TodosReducer(InitialState, action)).toEqual({
+      ...InitialState,
       items: [
         {
           value: todoItemName,
@@ -73,11 +75,6 @@ describe('TodosReducer', () => {
       type: CANCEL_EDIT_ITEM,
     };
 
-    // No item selected.
-    expect(TodosReducer(undefined, action)).toEqual({
-      items: [],
-    });
-
     const item = {
       value: 'Test todo item',
       id: '0',
@@ -94,7 +91,7 @@ describe('TodosReducer', () => {
         action,
       ),
     ).toEqual({
-      editingItem: {},
+      ...InitialState,
       items: [item],
     });
   });
@@ -112,11 +109,6 @@ describe('TodosReducer', () => {
         id: item.id,
       },
     };
-
-    // No item selected.
-    expect(TodosReducer(undefined, action)).toEqual({
-      items: [],
-    });
 
     // Some item selected
     expect(
@@ -157,7 +149,7 @@ describe('TodosReducer', () => {
         action,
       ),
     ).toEqual({
-      editingItem: {},
+      ...InitialState,
       items: [{ ...item, value: newName }],
     });
   });

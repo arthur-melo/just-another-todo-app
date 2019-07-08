@@ -1,13 +1,9 @@
 import reduceReducers from 'reduce-reducers';
 
+import InitialState from './InitialState';
 import TodosReducer from './Todos';
 import LocalStorageReducer from './LocalStorage';
 
-const initialState = {
-  items: [],
-  editingItem: {},
-};
-
-const AppReducer = reduceReducers(initialState, LocalStorageReducer, TodosReducer);
+const AppReducer = reduceReducers(InitialState, LocalStorageReducer, TodosReducer);
 
 export default AppReducer;

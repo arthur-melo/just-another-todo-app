@@ -55,7 +55,6 @@ const FormEdit = props => {
             <input
               type="text"
               className="form-control"
-              data-testid="input-edit-todo-item"
               id="input-edit-todo-item"
               name="edit-todo-item"
               value={itemValue}
@@ -66,6 +65,7 @@ const FormEdit = props => {
 
           <div className="col-auto">
             <button
+              data-testid="form-edit-submit-button"
               type="submit"
               id="submit-edit-todo-item"
               className="btn btn-primary form_edit__button--first"
@@ -73,6 +73,7 @@ const FormEdit = props => {
               <FontAwesomeIcon icon={faCheck} />
             </button>
             <button
+              data-testid="form-edit-cancel-edit-button"
               id="cancel-edit-todo-item"
               type="button"
               className="btn btn-danger"
