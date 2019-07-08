@@ -1,12 +1,12 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+
+import { render } from '@testing-library/react';
 
 import Footer from './Footer';
 
-test('Footer gets rendered with a given classname', () => {
+it('should render the Footer component', () => {
   const className = 'test-classname';
-  const component = renderer.create(<Footer className={className} />);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-  expect(tree.props.className).toEqual(className);
+  const { asFragment } = render(<Footer className={className} />);
+
+  expect(asFragment).toMatchSnapshot();
 });

@@ -1,63 +1,61 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-export default class Form extends Component {
-  static propTypes = {
-    handleAddItem: PropTypes.func.isRequired,
-  };
+const formPropTypes = {
+  handleAddItem: PropTypes.func.isRequired,
+};
 
-  state = { itemValue: '' };
+const Form = ({ handleAddItem }) => {
+  const [itemValue, setItemValue] = useState('');
 
-  handleSubmitAndResetForm = ev => {
+  const handleSubmitAndResetForm = ev => {
     ev.preventDefault();
 
-    this.props.handleAddItem(this.state.itemValue);
+    handleAddItem(itemValue);
 
     // Reset value
-    return this.setState({
-      itemValue: '',
-    });
+    setItemValue('');
   };
 
-  handleItemChange = ev =>
-    this.setState({
-      itemValue: ev.target.value,
-    });
+  const handleItemChange = ev => setItemValue(ev.target.value);
 
-  render() {
-    return (
-      <div>
-        <form method="POST" autoComplete="on" onSubmit={this.handleSubmitAndResetForm}>
-          <div className="form-row">
-            <div className="col">
-              <input
-                type="text"
-                className="form-control"
-                id="new-todo-item"
-                name="new-todo-item"
-                placeholder="I want to do..."
-                aria-label="Todo item description"
-                value={this.state.itemValue}
-                onChange={this.handleItemChange}
-                autoFocus
-              />
-            </div>
-
-            <div className="col-auto">
-              <button
-                type="submit"
-                className="btn btn-primary"
-                disabled={!this.state.itemValue}
-                aria-label="Add todo item">
-                <FontAwesomeIcon icon={faPlus} />
-              </button>
-            </div>
+  return (
+    <div>
+      <form method="POST" autoComplete="on" onSubmit={handleSubmitAndResetForm}>
+        <div className="form-row">
+          <div className="col">
+            <input
+              type="text"
+              className="form-control"
+              id="new-todo-item"
+              name="new-todo-item"
+              placeholder="I want to do..."
+              aria-label="Todo item description"
+              value={itemValue}
+              onChange={handleItemChange}
+              autoFocus
+            />
           </div>
-        </form>
-      </div>
-    );
-  }
-}
+
+          <div className="col-auto">
+            <button
+              type="submit"
+              data-testid="form-submit"
+              className="btn btn-primary"
+              disabled={!itemValue}
+              aria-label="Add todo item">
+              <FontAwesomeIcon icon={faPlus} />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+Form.propTypes = formPropTypes;
+
+export default Form;

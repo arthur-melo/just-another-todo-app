@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 
 import PropertyBar from './PropertyBar';
 
@@ -16,26 +16,18 @@ describe('Checkout', () => {
   });
 
   it('should set handleSelectEditItem prop when edit button is clicked', () => {
-    const component = mount(<PropertyBar {...props} />);
+    const { getByTestId } = render(<PropertyBar {...props} />);
 
-    component
-      .find('.property_bar__button')
-      .first()
-      .simulate('click');
+    fireEvent.click(getByTestId('property-bar-edit-button'));
 
-    expect(props.handleSelectEditItem).toBeCalled();
-    expect(props.handleDeleteItem).not.toHaveBeenCalled();
+    expect(props.handleSelectEditItem).toHaveBeenCalled();
   });
 
   it('should set handleDeleteItem prop when delete button is clicked', () => {
-    const component = mount(<PropertyBar {...props} />);
+    const { getByTestId } = render(<PropertyBar {...props} />);
 
-    component
-      .find('.property_bar__button')
-      .last()
-      .simulate('click');
+    fireEvent.click(getByTestId('property-bar-delete-button'));
 
-    expect(props.handleDeleteItem).toBeCalled();
-    expect(props.handleSelectEditItem).not.toHaveBeenCalled();
+    expect(props.handleDeleteItem).toHaveBeenCalled();
   });
 });

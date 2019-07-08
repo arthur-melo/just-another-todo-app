@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { shallow } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 
 import FormItem from './FormItem';
-import PropertyBar from '../PropertyBar/PropertyBar';
 
 describe('FormItem', () => {
   let props;
@@ -22,36 +21,25 @@ describe('FormItem', () => {
   });
 
   it('should set handleItemCompletion prop when an item is clicked', () => {
-    const component = shallow(<FormItem {...props} />);
+    const { getByTestId } = render(<FormItem {...props} />);
 
-    component
-      .find('.form_item__component')
-      .children()
-      .first()
-      .simulate('click');
+    fireEvent.click(getByTestId('form-item-item-completion'));
 
-    expect(props.handleItemCompletion).toHaveBeenCalledWith(props.item);
-    expect(props.handleDeleteItem).not.toHaveBeenCalled();
-    expect(props.handleSelectEditItem).not.toHaveBeenCalled();
+    expect(props.handleItemCompletion).toHaveBeenCalled();
   });
 
-  it('should show a PropertyBar component when displayMenu is set', () => {
-    const component = shallow(<FormItem {...props} />).update();
+  it('should set displayMenu prop when `mouseOver/mouseOut` events are fired', () => {
+    const { queryByTestId, getByTestId } = render(<FormItem {...props} />);
 
-    expect(component.state('displayMenu')).toBe(false);
-    expect(component.find(PropertyBar).length).toBe(0);
+    const item = getByTestId('form-item-listitem');
+    fireEvent.mouseOver(item);
 
-    component.instance().setDisplayMenu(true);
-    expect(component.find(PropertyBar).length).toBe(1);
-  });
+    expect(queryByTestId('property-bar-edit-button')).toBeDefined();
+    expect(queryByTestId('property-bar-delete-button')).toBeDefined();
 
-  it('should set displayMenu prop when `mouseMove/mouseLeave` events are fired', () => {
-    const component = shallow(<FormItem {...props} />);
+    fireEvent.mouseOut(item);
 
-    component.find('.form_item__component').simulate('mouseMove');
-    expect(component.state('displayMenu')).toBe(true);
-
-    component.find('.form_item__component').simulate('mouseLeave');
-    expect(component.state('displayMenu')).toBe(false);
+    expect(queryByTestId('property-bar-edit-button')).toBeNull();
+    expect(queryByTestId('property-bar-delete-button')).toBeNull();
   });
 });

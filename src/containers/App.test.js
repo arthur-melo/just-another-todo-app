@@ -1,127 +1,47 @@
 import React from 'react';
 
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { mount } from 'enzyme';
+import { fireEvent } from '@testing-library/react';
+
+import { renderWithRedux } from '../testHelpers';
+import { LOCALSTORAGE_NAME } from '../constants';
 
 import App from './App';
-import AppReducer from '../reducers';
 
 describe('App', () => {
   let props;
-  let store;
 
   beforeEach(() => {
     props = {
-      handleAddItem: jest.fn(),
-      handleCancelEditItem: jest.fn(),
-      handleDeleteItem: jest.fn(),
-      handleEditItem: jest.fn(),
-      handleSelectEditItem: jest.fn(),
-      handleItemCompletion: jest.fn(),
       handleLoadStateLocalStorage: jest.fn(),
       handleSaveStateLocalStorage: jest.fn(),
     };
-    store = createStore(AppReducer);
   });
 
-  it('should render without errors', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+  it('should render the App component', () => {
+    const { container } = renderWithRedux(<App {...props} />);
 
-    expect(component).toHaveLength(1);
+    expect(container.firstChild).toBeDefined();
   });
 
-  it('should call handleAddItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+  it('should call handleLoadStateLocalStorage', () => {
+    localStorage.setItem(LOCALSTORAGE_NAME, '[{"value":"load","id":"id","completed":false}]');
 
-    component
-      .find(App)
-      .props()
-      .handleAddItem('0');
+    const { getByText } = renderWithRedux(<App {...props} />);
 
-    expect(props.handleAddItem).toHaveBeenCalledWith('0');
+    expect(getByText('load')).toBeDefined();
   });
 
-  it('should call handleCancelEditItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
+  it('should call handleSaveStateLocalStorage', () => {
+    const { getByPlaceholderText, getByTestId, getByText } = renderWithRedux(<App {...props} />);
 
-    component
-      .find(App)
-      .props()
-      .handleCancelEditItem();
+    // Add a new item
+    const input = getByPlaceholderText('I want to do...');
+    const submitButton = getByTestId('form-submit');
 
-    expect(props.handleCancelEditItem).toHaveBeenCalled();
-  });
+    fireEvent.change(input, { target: { value: 'save' } });
+    fireEvent.click(submitButton);
 
-  it('should call handleDeleteItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
-
-    component
-      .find(App)
-      .props()
-      .handleDeleteItem('0');
-
-    expect(props.handleDeleteItem).toHaveBeenCalledWith('0');
-  });
-
-  it('should call handleEditItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
-
-    component
-      .find(App)
-      .props()
-      .handleEditItem({});
-
-    expect(props.handleEditItem).toHaveBeenCalledWith({});
-  });
-
-  it('should call handleItemCompletion', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
-
-    component
-      .find(App)
-      .props()
-      .handleItemCompletion({});
-
-    expect(props.handleItemCompletion).toHaveBeenCalledWith({});
-  });
-
-  it('should call handleSelectEditItem', () => {
-    const component = mount(
-      <Provider store={store}>
-        <App {...props} />
-      </Provider>,
-    );
-
-    component
-      .find(App)
-      .props()
-      .handleSelectEditItem('0');
-
-    expect(props.handleSelectEditItem).toHaveBeenCalledWith('0');
+    // Item should be defined
+    expect(getByText('save')).toBeDefined();
   });
 });
