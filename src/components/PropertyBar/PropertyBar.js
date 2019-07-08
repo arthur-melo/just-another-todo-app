@@ -14,11 +14,15 @@ const propertyBarPropTypes = {
 const PropertyBar = props => (
   <div className="property_bar__component">
     <button
+      data-testid="property-bar-edit-button"
       className="btn btn-secondary property_bar__button"
       onClick={() => props.handleSelectEditItem(props.id)}>
       <FontAwesomeIcon icon={faEdit} size="sm" />
     </button>
-    <button className="btn btn-danger property_bar__button" onClick={() => props.handleDeleteItem(props.id)}>
+    <button
+      data-testid="property-bar-delete-button"
+      className="btn btn-danger property_bar__button"
+      onClick={() => props.handleDeleteItem(props.id)}>
       <FontAwesomeIcon icon={faTrash} size="sm" />
     </button>
   </div>

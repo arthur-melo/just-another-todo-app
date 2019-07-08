@@ -1,25 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer gets rendered with a given classname 1`] = `
-<div
-  className="test-classname"
->
-  <div
-    className="footer__container"
-  >
-    <p
-      className="footer__p"
-    >
-      Made using React + Redux -
-       
-      <a
-        href="https://github.com/arthur-melo"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        @arthur-melo
-      </a>
-    </p>
-  </div>
-</div>
-`;
+exports[`should render the Footer component 1`] = `[Function]`;

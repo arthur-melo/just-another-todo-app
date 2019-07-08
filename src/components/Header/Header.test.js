@@ -1,12 +1,12 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+
+import { render } from '@testing-library/react';
 
 import Header from './Header';
 
-test('Header gets rendered with a given classname', () => {
+it('should render the Header component', () => {
   const className = 'test-classname';
-  const component = renderer.create(<Header className={className} />);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-  expect(tree.props.className).toEqual(className);
+  const { asFragment } = render(<Header className={className} />);
+
+  expect(asFragment).toMatchSnapshot();
 });

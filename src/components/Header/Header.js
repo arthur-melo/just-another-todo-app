@@ -6,7 +6,7 @@ import { faListAlt } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
 
 const headerPropTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 const Header = ({ className }) => (

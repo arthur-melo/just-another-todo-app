@@ -34,6 +34,7 @@ npm run start
 - [Bootstrap (Flatly theme from Bootswatch)](https://getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com/)
 - [React-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)
+- [React-testing-library](https://testing-library.com/docs/react-testing-library/intro)
 
 ## License
 

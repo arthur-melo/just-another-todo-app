@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Footer.css';
 
 const footerPropTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 const Footer = ({ className }) => (
