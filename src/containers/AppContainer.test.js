@@ -5,7 +5,7 @@ import { fireEvent } from '@testing-library/react';
 import { renderWithRedux } from '../testHelpers';
 import { LOCALSTORAGE_NAME } from '../constants';
 
-import App from './App';
+import AppContainer from './AppContainer';
 
 describe('App', () => {
   let props;
@@ -18,7 +18,7 @@ describe('App', () => {
   });
 
   it('should render the App component', () => {
-    const { container } = renderWithRedux(<App {...props} />);
+    const { container } = renderWithRedux(<AppContainer {...props} />);
 
     expect(container.firstChild).toBeDefined();
   });
@@ -26,13 +26,13 @@ describe('App', () => {
   it('should call handleLoadStateLocalStorage', () => {
     localStorage.setItem(LOCALSTORAGE_NAME, '[{"value":"load","id":"id","completed":false}]');
 
-    const { getByText } = renderWithRedux(<App {...props} />);
+    const { getByText } = renderWithRedux(<AppContainer {...props} />);
 
     expect(getByText('load')).toBeDefined();
   });
 
   it('should call handleSaveStateLocalStorage', () => {
-    const { getByPlaceholderText, getByTestId, getByText } = renderWithRedux(<App {...props} />);
+    const { getByPlaceholderText, getByTestId, getByText } = renderWithRedux(<AppContainer {...props} />);
 
     // Add a new item
     const input = getByPlaceholderText('I want to do...');
