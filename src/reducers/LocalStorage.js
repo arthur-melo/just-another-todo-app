@@ -15,7 +15,12 @@ const LocalStorageReducer = (state, action) => {
     }
 
     case SAVE_STATE_LOCALSTORAGE: {
-      window.localStorage.setItem(LOCALSTORAGE_NAME, JSON.stringify(action.payload.state));
+      if (action.payload.state.length === 0) {
+        window.localStorage.removeItem(LOCALSTORAGE_NAME);
+      } else {
+        window.localStorage.setItem(LOCALSTORAGE_NAME, JSON.stringify(action.payload.state));
+      }
+
       return state;
     }
 

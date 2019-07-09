@@ -27,6 +27,7 @@ const AppContainer = props => {
   }, [handleLoadStateLocalStorage]);
 
   useEffect(() => {
+    // TODO: Better handle save states.
     handleSaveStateLocalStorage(items);
   }, [handleSaveStateLocalStorage, items]);
 
