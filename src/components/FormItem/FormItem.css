@@ -6,8 +6,13 @@
   margin-bottom: 0.5em;
 }
 
+.form_item__component-completed {
+  opacity: 0.4;
+}
+
 .form_item__component:hover {
   background: var(--background-color);
+  opacity: 1;
 }
 
 .form_item__checkout {

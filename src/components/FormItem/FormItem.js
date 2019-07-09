@@ -24,10 +24,13 @@ const FormItem = props => {
     }
   };
 
+  let liClass = 'form_item__component list-group-item form-control';
+  liClass = props.item.completed ? liClass + ' form_item__component-completed' : liClass;
+
   return (
     <li
       data-testid="form-item-listitem"
-      className="form_item__component list-group-item form-control"
+      className={liClass}
       onMouseOver={() => updateDisplayMenu(true)}
       onMouseLeave={() => updateDisplayMenu(false)}>
       <div
