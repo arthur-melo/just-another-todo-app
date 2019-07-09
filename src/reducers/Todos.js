@@ -46,7 +46,9 @@ const TodosReducer = (state, action) => {
     case ITEM_COMPLETION: {
       const items = state.items.map(item => {
         if (item.id === action.payload.modifiedItem.id) {
-          item.completed = !item.completed;
+          const newItem = { ...item };
+          newItem.completed = !newItem.completed;
+          return newItem;
         }
 
         return item;
