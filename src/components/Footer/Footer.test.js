@@ -4,9 +4,12 @@ import { render } from '@testing-library/react';
 
 import Footer from './Footer';
 
-it('should render the Footer component', () => {
-  const className = 'test-classname';
-  const { asFragment } = render(<Footer className={className} />);
+describe('Footer', () => {
+  it('should render the Footer component', () => {
+    const className = 'test-classname';
 
-  expect(asFragment).toMatchSnapshot();
+    const { container } = render(<Footer className={className} />);
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });

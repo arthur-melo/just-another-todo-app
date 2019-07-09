@@ -1,47 +1,49 @@
 import React from 'react';
 
 import { fireEvent } from '@testing-library/react';
+import configureMockStore from 'redux-mock-store';
 
-import { renderWithRedux } from '../testHelpers';
 import { LOCALSTORAGE_NAME } from '../constants';
+import { renderWithRedux } from '../testHelpers';
+import InitialState from '../reducers/InitialState';
+import { LOAD_STATE_LOCALSTORAGE } from '../actions/LoadStateLocalStorage';
+import { SAVE_STATE_LOCALSTORAGE } from '../actions/SaveStateLocalStorage';
 
 import AppContainer from './AppContainer';
 
-describe('App', () => {
-  let props;
+const mockStore = configureMockStore();
 
-  beforeEach(() => {
-    props = {
-      handleLoadStateLocalStorage: jest.fn(),
-      handleSaveStateLocalStorage: jest.fn(),
-    };
-  });
-
+describe('AppContainer', () => {
   it('should render the App component', () => {
-    const { container } = renderWithRedux(<AppContainer {...props} />);
+    const { asFragment } = renderWithRedux(<AppContainer />);
 
-    expect(container.firstChild).toBeDefined();
+    expect(asFragment).toBeDefined();
   });
 
   it('should call handleLoadStateLocalStorage', () => {
-    localStorage.setItem(LOCALSTORAGE_NAME, '[{"value":"load","id":"id","completed":false}]');
+    localStorage.setItem(LOCALSTORAGE_NAME, '[{"value":"testItem","id":"0","completed":false}]');
 
-    const { getByText } = renderWithRedux(<AppContainer {...props} />);
+    const { store } = renderWithRedux(<AppContainer />, {
+      store: mockStore(InitialState),
+    });
 
-    expect(getByText('load')).toBeDefined();
+    const actions = store.getActions();
+    expect(actions).toContainEqual(expect.objectContaining({ type: LOAD_STATE_LOCALSTORAGE }));
   });
 
   it('should call handleSaveStateLocalStorage', () => {
-    const { getByPlaceholderText, getByTestId, getByText } = renderWithRedux(<AppContainer {...props} />);
+    const { getByPlaceholderText, getByTestId, store } = renderWithRedux(<AppContainer />, {
+      store: mockStore(InitialState),
+    });
 
     // Add a new item
     const input = getByPlaceholderText('I want to do...');
     const submitButton = getByTestId('form-submit');
 
-    fireEvent.change(input, { target: { value: 'save' } });
+    fireEvent.change(input, { target: { value: 'testItem' } });
     fireEvent.click(submitButton);
 
-    // Item should be defined
-    expect(getByText('save')).toBeDefined();
+    const actions = store.getActions();
+    expect(actions).toContainEqual(expect.objectContaining({ type: SAVE_STATE_LOCALSTORAGE }));
   });
 });
