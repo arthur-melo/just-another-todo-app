@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-import Form from '../Form/Form';
-import FormEdit from '../FormEdit/FormEdit';
-import FormItem from '../FormItem/FormItem';
+import FormContainer from '../../containers/FormContainer';
+import FormEditContainer from '../../containers/FormEditContainer';
+import FormItemContainer from '../../containers/FormItemContainer';
 
 import './Content.css';
 
@@ -22,13 +22,7 @@ const contentPropTypes = {
     id: PropTypes.string,
     completed: PropTypes.bool,
   }).isRequired,
-  handleAddItem: PropTypes.func.isRequired,
-  handleCancelEditItem: PropTypes.func.isRequired,
-  handleDeleteItem: PropTypes.func.isRequired,
-  handleEditItem: PropTypes.func.isRequired,
-  handleItemCompletion: PropTypes.func.isRequired,
   handleReorderItem: PropTypes.func.isRequired,
-  handleSelectEditItem: PropTypes.func.isRequired,
 };
 
 const Content = props => {
@@ -51,7 +45,7 @@ const Content = props => {
                 <h5 className="card-title">Welcome!</h5>
                 <p className="card-text">To get started, add some items to your list:</p>
                 <div className="d-inline-block">
-                  <Form handleAddItem={props.handleAddItem} />
+                  <FormContainer />
                 </div>
               </div>
             </div>
@@ -75,18 +69,9 @@ const Content = props => {
                                   {...provided.dragHandleProps}
                                   className="content__todos__li">
                                   {props.editingItem.id === item.id ? (
-                                    <FormEdit
-                                      item={props.editingItem}
-                                      handleEditItem={props.handleEditItem}
-                                      handleCancelEditItem={props.handleCancelEditItem}
-                                    />
+                                    <FormEditContainer item={item} />
                                   ) : (
-                                    <FormItem
-                                      item={item}
-                                      handleDeleteItem={props.handleDeleteItem}
-                                      handleSelectEditItem={props.handleSelectEditItem}
-                                      handleItemCompletion={props.handleItemCompletion}
-                                    />
+                                    <FormItemContainer item={item} />
                                   )}
                                 </div>
                               )}

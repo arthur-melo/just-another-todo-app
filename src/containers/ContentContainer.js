@@ -4,13 +4,7 @@ import { connect } from 'react-redux';
 
 import Content from '../components/Content/Content';
 
-import { AddItem } from '../actions/AddItem';
-import { CancelEditItem } from '../actions/CancelEditItem';
-import { DeleteItem } from '../actions/DeleteItem';
-import { EditItem } from '../actions/EditItem';
-import { ItemCompletion } from '../actions/ItemCompletion';
 import { ReorderItem } from '../actions/ReorderItem';
-import { SelectEditItem } from '../actions/SelectEditItem';
 
 const contentPropTypes = {
   className: PropTypes.string,
@@ -26,13 +20,7 @@ const contentPropTypes = {
     id: PropTypes.string,
     completed: PropTypes.bool,
   }).isRequired,
-  handleAddItem: PropTypes.func.isRequired,
-  handleCancelEditItem: PropTypes.func.isRequired,
-  handleDeleteItem: PropTypes.func.isRequired,
-  handleEditItem: PropTypes.func.isRequired,
-  handleItemCompletion: PropTypes.func.isRequired,
   handleReorderItem: PropTypes.func.isRequired,
-  handleSelectEditItem: PropTypes.func.isRequired,
 };
 
 const ContentContainer = props => <Content {...props} />;
@@ -45,13 +33,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  handleAddItem: AddItem,
-  handleCancelEditItem: CancelEditItem,
-  handleDeleteItem: DeleteItem,
-  handleEditItem: EditItem,
-  handleItemCompletion: ItemCompletion,
   handleReorderItem: ReorderItem,
-  handleSelectEditItem: SelectEditItem,
 };
 
 export default connect(

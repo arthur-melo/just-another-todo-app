@@ -12,7 +12,7 @@ import 'bootswatch/dist/flatly/bootstrap.min.css';
 import './stylesheets/index.css';
 import './stylesheets/animations.css';
 
-import App from './containers/App';
+import AppContainer from './containers/AppContainer';
 
 const store = createStore(
   AppReducer,
@@ -21,7 +21,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppContainer />
   </Provider>,
   document.getElementById('app'),
 );
