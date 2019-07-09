@@ -65,6 +65,7 @@ const Content = props => {
                               {provided => (
                                 <div
                                   ref={provided.innerRef}
+                                  data-testid="content-draggable-item"
                                   {...provided.draggableProps}
                                   {...provided.dragHandleProps}
                                   className="content__todos__li">

@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
+
+import { renderWithRedux } from '../../testHelpers';
 
 import FormItem from './FormItem';
 
@@ -14,14 +16,12 @@ describe('FormItem', () => {
         id: '0',
         completed: false,
       },
-      handleDeleteItem: jest.fn(),
-      handleSelectEditItem: jest.fn(),
       handleItemCompletion: jest.fn(),
     };
   });
 
   it('should set handleItemCompletion prop when an item is clicked', () => {
-    const { getByTestId } = render(<FormItem {...props} />);
+    const { getByTestId } = renderWithRedux(<FormItem {...props} />);
 
     fireEvent.click(getByTestId('form-item-item-completion'));
 
@@ -29,7 +29,7 @@ describe('FormItem', () => {
   });
 
   it('should set displayMenu prop when `mouseOver/mouseOut` events are fired', () => {
-    const { queryByTestId, getByTestId } = render(<FormItem {...props} />);
+    const { queryByTestId, getByTestId } = renderWithRedux(<FormItem {...props} />);
 
     const item = getByTestId('form-item-listitem');
     fireEvent.mouseOver(item);
@@ -37,7 +37,7 @@ describe('FormItem', () => {
     expect(queryByTestId('property-bar-edit-button')).toBeDefined();
     expect(queryByTestId('property-bar-delete-button')).toBeDefined();
 
-    fireEvent.mouseOut(item);
+    fireEvent.mouseLeave(item);
 
     expect(queryByTestId('property-bar-edit-button')).toBeNull();
     expect(queryByTestId('property-bar-delete-button')).toBeNull();

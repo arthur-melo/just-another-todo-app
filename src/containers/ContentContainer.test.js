@@ -1,155 +1,68 @@
 import React from 'react';
 
-import { fireEvent } from '@testing-library/react';
+import configureMockStore from 'redux-mock-store';
+import {
+  mockGetComputedSpacing,
+  mockDndElSpacing,
+  makeDnd,
+  DND_DRAGGABLE_DATA_ATTR,
+  DND_DIRECTION_DOWN,
+} from 'react-beautiful-dnd-test-utils';
 
 import { renderWithRedux } from '../testHelpers';
+import { REORDER_ITEM } from '../actions/ReorderItem';
 
 import ContentContainer from './ContentContainer';
 
-describe('Content', () => {
+const mockStore = configureMockStore();
+
+describe('ContentContainer', () => {
   let props;
 
   beforeEach(() => {
     props = {
-      handleAddItem: jest.fn(),
-      handleCancelEditItem: jest.fn(),
-      handleDeleteItem: jest.fn(),
-      handleEditItem: jest.fn(),
-      handleSelectEditItem: jest.fn(),
-      handleItemCompletion: jest.fn(),
-      handleReorderItem: jest.fn(),
+      className: 'testClassname',
     };
+
+    mockGetComputedSpacing();
   });
 
-  it('should render the Content component', () => {
-    const { container } = renderWithRedux(<ContentContainer {...props} />);
+  it('should render the ContentContainer component', () => {
+    const { asFragment } = renderWithRedux(<ContentContainer {...props} />);
 
-    expect(container.firstChild).toBeDefined();
+    expect(asFragment).toBeDefined();
   });
 
-  it('should call handleAddItem', () => {
-    const { getByPlaceholderText, getByTestId, getByText } = renderWithRedux(<ContentContainer {...props} />);
-
-    const input = getByPlaceholderText('I want to do...');
-    const submitButton = getByTestId('form-submit');
-
-    fireEvent.change(input, { target: { value: 'addItem' } });
-    fireEvent.click(submitButton);
-    expect(getByText('addItem')).toBeDefined();
-  });
-
-  it('should call handleCancelEditItem', () => {
-    const { getByText, getByTestId } = renderWithRedux(<ContentContainer {...props} />, {
-      initialState: {
-        items: [{ value: 'cancelEditItem', id: 'id', completed: false }],
-        editingItem: {},
-      },
+  it('should call handleReorderItem', async () => {
+    const initialState = {
+      items: [
+        { value: 'testItem1', id: '0', completed: false },
+        { value: 'testItem2', id: '1', completed: false },
+      ],
+      editingItem: {},
+    };
+    const rtlUtils = renderWithRedux(<ContentContainer {...props} />, {
+      store: mockStore(initialState),
     });
 
-    // Element is listed.
-    expect(getByText('cancelEditItem')).toBeDefined();
+    mockDndElSpacing(rtlUtils);
 
-    // Hover and click on its edit button.
-    const item = getByTestId('form-item-listitem');
-    fireEvent.mouseOver(item);
-    fireEvent.click(getByTestId('property-bar-edit-button'));
+    const makeGetDragEl = text => () => rtlUtils.getByText(text).closest(DND_DRAGGABLE_DATA_ATTR);
 
-    // Cancel editing button is being shown, element is hidden.
-    expect(getByTestId('form-edit-cancel-edit-button')).toBeDefined();
+    const { getByText, getAllByTestId, store } = { makeGetDragEl, ...rtlUtils };
 
-    fireEvent.click(getByTestId('form-edit-cancel-edit-button'));
-
-    // Element is beign shown.
-    expect(getByText('cancelEditItem')).toBeDefined();
-  });
-
-  it('should call handleDeleteItem', () => {
-    const { getAllByText, getByTestId, getAllByTestId } = renderWithRedux(<ContentContainer {...props} />, {
-      initialState: {
-        items: [
-          { value: 'deleteItem', id: 'id', completed: false },
-          { value: 'deleteItem', id: 'id2', completed: false },
-        ],
-        editingItem: {},
-      },
+    await makeDnd({
+      getByText,
+      getDragEl: makeGetDragEl('testItem1'),
+      direction: DND_DIRECTION_DOWN,
+      positions: 1,
     });
 
-    // Elements are listed.
-    expect(getAllByText('deleteItem')).toHaveLength(2);
+    const items = getAllByTestId('content-draggable-item');
 
-    // Hover on one element and click on its delete button.
-    const item = getAllByTestId('form-item-listitem').shift();
-    fireEvent.mouseOver(item);
-    fireEvent.click(getByTestId('property-bar-delete-button'));
+    expect(items).toHaveLength(2);
 
-    // Only one element should be left.
-    expect(getAllByText('deleteItem')).toHaveLength(1);
-  });
-
-  it('should call handleEditItem', () => {
-    const { getByText, getByTestId, getByDisplayValue } = renderWithRedux(<ContentContainer {...props} />, {
-      initialState: {
-        items: [{ value: 'editItem', id: 'id', completed: false }],
-        editingItem: {},
-      },
-    });
-
-    // Element is listed.
-    expect(getByText('editItem')).toBeDefined();
-
-    // Hover and click on its edit button.
-    const item = getByTestId('form-item-listitem');
-    fireEvent.mouseOver(item);
-    fireEvent.click(getByTestId('property-bar-edit-button'));
-
-    // Edit its value and submit.
-    const input = getByDisplayValue('editItem');
-    const submitButton = getByTestId('form-edit-submit-button');
-
-    fireEvent.change(input, { target: { value: 'editItemNewValue' } });
-    fireEvent.click(submitButton);
-
-    // Value should be altered.
-    expect(getByText('editItemNewValue')).toBeDefined();
-  });
-
-  it('should call handleItemCompletion', () => {
-    const { getByText, getByTestId, getAllByRole } = renderWithRedux(<ContentContainer {...props} />, {
-      initialState: {
-        items: [{ value: 'itemCompletion', id: 'id', completed: false }],
-        editingItem: {},
-      },
-    });
-
-    // Element is listed.
-    expect(getByText('itemCompletion')).toBeDefined();
-
-    // Hover and click on its item completion button.
-    fireEvent.click(getByTestId('form-item-item-completion'));
-
-    // Element should have a check-square icon next to it.
-    const svgElements = getAllByRole('img');
-
-    expect(svgElements).toContainEqual(expect.toHaveClass('fa-check-square'));
-  });
-
-  it('should call handleSelectEditItem', () => {
-    const { queryByText, getByTestId } = renderWithRedux(<ContentContainer {...props} />, {
-      initialState: {
-        items: [{ value: 'selectEditItem', id: 'id', completed: false }],
-        editingItem: {},
-      },
-    });
-
-    // Element is listed.
-    expect(queryByText('selectEditItem')).toBeDefined();
-
-    // Hover and click on its edit button.
-    const item = getByTestId('form-item-listitem');
-    fireEvent.mouseOver(item);
-    fireEvent.click(getByTestId('property-bar-edit-button'));
-
-    // Cancel editing button is being shown, element is hidden.
-    expect(queryByText('selectEditItem')).toBeNull();
+    const actions = store.getActions();
+    expect(actions).toMatchObject([{ type: REORDER_ITEM }]);
   });
 });
