@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './FormItem.css';
 
-import PropertyBar from '../PropertyBar/PropertyBar';
+import PropertyBarContainer from '../../containers/PropertyBarContainer';
 import Checkout from '../Checkout/Checkout';
 
 const formItemPropTypes = {
@@ -12,8 +12,6 @@ const formItemPropTypes = {
     id: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired,
   }).isRequired,
-  handleDeleteItem: PropTypes.func.isRequired,
-  handleSelectEditItem: PropTypes.func.isRequired,
   handleItemCompletion: PropTypes.func.isRequired,
 };
 
@@ -42,13 +40,7 @@ const FormItem = props => {
         <span className="form_item__text">{props.item.value}</span>
       </div>
 
-      {displayMenu ? (
-        <PropertyBar
-          id={props.item.id}
-          handleSelectEditItem={props.handleSelectEditItem}
-          handleDeleteItem={props.handleDeleteItem}
-        />
-      ) : null}
+      {displayMenu ? <PropertyBarContainer id={props.item.id} /> : null}
     </li>
   );
 };

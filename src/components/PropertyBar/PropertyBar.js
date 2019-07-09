@@ -7,8 +7,8 @@ import './PropertyBar.css';
 
 const propertyBarPropTypes = {
   id: PropTypes.string.isRequired,
-  handleSelectEditItem: PropTypes.func.isRequired,
   handleDeleteItem: PropTypes.func.isRequired,
+  handleSelectEditItem: PropTypes.func.isRequired,
 };
 
 const PropertyBar = props => (

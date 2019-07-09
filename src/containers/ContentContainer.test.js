@@ -4,7 +4,7 @@ import { fireEvent } from '@testing-library/react';
 
 import { renderWithRedux } from '../testHelpers';
 
-import Content from './Content';
+import ContentContainer from './ContentContainer';
 
 describe('Content', () => {
   let props;
@@ -22,13 +22,13 @@ describe('Content', () => {
   });
 
   it('should render the Content component', () => {
-    const { container } = renderWithRedux(<Content {...props} />);
+    const { container } = renderWithRedux(<ContentContainer {...props} />);
 
     expect(container.firstChild).toBeDefined();
   });
 
   it('should call handleAddItem', () => {
-    const { getByPlaceholderText, getByTestId, getByText } = renderWithRedux(<Content {...props} />);
+    const { getByPlaceholderText, getByTestId, getByText } = renderWithRedux(<ContentContainer {...props} />);
 
     const input = getByPlaceholderText('I want to do...');
     const submitButton = getByTestId('form-submit');
@@ -39,7 +39,7 @@ describe('Content', () => {
   });
 
   it('should call handleCancelEditItem', () => {
-    const { getByText, getByTestId } = renderWithRedux(<Content {...props} />, {
+    const { getByText, getByTestId } = renderWithRedux(<ContentContainer {...props} />, {
       initialState: {
         items: [{ value: 'cancelEditItem', id: 'id', completed: false }],
         editingItem: {},
@@ -64,7 +64,7 @@ describe('Content', () => {
   });
 
   it('should call handleDeleteItem', () => {
-    const { getAllByText, getByTestId, getAllByTestId } = renderWithRedux(<Content {...props} />, {
+    const { getAllByText, getByTestId, getAllByTestId } = renderWithRedux(<ContentContainer {...props} />, {
       initialState: {
         items: [
           { value: 'deleteItem', id: 'id', completed: false },
@@ -87,7 +87,7 @@ describe('Content', () => {
   });
 
   it('should call handleEditItem', () => {
-    const { getByText, getByTestId, getByDisplayValue } = renderWithRedux(<Content {...props} />, {
+    const { getByText, getByTestId, getByDisplayValue } = renderWithRedux(<ContentContainer {...props} />, {
       initialState: {
         items: [{ value: 'editItem', id: 'id', completed: false }],
         editingItem: {},
@@ -114,7 +114,7 @@ describe('Content', () => {
   });
 
   it('should call handleItemCompletion', () => {
-    const { getByText, getByTestId, getAllByRole } = renderWithRedux(<Content {...props} />, {
+    const { getByText, getByTestId, getAllByRole } = renderWithRedux(<ContentContainer {...props} />, {
       initialState: {
         items: [{ value: 'itemCompletion', id: 'id', completed: false }],
         editingItem: {},
@@ -134,7 +134,7 @@ describe('Content', () => {
   });
 
   it('should call handleSelectEditItem', () => {
-    const { queryByText, getByTestId } = renderWithRedux(<Content {...props} />, {
+    const { queryByText, getByTestId } = renderWithRedux(<ContentContainer {...props} />, {
       initialState: {
         items: [{ value: 'selectEditItem', id: 'id', completed: false }],
         editingItem: {},
