@@ -43,7 +43,9 @@ describe('AppContainer', () => {
     fireEvent.change(input, { target: { value: 'testItem' } });
     fireEvent.click(submitButton);
 
-    const actions = store.getActions();
-    expect(actions).toContainEqual(expect.objectContaining({ type: SAVE_STATE_LOCALSTORAGE }));
+    setTimeout(() => {
+      const actions = store.getActions();
+      expect(actions).toContainEqual(expect.objectContaining({ type: SAVE_STATE_LOCALSTORAGE }));
+    }, 0);
   });
 });
