@@ -189,6 +189,24 @@ describe('TodosReducer', () => {
     ).toEqual({
       items: [{ ...item, completed: false }],
     });
+
+    // Only the item with specified ID should be changed.
+    const item2 = {
+      ...item,
+      id: '1',
+      completed: false,
+    };
+
+    expect(
+      TodosReducer(
+        {
+          items: [{ ...item, completed: true }, item2],
+        },
+        action,
+      ),
+    ).toEqual({
+      items: [{ ...item, completed: false }, item2],
+    });
   });
 
   it('should handle SELECT_EDIT_ITEM', () => {
