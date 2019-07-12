@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -21,15 +21,31 @@ const appPropTypes = {
 
 const AppContainer = props => {
   const { handleLoadStateLocalStorage, handleSaveStateLocalStorage, items } = props;
+  const [isLocalStorageLoaded, setIsLocalStorageLoaded] = useState(false);
+  const previousItemsLength = useRef(null);
 
   useEffect(() => {
     handleLoadStateLocalStorage();
+    setIsLocalStorageLoaded(true);
   }, [handleLoadStateLocalStorage]);
 
   useEffect(() => {
-    // TODO: Better handle save states.
-    handleSaveStateLocalStorage(items);
-  }, [handleSaveStateLocalStorage, items]);
+    if (isLocalStorageLoaded) {
+      if (!previousItemsLength.current) {
+        previousItemsLength.current = -1;
+        return;
+      }
+
+      if (items.length !== previousItemsLength.current) {
+        handleSaveStateLocalStorage(items);
+        if (items.length === 0) {
+          previousItemsLength.current = -1;
+        } else {
+          previousItemsLength.current = items.length;
+        }
+      }
+    }
+  }, [handleSaveStateLocalStorage, items, isLocalStorageLoaded]);
 
   return <App />;
 };
