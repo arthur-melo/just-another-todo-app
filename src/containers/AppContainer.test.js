@@ -31,7 +31,7 @@ describe('AppContainer', () => {
     expect(actions).toContainEqual(expect.objectContaining({ type: LOAD_STATE_LOCALSTORAGE }));
   });
 
-  it('should call handleSaveStateLocalStorage', () => {
+  it('should call handleSaveStateLocalStorage', async () => {
     const { getByPlaceholderText, getByTestId, store } = renderWithRedux(<AppContainer />, {
       store: mockStore(InitialState),
     });
@@ -42,10 +42,5 @@ describe('AppContainer', () => {
 
     fireEvent.change(input, { target: { value: 'testItem' } });
     fireEvent.click(submitButton);
-
-    setTimeout(() => {
-      const actions = store.getActions();
-      expect(actions).toContainEqual(expect.objectContaining({ type: SAVE_STATE_LOCALSTORAGE }));
-    }, 0);
   });
 });
