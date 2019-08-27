@@ -59,7 +59,7 @@
     "husky": "3.0.3",
     "jest-dom": "3.5.0",
     "jest-localstorage-mock": "2.4.0",
-    "lint-staged": "9.2.1",
+    "lint-staged": "9.2.5",
     "prettier": "1.18.2",
     "react-beautiful-dnd-test-utils": "2.0.0",
     "react-test-renderer": "16.9.0",
