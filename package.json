@@ -34,8 +34,8 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.23",
-    "@fortawesome/free-solid-svg-icons": "5.11.0",
+    "@fortawesome/fontawesome-svg-core": "1.2.24",
+    "@fortawesome/free-solid-svg-icons": "5.11.1",
     "@fortawesome/react-fontawesome": "0.1.4",
     "bootswatch": "4.3.1",
     "prop-types": "15.7.2",
