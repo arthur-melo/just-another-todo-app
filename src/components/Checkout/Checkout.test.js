@@ -10,7 +10,7 @@ describe('Checkout', () => {
 
     const { getByRole } = render(<Checkout isCompleted={completed} />);
 
-    expect(getByRole('img')).toHaveClass('fa-check-square');
+    expect(getByRole('img', { hidden: true })).toHaveClass('fa-check-square');
   });
 
   it('renders a square icon when received prop is false', () => {
@@ -18,6 +18,6 @@ describe('Checkout', () => {
 
     const { getByRole } = render(<Checkout isCompleted={completed} />);
 
-    expect(getByRole('img')).toHaveClass('fa-square');
+    expect(getByRole('img', { hidden: true })).toHaveClass('fa-square');
   });
 });
