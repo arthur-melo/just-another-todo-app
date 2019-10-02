@@ -16,7 +16,7 @@ exports[`Header should render the Header component 1`] = `
         <svg
           alt="List emoji"
           aria-hidden="true"
-          class="svg-inline--fa fa-list-alt fa-w-16 fa-lg d-inline-block"
+          class="svg-inline--fa fa-list-alt fa-w-16 fa-lg fa-rotate-null fa-pull-null d-inline-block"
           data-icon="list-alt"
           data-prefix="fas"
           focusable="false"
