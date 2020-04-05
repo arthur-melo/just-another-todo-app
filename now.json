@@ -2,6 +2,7 @@
   "name": "just-another-todo-app",
   "alias": "just-another-todo-app",
   "type": "static",
+  "public": true,
   "static": {
     "rewrites": [
       {
