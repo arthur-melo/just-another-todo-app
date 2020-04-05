@@ -1,12 +1,5 @@
 {
   "name": "just-another-todo-app",
-  "public": true,
-  "static": {
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "type": "static",
+  "public": true
 }
