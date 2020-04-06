@@ -1,4 +1,4 @@
-import uuid from 'uuid/v1';
+import { v1 } from 'uuid';
 
 import { ADD_ITEM } from '../actions/AddItem';
 import { CANCEL_EDIT_ITEM } from '../actions/CancelEditItem';
@@ -11,7 +11,7 @@ import { REORDER_ITEM } from '../actions/ReorderItem';
 const TodosReducer = (state, action) => {
   switch (action.type) {
     case ADD_ITEM: {
-      const id = uuid();
+      const id = v1();
       const todoItem = {
         value: action.payload.value,
         id,
