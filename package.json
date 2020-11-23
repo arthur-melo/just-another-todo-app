@@ -36,7 +36,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.32",
     "@fortawesome/free-solid-svg-icons": "5.15.1",
-    "@fortawesome/react-fontawesome": "0.1.12",
+    "@fortawesome/react-fontawesome": "0.1.13",
     "bootswatch": "4.5.3",
     "prop-types": "15.7.2",
     "react": "17.0.1",
