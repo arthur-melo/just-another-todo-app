@@ -46,7 +46,7 @@
     "react-scripts": "3.4.4",
     "reduce-reducers": "1.0.4",
     "redux": "4.0.5",
-    "uuid": "8.3.1"
+    "uuid": "8.3.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.11.6",
