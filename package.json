@@ -38,7 +38,7 @@
     "@fortawesome/free-solid-svg-icons": "5.15.1",
     "@fortawesome/react-fontawesome": "0.1.13",
     "bootswatch": "4.5.3",
-    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-import-resolver-node": "0.3.4",
     "prop-types": "15.7.2",
     "react": "17.0.1",
     "react-beautiful-dnd": "13.0.0",
