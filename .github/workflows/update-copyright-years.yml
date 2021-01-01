@@ -1,0 +1,6 @@
+- uses: actions/checkout@v2
+  with:
+    fetch-depth: 0
+- uses: FantasticFiasco/action-update-license-year@v2
+  with:
+    token: ${{ secrets.UPDATE_LICENSE }}
