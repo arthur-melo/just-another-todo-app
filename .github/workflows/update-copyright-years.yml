@@ -3,6 +3,8 @@ name: Update copyright year(s) in license file
 on:
   schedule:
     - cron: '0 0 1 1 *'
+  repository_dispatch:
+    types: [update-copyright]
 
 jobs:
   run:
