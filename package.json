@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.11.8",
-    "@testing-library/react": "11.2.2",
+    "@testing-library/react": "11.2.3",
     "codecov": "3.8.1",
     "eslint-config-prettier": "7.1.0",
     "eslint-plugin-prettier": "3.3.1",
