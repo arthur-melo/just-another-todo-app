@@ -63,7 +63,7 @@
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "react-beautiful-dnd-test-utils": "3.2.1",
-    "react-test-renderer": "17.0.1",
+    "react-test-renderer": "17.0.2",
     "redux-mock-store": "1.5.4",
     "stylelint": "13.12.0",
     "stylelint-config-recommended": "4.0.0",
