@@ -50,7 +50,7 @@
     "uuid": "8.3.2"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "5.11.9",
+    "@testing-library/jest-dom": "5.11.10",
     "@testing-library/react": "11.2.5",
     "codecov": "3.8.1",
     "eslint-config-prettier": "8.1.0",
