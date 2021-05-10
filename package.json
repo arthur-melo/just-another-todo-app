@@ -61,7 +61,7 @@
     "jest-environment-jsdom-sixteen": "1.0.3",
     "jest-localstorage-mock": "2.4.10",
     "lint-staged": "11.0.0",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "react-beautiful-dnd-test-utils": "3.2.1",
     "react-test-renderer": "17.0.2",
     "redux-mock-store": "1.5.4",
