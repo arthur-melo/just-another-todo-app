@@ -61,7 +61,4 @@ const mapDispatchToProps = {
   handleSaveStateLocalStorage: SaveStateLocalStorage,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(AppContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

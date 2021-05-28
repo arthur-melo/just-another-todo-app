@@ -22,7 +22,4 @@ const mapDispatchToProps = {
   handleSelectEditItem: SelectEditItem,
 };
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(PropertyBarContainer);
+export default connect(null, mapDispatchToProps)(PropertyBarContainer);

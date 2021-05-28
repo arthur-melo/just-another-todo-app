@@ -18,7 +18,4 @@ const mapDispatchToProps = {
   handleAddItem: AddItem,
 };
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(FormContainer);
+export default connect(null, mapDispatchToProps)(FormContainer);

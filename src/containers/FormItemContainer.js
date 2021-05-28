@@ -23,7 +23,4 @@ const mapDispatchToProps = {
   handleItemCompletion: ItemCompletion,
 };
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(FormItemContainer);
+export default connect(null, mapDispatchToProps)(FormItemContainer);

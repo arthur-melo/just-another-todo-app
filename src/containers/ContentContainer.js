@@ -36,7 +36,4 @@ const mapDispatchToProps = {
   handleReorderItem: ReorderItem,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ContentContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ContentContainer);

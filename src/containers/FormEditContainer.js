@@ -26,7 +26,4 @@ const mapDispatchToProps = {
   handleEditItem: EditItem,
 };
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(FormEditContainer);
+export default connect(null, mapDispatchToProps)(FormEditContainer);
