@@ -25,8 +25,8 @@ const Form = ({ handleAddItem }) => {
   return (
     <div>
       <form method="POST" autoComplete="on" onSubmit={handleSubmitAndResetForm}>
-        <div className="form-row">
-          <div className="col">
+        <div className="row">
+          <div className="col-auto p-0">
             <input
               type="text"
               className="form-control"
