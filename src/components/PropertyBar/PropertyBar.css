@@ -11,7 +11,7 @@
 
 .property_bar__button {
   margin-right: 0.5em;
-  opacity: 0.1;
+  opacity: 0.4;
   transition: opacity 0.25s ease-in-out;
 }
 
