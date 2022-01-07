@@ -60,7 +60,7 @@
     "jest-dom": "3.5.0",
     "jest-environment-jsdom-sixteen": "1.0.3",
     "jest-localstorage-mock": "2.4.18",
-    "lint-staged": "12.1.5",
+    "lint-staged": "12.1.6",
     "prettier": "2.5.1",
     "react-beautiful-dnd-test-utils": "4.1.1",
     "react-test-renderer": "17.0.2",
