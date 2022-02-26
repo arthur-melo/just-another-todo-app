@@ -55,7 +55,7 @@
     "codecov": "3.8.3",
     "eslint-config-prettier": "8.4.0",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-react": "7.29.1",
+    "eslint-plugin-react": "7.29.2",
     "husky": "7.0.4",
     "jest-dom": "4.0.0",
     "jest-environment-jsdom-sixteen": "1.0.3",
