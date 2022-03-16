@@ -36,7 +36,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.1.0",
     "@fortawesome/free-solid-svg-icons": "6.1.0",
-    "@fortawesome/react-fontawesome": "0.1.17",
+    "@fortawesome/react-fontawesome": "0.1.18",
     "bootswatch": "5.1.3",
     "eslint-import-resolver-node": "0.3.6",
     "prop-types": "15.8.1",
