@@ -37,11 +37,11 @@
     "@fortawesome/fontawesome-svg-core": "6.1.2",
     "@fortawesome/free-solid-svg-icons": "6.1.2",
     "@fortawesome/react-fontawesome": "0.2.0",
+    "@hello-pangea/dnd": "^16.0.0",
     "bootswatch": "5.2.0",
     "eslint-import-resolver-node": "0.3.6",
     "prop-types": "15.8.1",
     "react": "18.2.0",
-    "react-beautiful-dnd": "13.1.0",
     "react-dom": "18.2.0",
     "react-redux": "8.0.2",
     "react-scripts": "5.0.1",
@@ -64,9 +64,6 @@
     "prettier": "2.7.1",
     "react-beautiful-dnd-test-utils": "4.1.1",
     "react-test-renderer": "18.2.0",
-    "redux-mock-store": "1.5.4",
-    "stylelint": "14.11.0",
-    "stylelint-config-recommended": "9.0.0",
-    "stylelint-declaration-use-variable": "1.7.3"
+    "redux-mock-store": "1.5.4"
   }
 }
