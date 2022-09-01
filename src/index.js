@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import AppReducer from './reducers';
+
+import reportWebVitals from './reportWebVitals';
 import registerServiceWorker from './registerServiceWorker';
 
 // Third-party declarations.
@@ -12,18 +12,20 @@ import 'bootswatch/dist/flatly/bootstrap.min.css';
 import './stylesheets/index.css';
 import './stylesheets/animations.css';
 
-import AppContainer from './containers/AppContainer';
+// Store
+import { setupStore } from './app/store';
 
-const store = createStore(
-  AppReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-);
+import App from './app/App';
 
-ReactDOM.render(
-  <Provider store={store}>
-    <AppContainer />
-  </Provider>,
-  document.getElementById('app'),
+const root = ReactDOM.createRoot(document.getElementById('app'));
+
+root.render(
+  <StrictMode>
+    <Provider store={setupStore()}>
+      <App />
+    </Provider>
+  </StrictMode>,
 );
 
 registerServiceWorker();
+reportWebVitals();

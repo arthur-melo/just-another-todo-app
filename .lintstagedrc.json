@@ -1,0 +1,8 @@
+{
+  "*.json": "prettier --config .prettierrc.json -w",
+  "*.js": [
+    "prettier --config .prettierrc.json -w",
+    "eslint --config .eslintrc.json --fix"
+  ],
+  "*.css": "stylelint --config .stylelintrc.json --fix"
+}
