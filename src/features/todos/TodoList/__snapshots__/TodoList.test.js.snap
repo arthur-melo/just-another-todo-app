@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList should render the TodoList component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container"
+      >
+        <div
+          class="row justify-content-center"
+        >
+          <div
+            class="col-12 col-md-9 col-lg-7 col-xl-6"
+          >
+            <div
+              class="todo_list__todos"
+            >
+              <ul
+                class="list-group"
+              >
+                <div />
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      id="rfd-announcement-0"
+      style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+    />
+    <div
+      id="rfd-hidden-text-0-hidden-text-0"
+      style="display: none;"
+    >
+      
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+    >
+      <div
+        class="row justify-content-center"
+      >
+        <div
+          class="col-12 col-md-9 col-lg-7 col-xl-6"
+        >
+          <div
+            class="todo_list__todos"
+          >
+            <ul
+              class="list-group"
+            >
+              <div />
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "store": Object {
+    "@@observable": [Function],
+    "dispatch": [Function],
+    "getState": [Function],
+    "replaceReducer": [Function],
+    "subscribe": [Function],
+  },
+  "unmount": [Function],
+}
+`;
+
+exports[`TodoList should render the TodoList component with preloaded items 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      id="rfd-announcement-0"
+      style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+    />
+    <div>
+      <div
+        class="container"
+      >
+        <div
+          class="row justify-content-center"
+        >
+          <div
+            class="col-12 col-md-9 col-lg-7 col-xl-6"
+          >
+            <div
+              class="todo_list__todos"
+            >
+              <ul
+                class="list-group"
+              >
+                <div>
+                  <div
+                    aria-describedby="rfd-hidden-text-1-hidden-text-2"
+                    class="todo_list__todos__li"
+                    data-rfd-drag-handle-context-id="1"
+                    data-rfd-drag-handle-draggable-id="0"
+                    data-rfd-draggable-context-id="1"
+                    data-rfd-draggable-id="0"
+                    data-testid="todo-list-item"
+                    draggable="false"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <li
+                      class="todo_item__component list-group-item form-control"
+                      data-testid="todo_item-listitem"
+                    >
+                      <div
+                        class="text-truncate"
+                        data-testid="todo_item-item-completion"
+                      >
+                        <div
+                          class="todo_item__checkout d-inline-block"
+                        >
+                          <span>
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-square fa-2x "
+                              data-icon="square"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <span
+                          class="todo_item__text"
+                        >
+                          Test todo item
+                        </span>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      id="rfd-announcement-1"
+      style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+    />
+    <div
+      id="rfd-hidden-text-1-hidden-text-2"
+      style="display: none;"
+    >
+      
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+    >
+      <div
+        class="row justify-content-center"
+      >
+        <div
+          class="col-12 col-md-9 col-lg-7 col-xl-6"
+        >
+          <div
+            class="todo_list__todos"
+          >
+            <ul
+              class="list-group"
+            >
+              <div>
+                <div
+                  aria-describedby="rfd-hidden-text-1-hidden-text-2"
+                  class="todo_list__todos__li"
+                  data-rfd-drag-handle-context-id="1"
+                  data-rfd-drag-handle-draggable-id="0"
+                  data-rfd-draggable-context-id="1"
+                  data-rfd-draggable-id="0"
+                  data-testid="todo-list-item"
+                  draggable="false"
+                  role="button"
+                  tabindex="0"
+                >
+                  <li
+                    class="todo_item__component list-group-item form-control"
+                    data-testid="todo_item-listitem"
+                  >
+                    <div
+                      class="text-truncate"
+                      data-testid="todo_item-item-completion"
+                    >
+                      <div
+                        class="todo_item__checkout d-inline-block"
+                      >
+                        <span>
+                          <svg
+                            aria-hidden="true"
+                            class="svg-inline--fa fa-square fa-2x "
+                            data-icon="square"
+                            data-prefix="fas"
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                      <span
+                        class="todo_item__text"
+                      >
+                        Test todo item
+                      </span>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "store": Object {
+    "@@observable": [Function],
+    "dispatch": [Function],
+    "getState": [Function],
+    "replaceReducer": [Function],
+    "subscribe": [Function],
+  },
+  "unmount": [Function],
+}
+`;
