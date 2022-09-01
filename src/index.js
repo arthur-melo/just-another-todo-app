@@ -2,8 +2,8 @@ import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import registerServiceWorker from './registerServiceWorker';
 
 // Third-party declarations.
 import 'bootswatch/dist/flatly/bootstrap.min.css';
@@ -27,5 +27,5 @@ root.render(
   </StrictMode>,
 );
 
-registerServiceWorker();
+serviceWorkerRegistration.register();
 reportWebVitals();
