@@ -8,7 +8,8 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(../assets/fonts/Roboto-Regular.ttf) format('ttf'),
+  src: local('Roboto'), local('Roboto-Regular'),
+    url(../assets/fonts/Roboto-Regular.ttf) format('ttf'),
     url(../assets/fonts/Roboto-Regular.ttf) format('ttf');
 }
 
@@ -16,7 +17,8 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(../assets/fonts/Roboto-Bold.ttf) format('ttf'),
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url(../assets/fonts/Roboto-Bold.ttf) format('ttf'),
     url(../assets/fonts/Roboto-Bold.ttf) format('ttf');
 }
 
@@ -25,8 +27,8 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen-Sans, Ubuntu, Cantarell,
-    'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
 *,
