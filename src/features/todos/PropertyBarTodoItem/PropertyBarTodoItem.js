@@ -17,16 +17,16 @@ const PropertyBarTodoItem = props => {
   return (
     <div className="property_bar_todo_item__component">
       <button
-        className="btn btn-secondary tproperty_bar_todo_item__button mx-2 border-0"
+        className="btn btn-secondary tproperty_bar_todo_item__button mx-2"
         title="Edit"
         onClick={() => dispatch(markItemToEdit(id))}>
-        <FontAwesomeIcon icon={faEdit} size="sm" />
+        <FontAwesomeIcon icon={faEdit} fixedWidth />
       </button>
       <button
-        className="btn btn-danger property_bar_todo_item__button border-0"
+        className="btn btn-danger property_bar_todo_item__button"
         title="Delete"
         onClick={() => dispatch(deleteItem(id))}>
-        <FontAwesomeIcon icon={faTrash} size="sm" />
+        <FontAwesomeIcon icon={faTrash} fixedWidth />
       </button>
     </div>
   );

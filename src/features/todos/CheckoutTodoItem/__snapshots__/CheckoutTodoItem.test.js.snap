@@ -4,10 +4,11 @@ exports[`CheckoutTodoItem should render the component with a checkmark icon when
 <span>
   <svg
     aria-hidden="true"
-    className="svg-inline--fa fa-square-check fa-2x "
+    className="svg-inline--fa fa-square-check fa-fw "
     data-icon="square-check"
     data-prefix="fas"
     focusable="false"
+    fontSize="36px"
     role="img"
     style={Object {}}
     viewBox="0 0 448 512"
@@ -26,10 +27,11 @@ exports[`CheckoutTodoItem should render the component with a square icon when is
 <span>
   <svg
     aria-hidden="true"
-    className="svg-inline--fa fa-square fa-2x "
+    className="svg-inline--fa fa-square fa-fw "
     data-icon="square"
     data-prefix="fas"
     focusable="false"
+    fontSize="36px"
     role="img"
     style={Object {}}
     viewBox="0 0 448 512"

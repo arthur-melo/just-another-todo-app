@@ -12,10 +12,10 @@ Object {
           class="row justify-content-center"
         >
           <div
-            class="col-12 col-md-9 col-lg-7 col-xl-6"
+            class="col-auto"
           >
             <div
-              class="card text-center"
+              class="card text-center border border-0"
             >
               <div
                 class="card-body"
@@ -31,58 +31,59 @@ Object {
                   To get started, add some items to your list:
                 </p>
                 <div
-                  class="d-inline-block"
+                  class="container-fluid"
                 >
-                  <div>
-                    <form
-                      autocomplete="on"
-                      method="POST"
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="mx-auto"
                     >
-                      <div
-                        class="row"
+                      <form
+                        autocomplete="on"
+                        method="POST"
                       >
                         <div
-                          class="col-auto p-0"
+                          class="d-flex"
                         >
-                          <input
+                          <textarea
                             aria-label="Todo item description"
-                            class="form-control"
+                            class="form-control create_todo_item__textarea"
                             id="new-todo-item"
                             name="new-todo-item"
                             placeholder="I want to do..."
                             type="text"
-                            value=""
                           />
-                        </div>
-                        <div
-                          class="col-auto"
-                        >
-                          <button
-                            aria-label="Add todo item"
-                            class="btn btn-primary"
-                            disabled=""
-                            title="Add todo item"
-                            type="submit"
+                          <div
+                            class="mx-2"
                           >
-                            <svg
-                              aria-hidden="true"
-                              class="svg-inline--fa fa-plus "
-                              data-icon="plus"
-                              data-prefix="fas"
-                              focusable="false"
-                              role="img"
-                              viewBox="0 0 448 512"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <button
+                              aria-label="Add todo item"
+                              class="btn btn-primary"
+                              disabled=""
+                              title="Add todo item"
+                              type="submit"
                             >
-                              <path
-                                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </button>
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-plus fa-fw "
+                                data-icon="plus"
+                                data-prefix="fas"
+                                focusable="false"
+                                role="img"
+                                viewBox="0 0 448 512"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -100,10 +101,10 @@ Object {
         class="row justify-content-center"
       >
         <div
-          class="col-12 col-md-9 col-lg-7 col-xl-6"
+          class="col-auto"
         >
           <div
-            class="card text-center"
+            class="card text-center border border-0"
           >
             <div
               class="card-body"
@@ -119,58 +120,59 @@ Object {
                 To get started, add some items to your list:
               </p>
               <div
-                class="d-inline-block"
+                class="container-fluid"
               >
-                <div>
-                  <form
-                    autocomplete="on"
-                    method="POST"
+                <div
+                  class="row"
+                >
+                  <div
+                    class="mx-auto"
                   >
-                    <div
-                      class="row"
+                    <form
+                      autocomplete="on"
+                      method="POST"
                     >
                       <div
-                        class="col-auto p-0"
+                        class="d-flex"
                       >
-                        <input
+                        <textarea
                           aria-label="Todo item description"
-                          class="form-control"
+                          class="form-control create_todo_item__textarea"
                           id="new-todo-item"
                           name="new-todo-item"
                           placeholder="I want to do..."
                           type="text"
-                          value=""
                         />
-                      </div>
-                      <div
-                        class="col-auto"
-                      >
-                        <button
-                          aria-label="Add todo item"
-                          class="btn btn-primary"
-                          disabled=""
-                          title="Add todo item"
-                          type="submit"
+                        <div
+                          class="mx-2"
                         >
-                          <svg
-                            aria-hidden="true"
-                            class="svg-inline--fa fa-plus "
-                            data-icon="plus"
-                            data-prefix="fas"
-                            focusable="false"
-                            role="img"
-                            viewBox="0 0 448 512"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <button
+                            aria-label="Add todo item"
+                            class="btn btn-primary"
+                            disabled=""
+                            title="Add todo item"
+                            type="submit"
                           >
-                            <path
-                              d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
-                              fill="currentColor"
-                            />
-                          </svg>
-                        </button>
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-plus fa-fw "
+                              data-icon="plus"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </form>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

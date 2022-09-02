@@ -168,39 +168,36 @@ Object {
                     tabindex="0"
                   >
                     <li
-                      class="todo_item__component list-group-item form-control"
+                      class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
                       data-testid="todo_item-listitem"
                     >
                       <div
-                        class="text-truncate"
+                        class="todo_item__checkout"
                         data-testid="todo_item-item-completion"
                       >
-                        <div
-                          class="todo_item__checkout d-inline-block"
-                        >
-                          <span>
-                            <svg
-                              aria-hidden="true"
-                              class="svg-inline--fa fa-square fa-2x "
-                              data-icon="square"
-                              data-prefix="fas"
-                              focusable="false"
-                              role="img"
-                              viewBox="0 0 448 512"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </span>
-                        </div>
-                        <span
-                          class="todo_item__text"
-                        >
-                          Test todo item
+                        <span>
+                          <svg
+                            aria-hidden="true"
+                            class="svg-inline--fa fa-square fa-fw "
+                            data-icon="square"
+                            data-prefix="fas"
+                            focusable="false"
+                            font-size="36px"
+                            role="img"
+                            viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                              fill="currentColor"
+                            />
+                          </svg>
                         </span>
+                      </div>
+                      <div
+                        class="border rounded w-100 form-control todo_item__text text-break"
+                      >
+                        Test todo item
                       </div>
                     </li>
                   </div>
@@ -258,39 +255,36 @@ Object {
                   tabindex="0"
                 >
                   <li
-                    class="todo_item__component list-group-item form-control"
+                    class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
                     data-testid="todo_item-listitem"
                   >
                     <div
-                      class="text-truncate"
+                      class="todo_item__checkout"
                       data-testid="todo_item-item-completion"
                     >
-                      <div
-                        class="todo_item__checkout d-inline-block"
-                      >
-                        <span>
-                          <svg
-                            aria-hidden="true"
-                            class="svg-inline--fa fa-square fa-2x "
-                            data-icon="square"
-                            data-prefix="fas"
-                            focusable="false"
-                            role="img"
-                            viewBox="0 0 448 512"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
-                              fill="currentColor"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <span
-                        class="todo_item__text"
-                      >
-                        Test todo item
+                      <span>
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-square fa-fw "
+                          data-icon="square"
+                          data-prefix="fas"
+                          focusable="false"
+                          font-size="36px"
+                          role="img"
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                            fill="currentColor"
+                          />
+                        </svg>
                       </span>
+                    </div>
+                    <div
+                      class="border rounded w-100 form-control todo_item__text text-break"
+                    >
+                      Test todo item
                     </div>
                   </li>
                 </div>

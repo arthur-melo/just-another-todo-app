@@ -27,7 +27,8 @@ const TodoItem = props => {
     }
   };
 
-  let liClass = 'todo_item__component list-group-item form-control';
+  let liClass =
+    'todo_item__component list-group-item form-control d-flex border border-0  align-items-center';
   liClass = item.completed
     ? liClass + ' todo_item__component-completed'
     : liClass;
@@ -35,20 +36,24 @@ const TodoItem = props => {
   return (
     <li
       data-testid="todo_item-listitem"
-      className={liClass}
       onMouseOver={() => updateDisplayMenu(true)}
-      onMouseLeave={() => updateDisplayMenu(false)}>
+      onMouseLeave={() => updateDisplayMenu(false)}
+      className={liClass}>
       <div
-        className="text-truncate"
+        className="todo_item__checkout"
         data-testid="todo_item-item-completion"
         onClick={() => dispatch(itemCompletion(item))}>
-        <div className="todo_item__checkout d-inline-block">
-          <CheckoutTodoItem isCompleted={item.completed} />
-        </div>
-        <span className="todo_item__text">{item.value}</span>
+        <CheckoutTodoItem isCompleted={item.completed} />
+      </div>
+      <div className="border rounded w-100 form-control todo_item__text text-break">
+        {item.value}
       </div>
 
-      {displayMenu ? <PropertyBarTodoItem id={item.id} /> : null}
+      {displayMenu ? (
+        <div className="ms-auto align-self-start">
+          <PropertyBarTodoItem id={item.id} />
+        </div>
+      ) : null}
     </li>
   );
 };
