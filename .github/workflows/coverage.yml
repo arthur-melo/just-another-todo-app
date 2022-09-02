@@ -28,4 +28,4 @@ jobs:
         run: npm test -- --coverage --watchAll=false
 
       - name: Upload to codecov
-      - uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v3
