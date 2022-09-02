@@ -26,10 +26,6 @@ jobs:
 
       - name: Run the tests
         run: npm test -- --coverage --watchAll=false
-      - uses: actions/checkout@master
+
+      - name: Upload to codecov
       - uses: codecov/codecov-action@v3
-        with:
-          directory: ./coverage
-          files: ./clover.xml
-          fail_ci_if_error: true
-          verbose: true
