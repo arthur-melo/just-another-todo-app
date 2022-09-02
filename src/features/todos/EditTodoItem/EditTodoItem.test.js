@@ -23,7 +23,7 @@ describe('EditTodoItem', () => {
     });
 
     const input = screen.getByDisplayValue('Test todo item');
-    const submitButton = screen.getByTitle('Confirm item edition');
+    const submitButton = screen.getByTitle('Confirm');
 
     fireEvent.change(input, { target: { value: 'New name' } });
     fireEvent.click(submitButton);
@@ -57,7 +57,7 @@ describe('EditTodoItem', () => {
 
     expect(store.getState().todos.editingItem).toEqual(item);
 
-    const cancelEditingActionButton = screen.getByTitle('Cancel item edition');
+    const cancelEditingActionButton = screen.getByTitle('Cancel');
 
     fireEvent.click(cancelEditingActionButton);
 

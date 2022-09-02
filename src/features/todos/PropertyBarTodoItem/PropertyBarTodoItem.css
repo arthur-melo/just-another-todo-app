@@ -1,16 +1,10 @@
 .property_bar_todo_item__component {
-  position: absolute;
-  right: 1em;
-  top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  height: 100%;
 }
 
 .property_bar_todo_item__button {
-  margin-right: 0.5em;
   opacity: 0.4;
   transition: opacity 0.25s ease-in-out;
 }

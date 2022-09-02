@@ -21,11 +21,9 @@
 }
 
 .todo_item__checkout {
-  margin-right: 0.5em;
-  height: 100%;
   opacity: 0.5;
 }
 
 .todo_item__text {
-  vertical-align: super;
+  white-space: pre-wrap;
 }

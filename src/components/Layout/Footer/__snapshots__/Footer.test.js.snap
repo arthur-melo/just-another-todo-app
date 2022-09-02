@@ -7,7 +7,8 @@ exports[`Footer should render the Footer component 1`] = `
   <p
     className="footer__p"
   >
-    Made using React + Redux -
+    Offline Todo List Application — made with
+     by
      
     <a
       href="https://github.com/arthur-melo"

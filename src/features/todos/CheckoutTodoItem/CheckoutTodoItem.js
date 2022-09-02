@@ -12,9 +12,9 @@ const CheckoutTodoItem = props => {
   return (
     <span>
       {isCompleted ? (
-        <FontAwesomeIcon icon={faCheckSquare} size="2x" />
+        <FontAwesomeIcon icon={faCheckSquare} fontSize="36px" fixedWidth />
       ) : (
-        <FontAwesomeIcon icon={faSquare} size="2x" />
+        <FontAwesomeIcon icon={faSquare} fontSize="36px" fixedWidth />
       )}
     </span>
   );

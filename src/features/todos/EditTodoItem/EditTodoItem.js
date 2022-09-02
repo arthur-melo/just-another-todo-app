@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import TextareaAutosize from 'react-textarea-autosize';
 
 import './EditTodoItem.css';
+
 import { cancelEditItem, editItem } from '../todosSlice';
 
 const editTodoItemPropTypes = {
@@ -52,34 +54,37 @@ const EditTodoItem = props => {
   };
 
   return (
-    <li className="edit_todo_item__component list-group-item">
+    <li className="edit_todo_item__component list-group-item border border-0">
       <form method="POST" onSubmit={handleEditAndResetForm}>
-        <div className="input-group">
-          <input
+        <div className="d-flex">
+          <TextareaAutosize
             type="text"
-            className="form-control"
+            className="form-control edit_todo_item__textarea border rounded"
             id="input-edit-todo-item"
             name="edit-todo-item"
             value={itemValue}
             onChange={handleItemChange}
+            onFocus={event => event.target.select()}
             autoFocus
           />
-          <button
-            type="submit"
-            title="Confirm item edition"
-            id="submit-edit-todo-item"
-            className="btn btn-primary mx-2 rounded-3"
-            disabled={!itemValue}>
-            <FontAwesomeIcon icon={faCheck} size="sm" />
-          </button>
-          <button
-            id="cancel-edit-todo-item"
-            title="Cancel item edition"
-            type="button"
-            className="btn btn-danger me-2 rounded-3"
-            onClick={() => dispatch(cancelEditItem())}>
-            <FontAwesomeIcon icon={faTimes} size="sm" />
-          </button>
+          <div className="d-flex align-items-start">
+            <button
+              type="submit"
+              title="Confirm"
+              id="submit-edit-todo-item"
+              className="btn btn-primary mx-2 edit_todo_item__button"
+              disabled={!itemValue}>
+              <FontAwesomeIcon icon={faCheck} fixedWidth />
+            </button>
+            <button
+              id="cancel-edit-todo-item"
+              title="Cancel"
+              type="button"
+              className="btn btn-danger edit_todo_item__button"
+              onClick={() => dispatch(cancelEditItem())}>
+              <FontAwesomeIcon icon={faTimes} fixedWidth />
+            </button>
+          </div>
         </div>
       </form>
     </li>
