@@ -3,7 +3,7 @@
 A todo app built with React + Redux.
 
 [![codecov](https://codecov.io/gh/arthur-melo/just-another-todo-app/branch/master/graph/badge.svg)](https://codecov.io/gh/arthur-melo/just-another-todo-app)
-[![renovate-app badge](https://img.shields.io/badge/renovate-app-blue.svg)](https://renovatebot.com/)
+![License](https://img.shields.io/github/license/arthur-melo/just-another-todo-app)
 
 ## Demo
 

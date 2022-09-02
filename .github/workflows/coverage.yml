@@ -26,5 +26,6 @@ jobs:
 
       - name: Run the tests
         run: npm test -- --coverage --watchAll=false
-      - uses: actions/checkout@master
-      - uses: codecov/codecov-action@v3
+
+      - name: Upload to codecov
+        uses: codecov/codecov-action@v3
