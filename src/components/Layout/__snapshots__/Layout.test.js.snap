@@ -54,22 +54,37 @@ exports[`Layout should render the Layout component 1`] = `
     className="layout__footer"
   >
     <div
-      className="footer__container"
+      className="footer__container text-center d-flex h-100 justify-content-center align-items-center"
     >
-      <p
-        className="footer__p"
+      <div
+        className="wrapper"
       >
-        Offline Todo List Application — made with
-         by
          
-        <a
-          href="https://github.com/arthur-melo"
-          rel="noopener noreferrer"
-          target="_blank"
+        <p
+          className="footer__p"
         >
-          @arthur-melo
-        </a>
-      </p>
+          This app runs offline and doesn't use analytics.
+        </p>
+        <p
+          className="footer__p"
+        >
+          Keep your data safe in your browser!
+        </p>
+        <p
+          className="footer__p"
+        >
+          Made with 
+           by
+           
+          <a
+            href="https://github.com/arthur-melo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            @arthur-melo
+          </a>
+        </p>
+      </div>
     </div>
   </footer>
 </div>

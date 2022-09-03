@@ -12,8 +12,21 @@ const CreateTodoItem = () => {
 
   const dispatch = useDispatch();
 
+  const isValidInput = value => {
+    // If textarea is empty, or contains only newlines, reject it.
+    if (!value || !value.trim()) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   const handleSubmitAndResetForm = ev => {
     ev.preventDefault();
+
+    if (!isValidInput(itemValue)) {
+      return;
+    }
 
     dispatch(addItem(itemValue));
 
@@ -50,7 +63,7 @@ const CreateTodoItem = () => {
           <button
             type="submit"
             className="btn btn-primary"
-            disabled={!itemValue}
+            disabled={!isValidInput(itemValue)}
             title="Add todo item"
             aria-label="Add todo item">
             <FontAwesomeIcon icon={faPlus} fixedWidth />
