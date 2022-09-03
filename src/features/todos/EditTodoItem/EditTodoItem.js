@@ -78,7 +78,7 @@ const EditTodoItem = props => {
         <div className="d-flex">
           <TextareaAutosize
             type="text"
-            className="form-control edit_todo_item__textarea border rounded"
+            className="form-control border rounded"
             id="input-edit-todo-item"
             name="edit-todo-item"
             value={itemValue}

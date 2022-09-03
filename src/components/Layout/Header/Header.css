@@ -1,15 +1,4 @@
-.header__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background: var(--bs-light);
-}
-
-.header__span {
-  margin: 0 0.2em;
-  vertical-align: super;
-  font-size: 1.3em;
+.header__text {
+  margin-left: 0.3em;
   color: var(--bs-primary);
 }

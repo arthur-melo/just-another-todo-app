@@ -2,19 +2,19 @@
 
 exports[`Layout should render the Layout component 1`] = `
 <div
-  className="layout__container"
+  className="d-flex flex-column w-100 h-100"
 >
   <header
-    className="layout__header"
+    className="layout__header flex-shrink-0 w-100"
   >
     <div
-      className="header__container"
+      className="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
     >
       <nav
         className="navbar"
       >
         <span
-          className="header__span navbar-brand"
+          className="navbar-brand m-0"
         >
           <svg
             alt="List emoji"
@@ -36,7 +36,7 @@ exports[`Layout should render the Layout component 1`] = `
           </svg>
         </span>
         <span
-          className="header__span"
+          className="header__text align-top fs-5"
         >
           Just Another Todo App
         </span>
@@ -44,14 +44,14 @@ exports[`Layout should render the Layout component 1`] = `
     </div>
   </header>
   <main
-    className="layout__content"
+    className="flex-grow-1 flex-shrink-0 mt-1"
   >
     <div>
       Children
     </div>
   </main>
   <footer
-    className="layout__footer"
+    className="layout__footer flex-shrink-0 w-100"
   >
     <div
       className="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
@@ -61,17 +61,17 @@ exports[`Layout should render the Layout component 1`] = `
       >
          
         <p
-          className="footer__p"
+          className="w-100 m-0"
         >
           This app runs offline and doesn't use analytics.
         </p>
         <p
-          className="footer__p"
+          className="w-100 m-0"
         >
           Keep your data safe in your browser!
         </p>
         <p
-          className="footer__p"
+          className="w-100 m-0"
         >
           Made with 
            by

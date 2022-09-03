@@ -166,7 +166,7 @@ Object {
                   tabindex="0"
                 >
                   <li
-                    class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
+                    class="todo_item__component list-group-item form-control w-100 h-100 d-flex align-items-center border border-0"
                     data-testid="todo_item-listitem"
                   >
                     <div
@@ -255,7 +255,7 @@ Object {
                 tabindex="0"
               >
                 <li
-                  class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
+                  class="todo_item__component list-group-item form-control w-100 h-100 d-flex align-items-center border border-0"
                   data-testid="todo_item-listitem"
                 >
                   <div

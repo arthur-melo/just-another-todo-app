@@ -2,10 +2,6 @@
   padding: 0.5em;
 }
 
-.edit_todo_item__textarea {
-  height: 32px;
-}
-
 .edit_todo_item__button:disabled {
   opacity: 0.1;
   transition: opacity 0.25s ease-in-out;

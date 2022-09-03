@@ -48,7 +48,7 @@ Object {
                         >
                           <textarea
                             aria-label="Todo item description"
-                            class="form-control create_todo_item__textarea"
+                            class="form-control"
                             id="new-todo-item"
                             name="new-todo-item"
                             placeholder="I want to do..."
@@ -137,7 +137,7 @@ Object {
                       >
                         <textarea
                           aria-label="Todo item description"
-                          class="form-control create_todo_item__textarea"
+                          class="form-control"
                           id="new-todo-item"
                           name="new-todo-item"
                           placeholder="I want to do..."
