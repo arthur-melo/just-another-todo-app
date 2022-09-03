@@ -16,7 +16,7 @@ exports[`Footer should render the Footer component 1`] = `
     <p
       className="w-100 m-0"
     >
-      Keep your data safe in your browser!
+      Your data is safe in your device!
     </p>
     <p
       className="w-100 m-0"
