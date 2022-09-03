@@ -66,6 +66,12 @@ const EditTodoItem = props => {
     setItemValue('');
   };
 
+  const moveCursorToEndOfWord = ev =>
+    ev.currentTarget.setSelectionRange(
+      ev.currentTarget.value.length,
+      ev.currentTarget.value.length,
+    );
+
   return (
     <li className="edit_todo_item__component list-group-item border border-0">
       <form method="POST" onSubmit={handleEditAndResetForm}>
@@ -77,7 +83,7 @@ const EditTodoItem = props => {
             name="edit-todo-item"
             value={itemValue}
             onChange={handleItemChange}
-            onFocus={event => event.target.select()}
+            onFocus={moveCursorToEndOfWord}
             autoFocus
           />
           <div className="d-flex align-items-start">
