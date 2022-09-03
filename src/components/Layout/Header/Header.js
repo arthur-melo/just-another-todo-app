@@ -8,9 +8,9 @@ const Header = () => {
   const [colors] = useTheme();
 
   return (
-    <div className="header__container">
+    <div className="d-flex justify-content-center align-items-center w-100 h-100 bg-light">
       <nav className="navbar">
-        <span className="header__span navbar-brand">
+        <span className="navbar-brand m-0">
           <FontAwesomeIcon
             className="d-inline-block"
             icon={faListAlt}
@@ -19,7 +19,9 @@ const Header = () => {
             color={colors.primary}
           />
         </span>
-        <span className="header__span">Just Another Todo App</span>
+        <span className="header__text align-top fs-5">
+          Just Another Todo App
+        </span>
       </nav>
     </div>
   );

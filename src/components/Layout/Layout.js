@@ -13,12 +13,12 @@ const Layout = props => {
   const { children } = props;
 
   return (
-    <div className="layout__container">
-      <header className="layout__header">
+    <div className="d-flex flex-column w-100 h-100">
+      <header className="layout__header flex-shrink-0 w-100">
         <Header />
       </header>
-      <main className="layout__content">{children}</main>
-      <footer className="layout__footer">
+      <main className="flex-grow-1 flex-shrink-0 mt-1">{children}</main>
+      <footer className="layout__footer flex-shrink-0 w-100">
         <Footer />
       </footer>
     </div>

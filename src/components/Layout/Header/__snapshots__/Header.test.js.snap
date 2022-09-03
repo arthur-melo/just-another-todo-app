@@ -2,13 +2,13 @@
 
 exports[`Header should render the Header component 1`] = `
 <div
-  className="header__container"
+  className="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
 >
   <nav
     className="navbar"
   >
     <span
-      className="header__span navbar-brand"
+      className="navbar-brand m-0"
     >
       <svg
         alt="List emoji"
@@ -30,7 +30,7 @@ exports[`Header should render the Header component 1`] = `
       </svg>
     </span>
     <span
-      className="header__span"
+      className="header__text align-top fs-5"
     >
       Just Another Todo App
     </span>

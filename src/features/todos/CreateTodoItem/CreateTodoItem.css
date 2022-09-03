@@ -1,7 +1,3 @@
-.create_todo_item__textarea {
-  height: 32px;
-}
-
 .create_todo_item__button {
   opacity: 1;
   transition: opacity 0.25s ease-in-out;

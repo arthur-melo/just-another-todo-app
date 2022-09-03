@@ -6,19 +6,19 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="layout__container"
+        class="d-flex flex-column w-100 h-100"
       >
         <header
-          class="layout__header"
+          class="layout__header flex-shrink-0 w-100"
         >
           <div
-            class="header__container"
+            class="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
           >
             <nav
               class="navbar"
             >
               <span
-                class="header__span navbar-brand"
+                class="navbar-brand m-0"
               >
                 <svg
                   alt="List emoji"
@@ -39,7 +39,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="header__span"
+                class="header__text align-top fs-5"
               >
                 Just Another Todo App
               </span>
@@ -47,7 +47,7 @@ Object {
           </div>
         </header>
         <main
-          class="layout__content"
+          class="flex-grow-1 flex-shrink-0 mt-1"
         >
           <div
             class="container"
@@ -92,7 +92,7 @@ Object {
                             >
                               <textarea
                                 aria-label="Todo item description"
-                                class="form-control create_todo_item__textarea"
+                                class="form-control"
                                 id="new-todo-item"
                                 name="new-todo-item"
                                 placeholder="I want to do..."
@@ -137,7 +137,7 @@ Object {
           </div>
         </main>
         <footer
-          class="layout__footer"
+          class="layout__footer flex-shrink-0 w-100"
         >
           <div
             class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
@@ -147,17 +147,17 @@ Object {
             >
                
               <p
-                class="footer__p"
+                class="w-100 m-0"
               >
                 This app runs offline and doesn't use analytics.
               </p>
               <p
-                class="footer__p"
+                class="w-100 m-0"
               >
                 Keep your data safe in your browser!
               </p>
               <p
-                class="footer__p"
+                class="w-100 m-0"
               >
                 Made with 
                 ❤️
@@ -180,19 +180,19 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="layout__container"
+      class="d-flex flex-column w-100 h-100"
     >
       <header
-        class="layout__header"
+        class="layout__header flex-shrink-0 w-100"
       >
         <div
-          class="header__container"
+          class="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
         >
           <nav
             class="navbar"
           >
             <span
-              class="header__span navbar-brand"
+              class="navbar-brand m-0"
             >
               <svg
                 alt="List emoji"
@@ -213,7 +213,7 @@ Object {
               </svg>
             </span>
             <span
-              class="header__span"
+              class="header__text align-top fs-5"
             >
               Just Another Todo App
             </span>
@@ -221,7 +221,7 @@ Object {
         </div>
       </header>
       <main
-        class="layout__content"
+        class="flex-grow-1 flex-shrink-0 mt-1"
       >
         <div
           class="container"
@@ -266,7 +266,7 @@ Object {
                           >
                             <textarea
                               aria-label="Todo item description"
-                              class="form-control create_todo_item__textarea"
+                              class="form-control"
                               id="new-todo-item"
                               name="new-todo-item"
                               placeholder="I want to do..."
@@ -311,7 +311,7 @@ Object {
         </div>
       </main>
       <footer
-        class="layout__footer"
+        class="layout__footer flex-shrink-0 w-100"
       >
         <div
           class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
@@ -321,17 +321,17 @@ Object {
           >
              
             <p
-              class="footer__p"
+              class="w-100 m-0"
             >
               This app runs offline and doesn't use analytics.
             </p>
             <p
-              class="footer__p"
+              class="w-100 m-0"
             >
               Keep your data safe in your browser!
             </p>
             <p
-              class="footer__p"
+              class="w-100 m-0"
             >
               Made with 
               ❤️
@@ -418,19 +418,19 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="layout__container"
+        class="d-flex flex-column w-100 h-100"
       >
         <header
-          class="layout__header"
+          class="layout__header flex-shrink-0 w-100"
         >
           <div
-            class="header__container"
+            class="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
           >
             <nav
               class="navbar"
             >
               <span
-                class="header__span navbar-brand"
+                class="navbar-brand m-0"
               >
                 <svg
                   alt="List emoji"
@@ -451,7 +451,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="header__span"
+                class="header__text align-top fs-5"
               >
                 Just Another Todo App
               </span>
@@ -459,7 +459,7 @@ Object {
           </div>
         </header>
         <main
-          class="layout__content"
+          class="flex-grow-1 flex-shrink-0 mt-1"
         >
           <div
             class="container"
@@ -504,7 +504,7 @@ Object {
                             >
                               <textarea
                                 aria-label="Todo item description"
-                                class="form-control create_todo_item__textarea"
+                                class="form-control"
                                 id="new-todo-item"
                                 name="new-todo-item"
                                 placeholder="I want to do..."
@@ -576,7 +576,7 @@ Object {
                       tabindex="0"
                     >
                       <li
-                        class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
+                        class="todo_item__component list-group-item form-control w-100 h-100 d-flex align-items-center border border-0"
                         data-testid="todo_item-listitem"
                       >
                         <div
@@ -619,7 +619,7 @@ Object {
           </div>
         </main>
         <footer
-          class="layout__footer"
+          class="layout__footer flex-shrink-0 w-100"
         >
           <div
             class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
@@ -629,17 +629,17 @@ Object {
             >
                
               <p
-                class="footer__p"
+                class="w-100 m-0"
               >
                 This app runs offline and doesn't use analytics.
               </p>
               <p
-                class="footer__p"
+                class="w-100 m-0"
               >
                 Keep your data safe in your browser!
               </p>
               <p
-                class="footer__p"
+                class="w-100 m-0"
               >
                 Made with 
                 ❤️
@@ -678,19 +678,19 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="layout__container"
+      class="d-flex flex-column w-100 h-100"
     >
       <header
-        class="layout__header"
+        class="layout__header flex-shrink-0 w-100"
       >
         <div
-          class="header__container"
+          class="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
         >
           <nav
             class="navbar"
           >
             <span
-              class="header__span navbar-brand"
+              class="navbar-brand m-0"
             >
               <svg
                 alt="List emoji"
@@ -711,7 +711,7 @@ Object {
               </svg>
             </span>
             <span
-              class="header__span"
+              class="header__text align-top fs-5"
             >
               Just Another Todo App
             </span>
@@ -719,7 +719,7 @@ Object {
         </div>
       </header>
       <main
-        class="layout__content"
+        class="flex-grow-1 flex-shrink-0 mt-1"
       >
         <div
           class="container"
@@ -764,7 +764,7 @@ Object {
                           >
                             <textarea
                               aria-label="Todo item description"
-                              class="form-control create_todo_item__textarea"
+                              class="form-control"
                               id="new-todo-item"
                               name="new-todo-item"
                               placeholder="I want to do..."
@@ -836,7 +836,7 @@ Object {
                     tabindex="0"
                   >
                     <li
-                      class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
+                      class="todo_item__component list-group-item form-control w-100 h-100 d-flex align-items-center border border-0"
                       data-testid="todo_item-listitem"
                     >
                       <div
@@ -879,7 +879,7 @@ Object {
         </div>
       </main>
       <footer
-        class="layout__footer"
+        class="layout__footer flex-shrink-0 w-100"
       >
         <div
           class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
@@ -889,17 +889,17 @@ Object {
           >
              
             <p
-              class="footer__p"
+              class="w-100 m-0"
             >
               This app runs offline and doesn't use analytics.
             </p>
             <p
-              class="footer__p"
+              class="w-100 m-0"
             >
               Keep your data safe in your browser!
             </p>
             <p
-              class="footer__p"
+              class="w-100 m-0"
             >
               Made with 
               ❤️

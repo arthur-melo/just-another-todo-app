@@ -48,7 +48,7 @@ const CreateTodoItem = () => {
       <div className="d-flex">
         <TextareaAutosize
           type="text"
-          className="form-control create_todo_item__textarea"
+          className="form-control"
           id="new-todo-item"
           name="new-todo-item"
           placeholder="I want to do..."

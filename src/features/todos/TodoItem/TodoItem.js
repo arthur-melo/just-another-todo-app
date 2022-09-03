@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
 import './TodoItem.css';
 
@@ -27,12 +28,6 @@ const TodoItem = props => {
     }
   };
 
-  let liClass =
-    'todo_item__component list-group-item form-control d-flex border border-0  align-items-center';
-  liClass = item.completed
-    ? liClass + ' todo_item__component-completed'
-    : liClass;
-
   const handleItemCompletion = ev => {
     ev.target.blur();
     dispatch(itemCompletion(item));
@@ -43,14 +38,22 @@ const TodoItem = props => {
       data-testid="todo_item-listitem"
       onMouseOver={() => updateDisplayMenu(true)}
       onMouseLeave={() => updateDisplayMenu(false)}
-      className={liClass}>
+      className="todo_item__component list-group-item form-control w-100 h-100 d-flex align-items-center border border-0">
       <div
-        className="todo_item__checkout"
+        className={
+          item.completed
+            ? 'todo_item__component-completed'
+            : 'todo_item__checkout'
+        }
         data-testid="todo_item-item-completion"
         onClick={handleItemCompletion}>
         <CheckoutTodoItem isCompleted={item.completed} />
       </div>
-      <div className="border rounded w-100 form-control todo_item__text text-break">
+      <div
+        className={clsx(
+          'border rounded w-100 form-control todo_item__text text-break',
+          item.completed && 'todo_item__component-completed',
+        )}>
         {item.value}
       </div>
 
