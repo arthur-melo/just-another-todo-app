@@ -24,7 +24,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="footer__container text-center d-flex h-100 justify-content-center align-items-center">
+    <div className="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1">
       <div className="wrapper">
         {' '}
         <p className="footer__p">
@@ -34,6 +34,7 @@ const Footer = () => {
         <p className="footer__p">
           Made with {emoji} by{' '}
           <a
+            className="text-info"
             href="https://github.com/arthur-melo"
             rel="noopener noreferrer"
             target="_blank">

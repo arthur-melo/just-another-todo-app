@@ -3,21 +3,11 @@
   height: 100%;
   position: relative;
   cursor: pointer;
-  margin-bottom: 0.5em;
-}
-
-.todo_item__component:hover {
-  background: var(--background-color);
-  opacity: 1;
+  padding: 0.5em;
 }
 
 .todo_item__component-completed {
   opacity: 0.4;
-}
-
-.todo_item__component-completed:hover {
-  background: var(--background-color);
-  opacity: 0.6;
 }
 
 .todo_item__checkout {

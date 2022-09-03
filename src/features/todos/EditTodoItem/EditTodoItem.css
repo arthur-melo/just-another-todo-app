@@ -1,6 +1,5 @@
-.edit_todo_item__component:hover {
-  background: var(--background-color);
-  opacity: 1;
+.edit_todo_item__component {
+  padding: 0.5em;
 }
 
 .edit_todo_item__textarea {
@@ -13,11 +12,6 @@
 }
 
 .edit_todo_item__button {
-  opacity: 0.4;
-  transition: opacity 0.25s ease-in-out;
-}
-
-.edit_todo_item__button:hover {
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
 }
