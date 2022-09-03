@@ -28,7 +28,7 @@ const Footer = () => {
         <p className="w-100 m-0">
           This app runs offline and doesn't use analytics.
         </p>
-        <p className="w-100 m-0">Keep your data safe in your browser!</p>
+        <p className="w-100 m-0">Your data is safe in your device!</p>
         <p className="w-100 m-0">
           Made with {emoji} by{' '}
           <a
