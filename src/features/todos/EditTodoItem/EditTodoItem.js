@@ -30,6 +30,15 @@ const EditTodoItem = props => {
     };
   });
 
+  const isValidInput = value => {
+    // If textarea is empty, or contains only newlines, reject it.
+    if (!value || !value.trim()) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   const handleKeyUp = ev => {
     // Handle ESC Key interaction
     if (ev.code === 'Escape') {
@@ -41,6 +50,10 @@ const EditTodoItem = props => {
 
   const handleEditAndResetForm = ev => {
     ev.preventDefault();
+
+    if (!isValidInput(itemValue)) {
+      return;
+    }
 
     dispatch(
       editItem({
@@ -73,7 +86,7 @@ const EditTodoItem = props => {
               title="Confirm"
               id="submit-edit-todo-item"
               className="btn btn-primary mx-2 edit_todo_item__button"
-              disabled={!itemValue}>
+              disabled={!isValidInput(itemValue)}>
               <FontAwesomeIcon icon={faCheck} fixedWidth />
             </button>
             <button

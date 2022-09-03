@@ -139,22 +139,38 @@ Object {
           class="layout__footer"
         >
           <div
-            class="footer__container"
+            class="footer__container text-center d-flex h-100 justify-content-center align-items-center"
           >
-            <p
-              class="footer__p"
+            <div
+              class="wrapper"
             >
-              Offline Todo List Application — made with
-               by
                
-              <a
-                href="https://github.com/arthur-melo"
-                rel="noopener noreferrer"
-                target="_blank"
+              <p
+                class="footer__p"
               >
-                @arthur-melo
-              </a>
-            </p>
+                This app runs offline and doesn't use analytics.
+              </p>
+              <p
+                class="footer__p"
+              >
+                Keep your data safe in your browser!
+              </p>
+              <p
+                class="footer__p"
+              >
+                Made with 
+                ❤️
+                 by
+                 
+                <a
+                  href="https://github.com/arthur-melo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  @arthur-melo
+                </a>
+              </p>
+            </div>
           </div>
         </footer>
       </div>
@@ -295,22 +311,38 @@ Object {
         class="layout__footer"
       >
         <div
-          class="footer__container"
+          class="footer__container text-center d-flex h-100 justify-content-center align-items-center"
         >
-          <p
-            class="footer__p"
+          <div
+            class="wrapper"
           >
-            Offline Todo List Application — made with
-             by
              
-            <a
-              href="https://github.com/arthur-melo"
-              rel="noopener noreferrer"
-              target="_blank"
+            <p
+              class="footer__p"
             >
-              @arthur-melo
-            </a>
-          </p>
+              This app runs offline and doesn't use analytics.
+            </p>
+            <p
+              class="footer__p"
+            >
+              Keep your data safe in your browser!
+            </p>
+            <p
+              class="footer__p"
+            >
+              Made with 
+              ❤️
+               by
+               
+              <a
+                href="https://github.com/arthur-melo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @arthur-melo
+              </a>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
@@ -583,22 +615,38 @@ Object {
           class="layout__footer"
         >
           <div
-            class="footer__container"
+            class="footer__container text-center d-flex h-100 justify-content-center align-items-center"
           >
-            <p
-              class="footer__p"
+            <div
+              class="wrapper"
             >
-              Offline Todo List Application — made with
-               by
                
-              <a
-                href="https://github.com/arthur-melo"
-                rel="noopener noreferrer"
-                target="_blank"
+              <p
+                class="footer__p"
               >
-                @arthur-melo
-              </a>
-            </p>
+                This app runs offline and doesn't use analytics.
+              </p>
+              <p
+                class="footer__p"
+              >
+                Keep your data safe in your browser!
+              </p>
+              <p
+                class="footer__p"
+              >
+                Made with 
+                ❤️
+                 by
+                 
+                <a
+                  href="https://github.com/arthur-melo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  @arthur-melo
+                </a>
+              </p>
+            </div>
           </div>
         </footer>
       </div>
@@ -823,22 +871,38 @@ Object {
         class="layout__footer"
       >
         <div
-          class="footer__container"
+          class="footer__container text-center d-flex h-100 justify-content-center align-items-center"
         >
-          <p
-            class="footer__p"
+          <div
+            class="wrapper"
           >
-            Offline Todo List Application — made with
-             by
              
-            <a
-              href="https://github.com/arthur-melo"
-              rel="noopener noreferrer"
-              target="_blank"
+            <p
+              class="footer__p"
             >
-              @arthur-melo
-            </a>
-          </p>
+              This app runs offline and doesn't use analytics.
+            </p>
+            <p
+              class="footer__p"
+            >
+              Keep your data safe in your browser!
+            </p>
+            <p
+              class="footer__p"
+            >
+              Made with 
+              ❤️
+               by
+               
+              <a
+                href="https://github.com/arthur-melo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @arthur-melo
+              </a>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
