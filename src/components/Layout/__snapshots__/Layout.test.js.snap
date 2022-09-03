@@ -54,7 +54,7 @@ exports[`Layout should render the Layout component 1`] = `
     className="layout__footer"
   >
     <div
-      className="footer__container text-center d-flex h-100 justify-content-center align-items-center"
+      className="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
     >
       <div
         className="wrapper"
@@ -77,6 +77,7 @@ exports[`Layout should render the Layout component 1`] = `
            by
            
           <a
+            className="text-info"
             href="https://github.com/arthur-melo"
             rel="noopener noreferrer"
             target="_blank"

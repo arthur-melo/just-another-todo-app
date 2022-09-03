@@ -59,7 +59,7 @@ Object {
                           >
                             <button
                               aria-label="Add todo item"
-                              class="btn btn-primary"
+                              class="btn btn-primary create_todo_item__button"
                               disabled=""
                               title="Add todo item"
                               type="submit"
@@ -148,7 +148,7 @@ Object {
                         >
                           <button
                             aria-label="Add todo item"
-                            class="btn btn-primary"
+                            class="btn btn-primary create_todo_item__button"
                             disabled=""
                             title="Add todo item"
                             type="submit"
