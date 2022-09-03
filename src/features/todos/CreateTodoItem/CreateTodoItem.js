@@ -62,7 +62,7 @@ const CreateTodoItem = () => {
         <div className="mx-2">
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn btn-primary create_todo_item__button"
             disabled={!isValidInput(itemValue)}
             title="Add todo item"
             aria-label="Add todo item">

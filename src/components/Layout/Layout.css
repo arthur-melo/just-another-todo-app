@@ -20,5 +20,5 @@
 .layout__footer {
   flex-shrink: 0;
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
 }

@@ -1,23 +1,33 @@
-# Just Another Todo App
+<br>
 
-An offline todo app built with React + Redux Toolkit.
-
-No analytics, keep your data safe in your browser.
+<p align="center">
+  <img src="./public/favicon.ico" height="32">
+</p>
+<h1 align="center">
+  Just Another Todo App
+</h1>
 
 [![codecov](https://codecov.io/gh/arthur-melo/just-another-todo-app/branch/master/graph/badge.svg)](https://codecov.io/gh/arthur-melo/just-another-todo-app)
 ![License](https://img.shields.io/github/license/arthur-melo/just-another-todo-app)
+![GitHub deployments](https://img.shields.io/github/deployments/arthur-melo/just-another-todo-app/Production)
 
-## Demo
+`Just Another Todo App` is a todo list application built with React + Redux Toolkit.
 
-You can access the final project at: [just-another-todo-app.vercel.app](https://just-another-todo-app.vercel.app/) 👈
+## Features
 
-## Pre-requisites
+- Responsive design.
+- Offline capable (Progressive Web App).
+- No analytics/tracking cookies.
 
-- [NodeJS](https://nodejs.org)
+## Website
 
-## Usage
+The project can accessed at: [just-another-todo-app.vercel.app](https://just-another-todo-app.vercel.app/) 👈
 
-If you want to build from source, make sure that NodeJS is installed and download dependencies by issuing:
+## Build it yourself
+
+If you want to run from source, make sure that you have NodeJS installed (Latest / LTE supported).
+
+Open your terminal and run the following command to download the needed dependencies:
 
 ```bash
 npm install
@@ -26,9 +36,11 @@ npm install
 And then, to run the project:
 
 ```bash
-npm run start
+npm start
 ```
+
+A new browser window will be launched, have fun!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License — see the [LICENSE.md](LICENSE.md) file for details.

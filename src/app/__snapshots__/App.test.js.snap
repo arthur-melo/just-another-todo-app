@@ -24,6 +24,7 @@ Object {
                   alt="List emoji"
                   aria-hidden="true"
                   class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                  color=""
                   data-icon="rectangle-list"
                   data-prefix="fas"
                   focusable="false"
@@ -102,7 +103,7 @@ Object {
                               >
                                 <button
                                   aria-label="Add todo item"
-                                  class="btn btn-primary"
+                                  class="btn btn-primary create_todo_item__button"
                                   disabled=""
                                   title="Add todo item"
                                   type="submit"
@@ -139,7 +140,7 @@ Object {
           class="layout__footer"
         >
           <div
-            class="footer__container text-center d-flex h-100 justify-content-center align-items-center"
+            class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
           >
             <div
               class="wrapper"
@@ -163,6 +164,7 @@ Object {
                  by
                  
                 <a
+                  class="text-info"
                   href="https://github.com/arthur-melo"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -196,6 +198,7 @@ Object {
                 alt="List emoji"
                 aria-hidden="true"
                 class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                color=""
                 data-icon="rectangle-list"
                 data-prefix="fas"
                 focusable="false"
@@ -274,7 +277,7 @@ Object {
                             >
                               <button
                                 aria-label="Add todo item"
-                                class="btn btn-primary"
+                                class="btn btn-primary create_todo_item__button"
                                 disabled=""
                                 title="Add todo item"
                                 type="submit"
@@ -311,7 +314,7 @@ Object {
         class="layout__footer"
       >
         <div
-          class="footer__container text-center d-flex h-100 justify-content-center align-items-center"
+          class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
         >
           <div
             class="wrapper"
@@ -335,6 +338,7 @@ Object {
                by
                
               <a
+                class="text-info"
                 href="https://github.com/arthur-melo"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -432,6 +436,7 @@ Object {
                   alt="List emoji"
                   aria-hidden="true"
                   class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                  color=""
                   data-icon="rectangle-list"
                   data-prefix="fas"
                   focusable="false"
@@ -510,7 +515,7 @@ Object {
                               >
                                 <button
                                   aria-label="Add todo item"
-                                  class="btn btn-primary"
+                                  class="btn btn-primary create_todo_item__button"
                                   disabled=""
                                   title="Add todo item"
                                   type="submit"
@@ -551,62 +556,64 @@ Object {
               <div
                 class="col-12 col-md-9 col-lg-7 col-xl-6"
               >
-                <div
-                  class="todo_list__todos"
+                <ul
+                  class="list-group"
                 >
-                  <ul
-                    class="list-group"
+                  <div
+                    data-rfd-droppable-context-id="0"
+                    data-rfd-droppable-id="droppable"
                   >
-                    <div>
-                      <div
-                        aria-describedby="rfd-hidden-text-0-hidden-text-0"
-                        class="todo_list__todos__li"
-                        data-rfd-drag-handle-context-id="0"
-                        data-rfd-drag-handle-draggable-id="0"
-                        data-rfd-draggable-context-id="0"
-                        data-rfd-draggable-id="0"
-                        data-testid="todo-list-item"
-                        draggable="false"
-                        role="button"
-                        tabindex="0"
+                    <div
+                      aria-describedby="rfd-hidden-text-0-hidden-text-0"
+                      class="todo_list__todos__li"
+                      data-rfd-drag-handle-context-id="0"
+                      data-rfd-drag-handle-draggable-id="0"
+                      data-rfd-draggable-context-id="0"
+                      data-rfd-draggable-id="0"
+                      data-testid="todo-list-item"
+                      draggable="false"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <li
+                        class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
+                        data-testid="todo_item-listitem"
                       >
-                        <li
-                          class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
-                          data-testid="todo_item-listitem"
+                        <div
+                          class="todo_item__checkout"
+                          data-testid="todo_item-item-completion"
                         >
-                          <div
-                            class="todo_item__checkout"
-                            data-testid="todo_item-item-completion"
+                          <button
+                            class="border border-0 p-0 bg-transparent"
+                            type="button"
                           >
-                            <span>
-                              <svg
-                                aria-hidden="true"
-                                class="svg-inline--fa fa-square fa-fw "
-                                data-icon="square"
-                                data-prefix="fas"
-                                focusable="false"
-                                font-size="36px"
-                                role="img"
-                                viewBox="0 0 448 512"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </span>
-                          </div>
-                          <div
-                            class="border rounded w-100 form-control todo_item__text text-break"
-                          >
-                            Test todo item
-                          </div>
-                        </li>
-                      </div>
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-square fa-fw "
+                              data-icon="square"
+                              data-prefix="fas"
+                              focusable="false"
+                              font-size="36px"
+                              role="img"
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="border rounded w-100 form-control todo_item__text text-break"
+                        >
+                          Test todo item
+                        </div>
+                      </li>
                     </div>
-                  </ul>
-                </div>
+                  </div>
+                </ul>
               </div>
             </div>
           </div>
@@ -615,7 +622,7 @@ Object {
           class="layout__footer"
         >
           <div
-            class="footer__container text-center d-flex h-100 justify-content-center align-items-center"
+            class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
           >
             <div
               class="wrapper"
@@ -639,6 +646,7 @@ Object {
                  by
                  
                 <a
+                  class="text-info"
                   href="https://github.com/arthur-melo"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -688,6 +696,7 @@ Object {
                 alt="List emoji"
                 aria-hidden="true"
                 class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                color=""
                 data-icon="rectangle-list"
                 data-prefix="fas"
                 focusable="false"
@@ -766,7 +775,7 @@ Object {
                             >
                               <button
                                 aria-label="Add todo item"
-                                class="btn btn-primary"
+                                class="btn btn-primary create_todo_item__button"
                                 disabled=""
                                 title="Add todo item"
                                 type="submit"
@@ -807,62 +816,64 @@ Object {
             <div
               class="col-12 col-md-9 col-lg-7 col-xl-6"
             >
-              <div
-                class="todo_list__todos"
+              <ul
+                class="list-group"
               >
-                <ul
-                  class="list-group"
+                <div
+                  data-rfd-droppable-context-id="0"
+                  data-rfd-droppable-id="droppable"
                 >
-                  <div>
-                    <div
-                      aria-describedby="rfd-hidden-text-0-hidden-text-0"
-                      class="todo_list__todos__li"
-                      data-rfd-drag-handle-context-id="0"
-                      data-rfd-drag-handle-draggable-id="0"
-                      data-rfd-draggable-context-id="0"
-                      data-rfd-draggable-id="0"
-                      data-testid="todo-list-item"
-                      draggable="false"
-                      role="button"
-                      tabindex="0"
+                  <div
+                    aria-describedby="rfd-hidden-text-0-hidden-text-0"
+                    class="todo_list__todos__li"
+                    data-rfd-drag-handle-context-id="0"
+                    data-rfd-drag-handle-draggable-id="0"
+                    data-rfd-draggable-context-id="0"
+                    data-rfd-draggable-id="0"
+                    data-testid="todo-list-item"
+                    draggable="false"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <li
+                      class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
+                      data-testid="todo_item-listitem"
                     >
-                      <li
-                        class="todo_item__component list-group-item form-control d-flex border border-0  align-items-center"
-                        data-testid="todo_item-listitem"
+                      <div
+                        class="todo_item__checkout"
+                        data-testid="todo_item-item-completion"
                       >
-                        <div
-                          class="todo_item__checkout"
-                          data-testid="todo_item-item-completion"
+                        <button
+                          class="border border-0 p-0 bg-transparent"
+                          type="button"
                         >
-                          <span>
-                            <svg
-                              aria-hidden="true"
-                              class="svg-inline--fa fa-square fa-fw "
-                              data-icon="square"
-                              data-prefix="fas"
-                              focusable="false"
-                              font-size="36px"
-                              role="img"
-                              viewBox="0 0 448 512"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </span>
-                        </div>
-                        <div
-                          class="border rounded w-100 form-control todo_item__text text-break"
-                        >
-                          Test todo item
-                        </div>
-                      </li>
-                    </div>
+                          <svg
+                            aria-hidden="true"
+                            class="svg-inline--fa fa-square fa-fw "
+                            data-icon="square"
+                            data-prefix="fas"
+                            focusable="false"
+                            font-size="36px"
+                            role="img"
+                            viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        class="border rounded w-100 form-control todo_item__text text-break"
+                      >
+                        Test todo item
+                      </div>
+                    </li>
                   </div>
-                </ul>
-              </div>
+                </div>
+              </ul>
             </div>
           </div>
         </div>
@@ -871,7 +882,7 @@ Object {
         class="layout__footer"
       >
         <div
-          class="footer__container text-center d-flex h-100 justify-content-center align-items-center"
+          class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
         >
           <div
             class="wrapper"
@@ -895,6 +906,7 @@ Object {
                by
                
               <a
+                class="text-info"
                 href="https://github.com/arthur-melo"
                 rel="noopener noreferrer"
                 target="_blank"

@@ -10,13 +10,13 @@ const CheckoutTodoItem = props => {
   const { isCompleted } = props;
 
   return (
-    <span>
+    <button type="button" className="border border-0 p-0 bg-transparent">
       {isCompleted ? (
         <FontAwesomeIcon icon={faCheckSquare} fontSize="36px" fixedWidth />
       ) : (
         <FontAwesomeIcon icon={faSquare} fontSize="36px" fixedWidth />
       )}
-    </span>
+    </button>
   );
 };
 

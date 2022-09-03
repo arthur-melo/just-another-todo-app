@@ -33,6 +33,11 @@ const TodoItem = props => {
     ? liClass + ' todo_item__component-completed'
     : liClass;
 
+  const handleItemCompletion = ev => {
+    ev.target.blur();
+    dispatch(itemCompletion(item));
+  };
+
   return (
     <li
       data-testid="todo_item-listitem"
@@ -42,7 +47,7 @@ const TodoItem = props => {
       <div
         className="todo_item__checkout"
         data-testid="todo_item-item-completion"
-        onClick={() => dispatch(itemCompletion(item))}>
+        onClick={handleItemCompletion}>
         <CheckoutTodoItem isCompleted={item.completed} />
       </div>
       <div className="border rounded w-100 form-control todo_item__text text-break">

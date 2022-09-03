@@ -1,5 +1,5 @@
 .footer__container {
-  background: var(--background-color);
+  background: var(--bs-primary);
 }
 
 .footer__p {
