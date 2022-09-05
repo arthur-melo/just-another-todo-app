@@ -7,7 +7,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "prettier --config .prettierrc.json -w '**/*.{json,js}' && stylelint --config .stylelintrc.json --fix '**/*.css' && eslint --config .eslintrc.json --fix '**/*.js'"
+    "lint": "prettier --config .prettierrc.json -w '**/*.{json,js}' && stylelint --config .stylelintrc.json --fix '**/*.css' && eslint --config .eslintrc.json --fix '**/*.js'",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -45,7 +46,7 @@
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "jest": "^29.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
