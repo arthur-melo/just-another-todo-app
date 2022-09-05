@@ -1,6 +1,6 @@
 name: Running Code Coverage
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   build:
@@ -8,13 +8,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [latest, lts/*]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2
+          fetch-depth: 1
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
