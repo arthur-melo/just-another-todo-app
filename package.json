@@ -28,7 +28,7 @@
     "@fortawesome/react-fontawesome": "0.2.0",
     "@hello-pangea/dnd": "^16.0.0",
     "@reduxjs/toolkit": "^1.8.5",
-    "bootswatch": "5.2.1",
+    "bootswatch": "5.2.2",
     "clsx": "^1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
