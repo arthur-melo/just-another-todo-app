@@ -18,7 +18,7 @@ Object {
               class="list-group"
             >
               <div
-                data-rfd-droppable-context-id="0"
+                data-rfd-droppable-context-id=":r0:"
                 data-rfd-droppable-id="droppable"
               />
             </ul>
@@ -29,11 +29,11 @@ Object {
     <div
       aria-atomic="true"
       aria-live="assertive"
-      id="rfd-announcement-0"
+      id="rfd-announcement-:r0:"
       style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
     />
     <div
-      id="rfd-hidden-text-0-hidden-text-0"
+      id="rfd-hidden-text-:r0:-hidden-text-:r1:"
       style="display: none;"
     >
       
@@ -57,7 +57,7 @@ Object {
             class="list-group"
           >
             <div
-              data-rfd-droppable-context-id="0"
+              data-rfd-droppable-context-id=":r0:"
               data-rfd-droppable-id="droppable"
             />
           </ul>
@@ -133,7 +133,7 @@ Object {
     <div
       aria-atomic="true"
       aria-live="assertive"
-      id="rfd-announcement-0"
+      id="rfd-announcement-:r0:"
       style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
     />
     <div>
@@ -150,15 +150,15 @@ Object {
               class="list-group"
             >
               <div
-                data-rfd-droppable-context-id="1"
+                data-rfd-droppable-context-id=":r3:"
                 data-rfd-droppable-id="droppable"
               >
                 <div
-                  aria-describedby="rfd-hidden-text-1-hidden-text-2"
+                  aria-describedby="rfd-hidden-text-:r3:-hidden-text-:r4:"
                   class="todo_list__todos__li"
-                  data-rfd-drag-handle-context-id="1"
+                  data-rfd-drag-handle-context-id=":r3:"
                   data-rfd-drag-handle-draggable-id="0"
-                  data-rfd-draggable-context-id="1"
+                  data-rfd-draggable-context-id=":r3:"
                   data-rfd-draggable-id="0"
                   data-testid="todo-list-item"
                   draggable="false"
@@ -211,11 +211,11 @@ Object {
     <div
       aria-atomic="true"
       aria-live="assertive"
-      id="rfd-announcement-1"
+      id="rfd-announcement-:r3:"
       style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
     />
     <div
-      id="rfd-hidden-text-1-hidden-text-2"
+      id="rfd-hidden-text-:r3:-hidden-text-:r4:"
       style="display: none;"
     >
       
@@ -239,15 +239,15 @@ Object {
             class="list-group"
           >
             <div
-              data-rfd-droppable-context-id="1"
+              data-rfd-droppable-context-id=":r3:"
               data-rfd-droppable-id="droppable"
             >
               <div
-                aria-describedby="rfd-hidden-text-1-hidden-text-2"
+                aria-describedby="rfd-hidden-text-:r3:-hidden-text-:r4:"
                 class="todo_list__todos__li"
-                data-rfd-drag-handle-context-id="1"
+                data-rfd-drag-handle-context-id=":r3:"
                 data-rfd-drag-handle-draggable-id="0"
-                data-rfd-draggable-context-id="1"
+                data-rfd-draggable-context-id=":r3:"
                 data-rfd-draggable-id="0"
                 data-testid="todo-list-item"
                 draggable="false"
