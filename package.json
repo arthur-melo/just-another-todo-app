@@ -41,7 +41,7 @@
   "devDependencies": {
     "@redux-devtools/core": "^3.13.1",
     "@testing-library/jest-dom": "6.1.4",
-    "@testing-library/react": "14.1.0",
+    "@testing-library/react": "14.1.2",
     "@testing-library/user-event": "^14.4.3",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^9.0.0",
