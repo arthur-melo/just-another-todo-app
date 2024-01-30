@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@redux-devtools/core": "^4.0.0",
-    "@testing-library/jest-dom": "6.3.0",
+    "@testing-library/jest-dom": "6.4.0",
     "@testing-library/react": "14.1.2",
     "@testing-library/user-event": "^14.4.3",
     "eslint": "^8.23.0",
