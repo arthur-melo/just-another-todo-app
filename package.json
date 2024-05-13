@@ -36,7 +36,7 @@
     "react-scripts": "5.0.1",
     "react-textarea-autosize": "^8.3.4",
     "uuid": "9.0.1",
-    "web-vitals": "^3.0.1"
+    "web-vitals": "^4.0.0"
   },
   "devDependencies": {
     "@redux-devtools/core": "^4.0.0",
