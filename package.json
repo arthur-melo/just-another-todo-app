@@ -6,7 +6,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false",
+    "test": "react-scripts test",
     "lint": "prettier --config .prettierrc.json -w '**/*.{json,js}' && stylelint --config .stylelintrc.json --fix '**/*.css' && eslint --config .eslintrc.json --fix '**/*.js'",
     "prepare": "husky"
   },
@@ -40,9 +40,11 @@
   },
   "devDependencies": {
     "@redux-devtools/core": "^4.0.0",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "6.6.2",
-    "@testing-library/react": "15.0.7",
+    "@testing-library/react": "16.0.1",
     "@testing-library/user-event": "^14.4.3",
+    "ajv": "^8.17.1",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
