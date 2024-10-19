@@ -44,6 +44,7 @@
     "@testing-library/jest-dom": "6.6.2",
     "@testing-library/react": "16.0.1",
     "@testing-library/user-event": "^14.4.3",
+    "ajv": "^8.17.1",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
