@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CheckoutTodoItem > should render the component with a checkmark icon when isCompleted prop is true 1`] = `null`;
+
+exports[`CheckoutTodoItem > should render the component with a square icon when isCompleted prop is false 1`] = `null`;

@@ -1,1 +1,1 @@
-npm test -- --watchAll=false
+npm test

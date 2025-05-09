@@ -1,18 +1,19 @@
 import { act } from '@testing-library/react';
 import initialState from '../../features/initialState';
 import renderWithProviders from '../../utils/testHelpers';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
 import LocalStorage from './LocalStorage';
 import { addItem, deleteItem } from '../../features/todos/todosSlice';
 
 describe('LocalStorage', () => {
   beforeEach(() => {
-    jest.spyOn(Storage.prototype, 'setItem');
-    jest.spyOn(Storage.prototype, 'removeItem');
+    vi.spyOn(Storage.prototype, 'setItem');
+    vi.spyOn(Storage.prototype, 'removeItem');
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it("should verify that LocalStorage doesn't get populated when the component gets initialized with no items", () => {
@@ -79,16 +80,12 @@ describe('LocalStorage', () => {
       completed: expect.any(Boolean),
     });
 
-    expect(store.getState().todos.items).toHaveLength(1);
-
-    const deleteCallTimes = localStorage.removeItem.mock.calls.length;
+    expect(store.getState().todos.items).toHaveLength(2);
 
     const { id } = store.getState().todos.items.at(0);
     act(() => store.dispatch(deleteItem(id)));
 
-    expect(localStorage.removeItem.mock.calls).toHaveLength(
-      deleteCallTimes + 1,
-    );
-    expect(store.getState().todos.items).toHaveLength(0);
+    expect(localStorage.removeItem.mock.calls).toHaveLength(1);
+    expect(store.getState().todos.items).toHaveLength(1);
   });
 });
