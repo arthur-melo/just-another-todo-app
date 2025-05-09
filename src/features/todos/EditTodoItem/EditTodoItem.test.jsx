@@ -1,4 +1,5 @@
 import { screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
 
 import renderWithProviders from '../../../utils/testHelpers';
 import EditTodoItem from './EditTodoItem';

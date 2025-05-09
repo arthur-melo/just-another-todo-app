@@ -1,5 +1,6 @@
 import renderWithProviders from '../utils/testHelpers';
 import initialState from '../features/initialState';
+import { describe, it, expect } from 'vitest';
 
 import App from './App';
 

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
 
 // Third-party declarations.
 import 'bootswatch/dist/flatly/bootstrap.min.css';
@@ -28,4 +27,3 @@ root.render(
 );
 
 serviceWorkerRegistration.register();
-reportWebVitals();

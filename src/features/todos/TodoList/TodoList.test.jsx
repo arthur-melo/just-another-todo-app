@@ -1,4 +1,5 @@
 import { screen, act } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
 
 import renderWithProviders from '../../../utils/testHelpers';
 import initialState from '../../../features/initialState';

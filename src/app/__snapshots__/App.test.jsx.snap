@@ -1,0 +1,981 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > should render the App component 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="d-flex flex-column w-100 h-100"
+      >
+        <header
+          class="layout__header flex-shrink-0 w-100"
+        >
+          <div
+            class="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
+          >
+            <nav
+              class="navbar"
+            >
+              <span
+                class="navbar-brand m-0"
+              >
+                <svg
+                  alt="List emoji"
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                  color=""
+                  data-icon="rectangle-list"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 96C0 60.7 28.7 32 64 32l448 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM128 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm32-128a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM128 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm96-248c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span
+                class="header__text align-top fs-5"
+              >
+                Just Another Todo App
+              </span>
+            </nav>
+          </div>
+        </header>
+        <main
+          class="flex-grow-1 flex-shrink-0 mt-1"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="row justify-content-center"
+            >
+              <div
+                class="col-auto"
+              >
+                <div
+                  class="card text-center border border-0"
+                >
+                  <div
+                    class="card-body"
+                  >
+                    <h5
+                      class="card-title"
+                    >
+                      Welcome!
+                    </h5>
+                    <p
+                      class="card-text"
+                    >
+                      To get started, add some items to your list:
+                    </p>
+                    <div
+                      class="container-fluid"
+                    >
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="mx-auto"
+                        >
+                          <form
+                            autocomplete="on"
+                            method="POST"
+                          >
+                            <div
+                              class="d-flex"
+                            >
+                              <textarea
+                                aria-label="Todo item description"
+                                class="form-control"
+                                id="new-todo-item"
+                                name="new-todo-item"
+                                placeholder="I want to do..."
+                                type="text"
+                              />
+                              <div
+                                class="mx-2"
+                              >
+                                <button
+                                  aria-label="Add todo item"
+                                  class="btn btn-primary create_todo_item__button"
+                                  disabled=""
+                                  title="Add todo item"
+                                  type="submit"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="svg-inline--fa fa-plus fa-fw "
+                                    data-icon="plus"
+                                    data-prefix="fas"
+                                    focusable="false"
+                                    role="img"
+                                    viewBox="0 0 448 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
+                                      fill="currentColor"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="layout__footer flex-shrink-0 w-100"
+        >
+          <div
+            class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
+          >
+            <div
+              class="wrapper"
+            >
+               
+              <p
+                class="w-100 m-0"
+              >
+                This app runs offline and doesn't use analytics.
+              </p>
+              <p
+                class="w-100 m-0"
+              >
+                Your data is safe in your device!
+              </p>
+              <p
+                class="w-100 m-0"
+              >
+                Made with 
+                ❤️
+                 by
+                 
+                <a
+                  class="text-info"
+                  href="https://github.com/arthur-melo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  @arthur-melo
+                </a>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="d-flex flex-column w-100 h-100"
+    >
+      <header
+        class="layout__header flex-shrink-0 w-100"
+      >
+        <div
+          class="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
+        >
+          <nav
+            class="navbar"
+          >
+            <span
+              class="navbar-brand m-0"
+            >
+              <svg
+                alt="List emoji"
+                aria-hidden="true"
+                class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                color=""
+                data-icon="rectangle-list"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 96C0 60.7 28.7 32 64 32l448 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM128 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm32-128a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM128 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm96-248c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <span
+              class="header__text align-top fs-5"
+            >
+              Just Another Todo App
+            </span>
+          </nav>
+        </div>
+      </header>
+      <main
+        class="flex-grow-1 flex-shrink-0 mt-1"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-auto"
+            >
+              <div
+                class="card text-center border border-0"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title"
+                  >
+                    Welcome!
+                  </h5>
+                  <p
+                    class="card-text"
+                  >
+                    To get started, add some items to your list:
+                  </p>
+                  <div
+                    class="container-fluid"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="mx-auto"
+                      >
+                        <form
+                          autocomplete="on"
+                          method="POST"
+                        >
+                          <div
+                            class="d-flex"
+                          >
+                            <textarea
+                              aria-label="Todo item description"
+                              class="form-control"
+                              id="new-todo-item"
+                              name="new-todo-item"
+                              placeholder="I want to do..."
+                              type="text"
+                            />
+                            <div
+                              class="mx-2"
+                            >
+                              <button
+                                aria-label="Add todo item"
+                                class="btn btn-primary create_todo_item__button"
+                                disabled=""
+                                title="Add todo item"
+                                type="submit"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="svg-inline--fa fa-plus fa-fw "
+                                  data-icon="plus"
+                                  data-prefix="fas"
+                                  focusable="false"
+                                  role="img"
+                                  viewBox="0 0 448 512"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="layout__footer flex-shrink-0 w-100"
+      >
+        <div
+          class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
+        >
+          <div
+            class="wrapper"
+          >
+             
+            <p
+              class="w-100 m-0"
+            >
+              This app runs offline and doesn't use analytics.
+            </p>
+            <p
+              class="w-100 m-0"
+            >
+              Your data is safe in your device!
+            </p>
+            <p
+              class="w-100 m-0"
+            >
+              Made with 
+              ❤️
+               by
+               
+              <a
+                class="text-info"
+                href="https://github.com/arthur-melo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @arthur-melo
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "store": {
+    "@@observable": [Function],
+    "dispatch": [Function],
+    "getState": [Function],
+    "replaceReducer": [Function],
+    "subscribe": [Function],
+  },
+  "unmount": [Function],
+}
+`;
+
+exports[`App > should render the App component with preloaded items 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="d-flex flex-column w-100 h-100"
+      >
+        <header
+          class="layout__header flex-shrink-0 w-100"
+        >
+          <div
+            class="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
+          >
+            <nav
+              class="navbar"
+            >
+              <span
+                class="navbar-brand m-0"
+              >
+                <svg
+                  alt="List emoji"
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                  color=""
+                  data-icon="rectangle-list"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 96C0 60.7 28.7 32 64 32l448 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM128 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm32-128a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM128 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm96-248c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span
+                class="header__text align-top fs-5"
+              >
+                Just Another Todo App
+              </span>
+            </nav>
+          </div>
+        </header>
+        <main
+          class="flex-grow-1 flex-shrink-0 mt-1"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="row justify-content-center"
+            >
+              <div
+                class="col-auto"
+              >
+                <div
+                  class="card text-center border border-0"
+                >
+                  <div
+                    class="card-body"
+                  >
+                    <h5
+                      class="card-title"
+                    >
+                      Welcome!
+                    </h5>
+                    <p
+                      class="card-text"
+                    >
+                      To get started, add some items to your list:
+                    </p>
+                    <div
+                      class="container-fluid"
+                    >
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="mx-auto"
+                        >
+                          <form
+                            autocomplete="on"
+                            method="POST"
+                          >
+                            <div
+                              class="d-flex"
+                            >
+                              <textarea
+                                aria-label="Todo item description"
+                                class="form-control"
+                                id="new-todo-item"
+                                name="new-todo-item"
+                                placeholder="I want to do..."
+                                type="text"
+                              />
+                              <div
+                                class="mx-2"
+                              >
+                                <button
+                                  aria-label="Add todo item"
+                                  class="btn btn-primary create_todo_item__button"
+                                  disabled=""
+                                  title="Add todo item"
+                                  type="submit"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="svg-inline--fa fa-plus fa-fw "
+                                    data-icon="plus"
+                                    data-prefix="fas"
+                                    focusable="false"
+                                    role="img"
+                                    viewBox="0 0 448 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
+                                      fill="currentColor"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="container"
+          >
+            <div
+              class="row justify-content-center"
+            >
+              <div
+                class="col-12 col-md-9 col-lg-7 col-xl-6"
+              >
+                <ul
+                  class="list-group"
+                >
+                  <div
+                    data-rfd-droppable-context-id="«r0»"
+                    data-rfd-droppable-id="droppable"
+                  >
+                    <div
+                      aria-describedby="rfd-hidden-text-«r0»-hidden-text-«r1»"
+                      class="todo_list__todos__li"
+                      data-rfd-drag-handle-context-id="«r0»"
+                      data-rfd-drag-handle-draggable-id="0"
+                      data-rfd-draggable-context-id="«r0»"
+                      data-rfd-draggable-id="0"
+                      data-testid="todo-list-item"
+                      draggable="false"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <li
+                        class="todo_item__component list-group-item form-control w-100 h-100 d-flex align-items-center border border-0"
+                        data-testid="todo_item-listitem"
+                      >
+                        <div
+                          class="todo_item__checkout"
+                          data-testid="todo_item-item-completion"
+                        >
+                          <button
+                            class="border border-0 p-0 bg-transparent"
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-square fa-fw "
+                              data-icon="square"
+                              data-prefix="fas"
+                              focusable="false"
+                              font-size="36px"
+                              role="img"
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="border rounded w-100 form-control todo_item__text text-break"
+                        >
+                          Test todo item
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="layout__footer flex-shrink-0 w-100"
+        >
+          <div
+            class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
+          >
+            <div
+              class="wrapper"
+            >
+               
+              <p
+                class="w-100 m-0"
+              >
+                This app runs offline and doesn't use analytics.
+              </p>
+              <p
+                class="w-100 m-0"
+              >
+                Your data is safe in your device!
+              </p>
+              <p
+                class="w-100 m-0"
+              >
+                Made with 
+                ❤️
+                 by
+                 
+                <a
+                  class="text-info"
+                  href="https://github.com/arthur-melo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  @arthur-melo
+                </a>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      id="rfd-announcement-«r0»"
+      style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+    />
+    <div
+      id="rfd-hidden-text-«r0»-hidden-text-«r1»"
+      style="display: none;"
+    >
+      
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="d-flex flex-column w-100 h-100"
+    >
+      <header
+        class="layout__header flex-shrink-0 w-100"
+      >
+        <div
+          class="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
+        >
+          <nav
+            class="navbar"
+          >
+            <span
+              class="navbar-brand m-0"
+            >
+              <svg
+                alt="List emoji"
+                aria-hidden="true"
+                class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                color=""
+                data-icon="rectangle-list"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 96C0 60.7 28.7 32 64 32l448 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM128 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm32-128a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM128 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm96-248c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l224 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-224 0z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <span
+              class="header__text align-top fs-5"
+            >
+              Just Another Todo App
+            </span>
+          </nav>
+        </div>
+      </header>
+      <main
+        class="flex-grow-1 flex-shrink-0 mt-1"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-auto"
+            >
+              <div
+                class="card text-center border border-0"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title"
+                  >
+                    Welcome!
+                  </h5>
+                  <p
+                    class="card-text"
+                  >
+                    To get started, add some items to your list:
+                  </p>
+                  <div
+                    class="container-fluid"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="mx-auto"
+                      >
+                        <form
+                          autocomplete="on"
+                          method="POST"
+                        >
+                          <div
+                            class="d-flex"
+                          >
+                            <textarea
+                              aria-label="Todo item description"
+                              class="form-control"
+                              id="new-todo-item"
+                              name="new-todo-item"
+                              placeholder="I want to do..."
+                              type="text"
+                            />
+                            <div
+                              class="mx-2"
+                            >
+                              <button
+                                aria-label="Add todo item"
+                                class="btn btn-primary create_todo_item__button"
+                                disabled=""
+                                title="Add todo item"
+                                type="submit"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="svg-inline--fa fa-plus fa-fw "
+                                  data-icon="plus"
+                                  data-prefix="fas"
+                                  focusable="false"
+                                  role="img"
+                                  viewBox="0 0 448 512"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-12 col-md-9 col-lg-7 col-xl-6"
+            >
+              <ul
+                class="list-group"
+              >
+                <div
+                  data-rfd-droppable-context-id="«r0»"
+                  data-rfd-droppable-id="droppable"
+                >
+                  <div
+                    aria-describedby="rfd-hidden-text-«r0»-hidden-text-«r1»"
+                    class="todo_list__todos__li"
+                    data-rfd-drag-handle-context-id="«r0»"
+                    data-rfd-drag-handle-draggable-id="0"
+                    data-rfd-draggable-context-id="«r0»"
+                    data-rfd-draggable-id="0"
+                    data-testid="todo-list-item"
+                    draggable="false"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <li
+                      class="todo_item__component list-group-item form-control w-100 h-100 d-flex align-items-center border border-0"
+                      data-testid="todo_item-listitem"
+                    >
+                      <div
+                        class="todo_item__checkout"
+                        data-testid="todo_item-item-completion"
+                      >
+                        <button
+                          class="border border-0 p-0 bg-transparent"
+                          type="button"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="svg-inline--fa fa-square fa-fw "
+                            data-icon="square"
+                            data-prefix="fas"
+                            focusable="false"
+                            font-size="36px"
+                            role="img"
+                            viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        class="border rounded w-100 form-control todo_item__text text-break"
+                      >
+                        Test todo item
+                      </div>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="layout__footer flex-shrink-0 w-100"
+      >
+        <div
+          class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
+        >
+          <div
+            class="wrapper"
+          >
+             
+            <p
+              class="w-100 m-0"
+            >
+              This app runs offline and doesn't use analytics.
+            </p>
+            <p
+              class="w-100 m-0"
+            >
+              Your data is safe in your device!
+            </p>
+            <p
+              class="w-100 m-0"
+            >
+              Made with 
+              ❤️
+               by
+               
+              <a
+                class="text-info"
+                href="https://github.com/arthur-melo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @arthur-melo
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "store": {
+    "@@observable": [Function],
+    "dispatch": [Function],
+    "getState": [Function],
+    "replaceReducer": [Function],
+    "subscribe": [Function],
+  },
+  "unmount": [Function],
+}
+`;
