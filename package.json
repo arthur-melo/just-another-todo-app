@@ -15,7 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@fortawesome/react-fontawesome": "^3.0.0",
     "@hello-pangea/dnd": "^18.0.1",
     "@reduxjs/toolkit": "^2.8.1",
     "bootswatch": "^5.3.5",
