@@ -1,17 +1,12 @@
 import { act } from '@testing-library/react';
 import initialState from '../../features/initialState';
 import renderWithProviders from '../../utils/testHelpers';
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 
 import LocalStorage from './LocalStorage';
 import { addItem, deleteItem } from '../../features/todos/todosSlice';
 
 describe('LocalStorage', () => {
-  beforeEach(() => {
-    vi.spyOn(Storage.prototype, 'setItem');
-    vi.spyOn(Storage.prototype, 'removeItem');
-  });
-
   afterEach(() => {
     vi.clearAllMocks();
   });

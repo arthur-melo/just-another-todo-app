@@ -1,3 +1,38 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Footer > should render the Footer component 1`] = `null`;
+exports[`Footer > should render the Footer component 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-light text-center d-flex h-100 justify-content-center align-items-center p-1"
+  >
+    <div
+      class="wrapper"
+    >
+       
+      <p
+        class="w-100 m-0"
+      >
+        This app runs offline and doesn't use analytics.
+      </p>
+      <p
+        class="w-100 m-0"
+      >
+        Your data is safe in your device!
+      </p>
+      <p
+        class="w-100 m-0"
+      >
+        Made with ❤️ by 
+        <a
+          class="text-info"
+          href="https://github.com/arthur-melo"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          @arthur-melo
+        </a>
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
