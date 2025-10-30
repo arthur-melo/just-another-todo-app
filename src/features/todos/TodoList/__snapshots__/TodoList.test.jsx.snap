@@ -189,7 +189,7 @@ exports[`TodoList > should render the TodoList component with preloaded items 1`
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                            d="M64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32z"
                             fill="currentColor"
                           />
                         </svg>
@@ -278,7 +278,7 @@ exports[`TodoList > should render the TodoList component with preloaded items 1`
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+                          d="M64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32z"
                           fill="currentColor"
                         />
                       </svg>
