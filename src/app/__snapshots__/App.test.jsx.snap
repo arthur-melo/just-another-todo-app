@@ -23,7 +23,7 @@ exports[`App > should render the App component 1`] = `
                 <svg
                   alt="List emoji"
                   aria-hidden="true"
-                  class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                  class="svg-inline--fa fa-rectangle-list d-inline-block fa-lg"
                   color=""
                   data-icon="rectangle-list"
                   data-prefix="fas"
@@ -110,7 +110,7 @@ exports[`App > should render the App component 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="svg-inline--fa fa-plus fa-fw "
+                                    class="svg-inline--fa fa-plus fa-fw"
                                     data-icon="plus"
                                     data-prefix="fas"
                                     focusable="false"
@@ -197,7 +197,7 @@ exports[`App > should render the App component 1`] = `
               <svg
                 alt="List emoji"
                 aria-hidden="true"
-                class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                class="svg-inline--fa fa-rectangle-list d-inline-block fa-lg"
                 color=""
                 data-icon="rectangle-list"
                 data-prefix="fas"
@@ -284,7 +284,7 @@ exports[`App > should render the App component 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="svg-inline--fa fa-plus fa-fw "
+                                  class="svg-inline--fa fa-plus fa-fw"
                                   data-icon="plus"
                                   data-prefix="fas"
                                   focusable="false"
@@ -435,7 +435,7 @@ exports[`App > should render the App component with preloaded items 1`] = `
                 <svg
                   alt="List emoji"
                   aria-hidden="true"
-                  class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                  class="svg-inline--fa fa-rectangle-list d-inline-block fa-lg"
                   color=""
                   data-icon="rectangle-list"
                   data-prefix="fas"
@@ -522,7 +522,7 @@ exports[`App > should render the App component with preloaded items 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="svg-inline--fa fa-plus fa-fw "
+                                    class="svg-inline--fa fa-plus fa-fw"
                                     data-icon="plus"
                                     data-prefix="fas"
                                     focusable="false"
@@ -560,15 +560,15 @@ exports[`App > should render the App component with preloaded items 1`] = `
                   class="list-group"
                 >
                   <div
-                    data-rfd-droppable-context-id="«r0»"
+                    data-rfd-droppable-context-id="«r8»"
                     data-rfd-droppable-id="droppable"
                   >
                     <div
-                      aria-describedby="rfd-hidden-text-«r0»-hidden-text-«r1»"
+                      aria-describedby="rfd-hidden-text-«r8»-hidden-text-«r9»"
                       class="todo_list__todos__li"
-                      data-rfd-drag-handle-context-id="«r0»"
+                      data-rfd-drag-handle-context-id="«r8»"
                       data-rfd-drag-handle-draggable-id="0"
-                      data-rfd-draggable-context-id="«r0»"
+                      data-rfd-draggable-context-id="«r8»"
                       data-rfd-draggable-id="0"
                       data-testid="todo-list-item"
                       draggable="false"
@@ -589,7 +589,7 @@ exports[`App > should render the App component with preloaded items 1`] = `
                           >
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-square fa-fw "
+                              class="svg-inline--fa fa-square fa-fw"
                               data-icon="square"
                               data-prefix="fas"
                               focusable="false"
@@ -662,11 +662,11 @@ exports[`App > should render the App component with preloaded items 1`] = `
     <div
       aria-atomic="true"
       aria-live="assertive"
-      id="rfd-announcement-«r0»"
+      id="rfd-announcement-«r8»"
       style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px); clip-path: inset(100%);"
     />
     <div
-      id="rfd-hidden-text-«r0»-hidden-text-«r1»"
+      id="rfd-hidden-text-«r8»-hidden-text-«r9»"
       style="display: none;"
     >
       
@@ -695,7 +695,7 @@ exports[`App > should render the App component with preloaded items 1`] = `
               <svg
                 alt="List emoji"
                 aria-hidden="true"
-                class="svg-inline--fa fa-rectangle-list fa-lg d-inline-block"
+                class="svg-inline--fa fa-rectangle-list d-inline-block fa-lg"
                 color=""
                 data-icon="rectangle-list"
                 data-prefix="fas"
@@ -782,7 +782,7 @@ exports[`App > should render the App component with preloaded items 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="svg-inline--fa fa-plus fa-fw "
+                                  class="svg-inline--fa fa-plus fa-fw"
                                   data-icon="plus"
                                   data-prefix="fas"
                                   focusable="false"
@@ -820,15 +820,15 @@ exports[`App > should render the App component with preloaded items 1`] = `
                 class="list-group"
               >
                 <div
-                  data-rfd-droppable-context-id="«r0»"
+                  data-rfd-droppable-context-id="«r8»"
                   data-rfd-droppable-id="droppable"
                 >
                   <div
-                    aria-describedby="rfd-hidden-text-«r0»-hidden-text-«r1»"
+                    aria-describedby="rfd-hidden-text-«r8»-hidden-text-«r9»"
                     class="todo_list__todos__li"
-                    data-rfd-drag-handle-context-id="«r0»"
+                    data-rfd-drag-handle-context-id="«r8»"
                     data-rfd-drag-handle-draggable-id="0"
-                    data-rfd-draggable-context-id="«r0»"
+                    data-rfd-draggable-context-id="«r8»"
                     data-rfd-draggable-id="0"
                     data-testid="todo-list-item"
                     draggable="false"
@@ -849,7 +849,7 @@ exports[`App > should render the App component with preloaded items 1`] = `
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-square fa-fw "
+                            class="svg-inline--fa fa-square fa-fw"
                             data-icon="square"
                             data-prefix="fas"
                             focusable="false"

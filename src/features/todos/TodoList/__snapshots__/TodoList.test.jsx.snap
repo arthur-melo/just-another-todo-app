@@ -179,7 +179,7 @@ exports[`TodoList > should render the TodoList component with preloaded items 1`
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-square fa-fw "
+                          class="svg-inline--fa fa-square fa-fw"
                           data-icon="square"
                           data-prefix="fas"
                           focusable="false"
@@ -268,7 +268,7 @@ exports[`TodoList > should render the TodoList component with preloaded items 1`
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-square fa-fw "
+                        class="svg-inline--fa fa-square fa-fw"
                         data-icon="square"
                         data-prefix="fas"
                         focusable="false"
