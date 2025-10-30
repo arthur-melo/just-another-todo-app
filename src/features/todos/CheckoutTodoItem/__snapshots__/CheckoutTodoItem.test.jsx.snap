@@ -8,7 +8,7 @@ exports[`CheckoutTodoItem > should render the component with a checkmark icon wh
   >
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-square-check fa-fw "
+      class="svg-inline--fa fa-square-check fa-fw"
       data-icon="square-check"
       data-prefix="fas"
       focusable="false"
@@ -34,7 +34,7 @@ exports[`CheckoutTodoItem > should render the component with a square icon when 
   >
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-square fa-fw "
+      class="svg-inline--fa fa-square fa-fw"
       data-icon="square"
       data-prefix="fas"
       focusable="false"
