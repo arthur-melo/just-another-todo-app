@@ -18,7 +18,7 @@ exports[`TodoList > should render the TodoList component 1`] = `
               class="list-group"
             >
               <div
-                data-rfd-droppable-context-id="«r0»"
+                data-rfd-droppable-context-id="_r_0_"
                 data-rfd-droppable-id="droppable"
               />
             </ul>
@@ -29,11 +29,11 @@ exports[`TodoList > should render the TodoList component 1`] = `
     <div
       aria-atomic="true"
       aria-live="assertive"
-      id="rfd-announcement-«r0»"
+      id="rfd-announcement-_r_0_"
       style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px); clip-path: inset(100%);"
     />
     <div
-      id="rfd-hidden-text-«r0»-hidden-text-«r1»"
+      id="rfd-hidden-text-_r_0_-hidden-text-_r_1_"
       style="display: none;"
     >
       
@@ -57,7 +57,7 @@ exports[`TodoList > should render the TodoList component 1`] = `
             class="list-group"
           >
             <div
-              data-rfd-droppable-context-id="«r0»"
+              data-rfd-droppable-context-id="_r_0_"
               data-rfd-droppable-id="droppable"
             />
           </ul>
@@ -133,7 +133,7 @@ exports[`TodoList > should render the TodoList component with preloaded items 1`
     <div
       aria-atomic="true"
       aria-live="assertive"
-      id="rfd-announcement-«r0»"
+      id="rfd-announcement-_r_0_"
       style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px); clip-path: inset(100%);"
     />
     <div>
@@ -150,15 +150,15 @@ exports[`TodoList > should render the TodoList component with preloaded items 1`
               class="list-group"
             >
               <div
-                data-rfd-droppable-context-id="«r3»"
+                data-rfd-droppable-context-id="_r_3_"
                 data-rfd-droppable-id="droppable"
               >
                 <div
-                  aria-describedby="rfd-hidden-text-«r3»-hidden-text-«r4»"
+                  aria-describedby="rfd-hidden-text-_r_3_-hidden-text-_r_4_"
                   class="todo_list__todos__li"
-                  data-rfd-drag-handle-context-id="«r3»"
+                  data-rfd-drag-handle-context-id="_r_3_"
                   data-rfd-drag-handle-draggable-id="0"
-                  data-rfd-draggable-context-id="«r3»"
+                  data-rfd-draggable-context-id="_r_3_"
                   data-rfd-draggable-id="0"
                   data-testid="todo-list-item"
                   draggable="false"
@@ -211,11 +211,11 @@ exports[`TodoList > should render the TodoList component with preloaded items 1`
     <div
       aria-atomic="true"
       aria-live="assertive"
-      id="rfd-announcement-«r3»"
+      id="rfd-announcement-_r_3_"
       style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px); clip-path: inset(100%);"
     />
     <div
-      id="rfd-hidden-text-«r3»-hidden-text-«r4»"
+      id="rfd-hidden-text-_r_3_-hidden-text-_r_4_"
       style="display: none;"
     >
       
@@ -239,15 +239,15 @@ exports[`TodoList > should render the TodoList component with preloaded items 1`
             class="list-group"
           >
             <div
-              data-rfd-droppable-context-id="«r3»"
+              data-rfd-droppable-context-id="_r_3_"
               data-rfd-droppable-id="droppable"
             >
               <div
-                aria-describedby="rfd-hidden-text-«r3»-hidden-text-«r4»"
+                aria-describedby="rfd-hidden-text-_r_3_-hidden-text-_r_4_"
                 class="todo_list__todos__li"
-                data-rfd-drag-handle-context-id="«r3»"
+                data-rfd-drag-handle-context-id="_r_3_"
                 data-rfd-drag-handle-draggable-id="0"
-                data-rfd-draggable-context-id="«r3»"
+                data-rfd-draggable-context-id="_r_3_"
                 data-rfd-draggable-id="0"
                 data-testid="todo-list-item"
                 draggable="false"
