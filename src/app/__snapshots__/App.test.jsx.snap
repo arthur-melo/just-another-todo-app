@@ -663,7 +663,7 @@ exports[`App > should render the App component with preloaded items 1`] = `
       aria-atomic="true"
       aria-live="assertive"
       id="rfd-announcement-«r0»"
-      style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+      style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px); clip-path: inset(100%);"
     />
     <div
       id="rfd-hidden-text-«r0»-hidden-text-«r1»"

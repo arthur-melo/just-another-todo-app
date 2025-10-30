@@ -11,8 +11,7 @@ const useLocalStorage = localStorageKey => {
     }
   }, [value, localStorageKey]);
 
-  const clearLocalStorage = () =>
-    window.localStorage.removeItem(localStorageKey);
+  const clearLocalStorage = () => localStorage.removeItem(localStorageKey);
 
   return [value, setValue, clearLocalStorage];
 };

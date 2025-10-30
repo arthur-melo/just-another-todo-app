@@ -1,4 +1,4 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 
 import Layout from './Layout';
@@ -8,7 +8,7 @@ describe('Layout', () => {
     const child = <div>Children</div>;
     const component = <Layout>{child}</Layout>;
 
-    const view = renderer.create(component).toJSON();
-    expect(view).toMatchSnapshot();
+    const { asFragment } = render(component);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

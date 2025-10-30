@@ -1,4 +1,4 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 
 import CheckoutTodoItem from './CheckoutTodoItem';
@@ -7,20 +7,16 @@ describe('CheckoutTodoItem', () => {
   it('should render the component with a checkmark icon when isCompleted prop is true', async () => {
     const completed = true;
 
-    const view = renderer
-      .create(<CheckoutTodoItem isCompleted={completed} />)
-      .toJSON();
+    const { asFragment } = render(<CheckoutTodoItem isCompleted={completed} />);
 
-    expect(view).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render the component with a square icon when isCompleted prop is false', async () => {
     const completed = false;
 
-    const view = renderer
-      .create(<CheckoutTodoItem isCompleted={completed} />)
-      .toJSON();
+    const { asFragment } = render(<CheckoutTodoItem isCompleted={completed} />);
 
-    expect(view).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
